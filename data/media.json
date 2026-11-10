@@ -1,0 +1,1385 @@
+{
+  "seedance-2": {
+    "type": "video",
+    "src": "./assets/history/seedance-2-launch-skating.mp4",
+    "alt": "Seedance 2.0 官方发布页的双人花样滑冰生成演示",
+    "caption": "Seedance 2.0 发布页的双人花滑样片，发布于 2026 年 2 月 12 日。冰场、选手和动作由模型生成。",
+    "sourceTitle": "Seedance 2.0 Official Launch",
+    "sourceUrl": "https://seed.bytedance.com/en/blog/seedance-2-0-official-launch",
+    "credit": "© ByteDance Seed；官方公开演示，未发现独立媒体再分发许可证。",
+    "date": "2026-02-12",
+    "poster": "./assets/history/seedance-2-launch-skating-poster.jpg",
+    "displayCaption": "Seedance 2.0 发布页的双人花滑样片，发布于 2026 年 2 月 12 日。冰场、选手和动作由模型生成。"
+  },
+  "gan": {
+    "type": "image",
+    "src": "./assets/history/gan-2014-paper-figure2.png",
+    "alt": "2014年GAN原论文图2：手写数字、人脸和CIFAR-10生成样本",
+    "caption": "2014 年 GAN 论文中的生成结果。每组最右一列是最接近的训练图片，其余列由模型生成，可以对照着看两者的差别。",
+    "sourceTitle": "Generative Adversarial Networks — Figure 2",
+    "sourceUrl": "https://arxiv.org/abs/1406.2661",
+    "credit": "Ian Goodfellow 等，2014。原论文图，未发现单独的开放媒体许可。",
+    "date": "2014-06-10",
+    "displayCaption": "2014 年 GAN 论文中的生成结果。每组最右一列是最接近的训练图片，其余列由模型生成，可以对照着看两者的差别。"
+  },
+  "stylegan": {
+    "type": "embed",
+    "src": "https://www.youtube-nocookie.com/embed/kSLJriaOumA?autoplay=1&rel=0",
+    "poster": "./assets/history/stylegan-2019-official-video-poster.jpg",
+    "alt": "初代 StyleGAN 原论文配套演示：人脸风格混合与生成细节变化",
+    "caption": "初代 StyleGAN 的论文配套演示，2019 年 3 月由作者公开。片中组合不同人脸的风格，展示姿态、长相和细节怎样变化；这些人脸由模型生成。",
+    "displayCaption": "初代 StyleGAN 的论文配套演示，2019 年 3 月由作者公开。片中组合不同人脸的风格，展示姿态、长相和细节怎样变化；这些人脸由模型生成。",
+    "sourceTitle": "StyleGAN — Official TensorFlow Implementation；原论文演示视频",
+    "sourceUrl": "https://github.com/NVlabs/stylegan",
+    "credit": "© NVIDIA / Tero Karras、Samuli Laine、Timo Aila；官方仓库链接的作者原片，由 YouTube 播放器提供。",
+    "date": "2019-03-03"
+  },
+  "nerf": {
+    "type": "video",
+    "src": "./assets/history/nerf-2020-orchid.mp4",
+    "alt": "NeRF 2020原项目中的兰花场景新视角渲染演示",
+    "caption": "NeRF 2020 年项目页的兰花演示。研究者先从不同角度拍摄同一盆花，再让模型生成新的观看角度。",
+    "sourceTitle": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+    "sourceUrl": "https://www.matthewtancik.com/nerf",
+    "credit": "Ben Mildenhall、Pratul P. Srinivasan、Matthew Tancik 等；原项目演示，页面未单独标注媒体许可。",
+    "date": "2020",
+    "poster": "./assets/history/nerf-2020-orchid-poster.jpg",
+    "displayCaption": "NeRF 2020 年项目页的兰花演示。研究者先从不同角度拍摄同一盆花，再让模型生成新的观看角度。",
+    "loop": true,
+    "muted": true
+  },
+  "score-models": {
+    "type": "image",
+    "src": "./assets/history/score-2021-celeba-sampling.gif",
+    "alt": "作者发布的分数生成模型采样动画，从噪声逐渐形成多张人脸",
+    "caption": "Yang Song 在 2021 年文章中展示的人脸采样动图。一片噪声经过逐步调整，慢慢变成一张人脸。",
+    "sourceTitle": "Generative Modeling by Estimating Gradients of the Data Distribution",
+    "sourceUrl": "https://yang-song.net/blog/2021/score/",
+    "credit": "© Yang Song；作者公开博客 GIF，页面未标注独立开放媒体许可。",
+    "date": "2021",
+    "displayCaption": "Yang Song 在 2021 年文章中展示的人脸采样动图。一片噪声经过逐步调整，慢慢变成一张人脸。"
+  },
+  "ddpm": {
+    "type": "image",
+    "src": "./assets/history/ddpm-original-samples.png",
+    "alt": "DDPM 2020原项目展示的人脸、卧室、教堂与猫等生成样本",
+    "caption": "DDPM 作者在 2020 年项目页公开的样本。画面中的人脸、房间和动物都是模型生成的。",
+    "sourceTitle": "Denoising Diffusion Probabilistic Models",
+    "sourceUrl": "https://hojonathanho.github.io/diffusion/",
+    "credit": "Jonathan Ho、Ajay Jain、Pieter Abbeel；原项目展示图，页面未单独标注媒体许可。",
+    "date": "2020",
+    "displayCaption": "DDPM 作者在 2020 年项目页公开的样本。画面中的人脸、房间和动物都是模型生成的。"
+  },
+  "stable-diffusion-release": {
+    "type": "image",
+    "src": "./assets/history/stable-diffusion-v1-samples.jpg",
+    "alt": "Stable Diffusion v1官方仓库早期样本，包括宇航员、马和动物角色",
+    "caption": "Stable Diffusion v1 官方仓库的早期文生图样本，保留了原来的完整横幅；网页使用压缩后的 JPEG 副本。",
+    "sourceTitle": "CompVis Stable Diffusion — Official Repository",
+    "sourceUrl": "https://github.com/CompVis/stable-diffusion",
+    "credit": "CompVis / Stability AI / Runway；仓库采用 CreativeML OpenRAIL-M，媒体未单独标注许可。",
+    "date": "2022",
+    "displayCaption": "Stable Diffusion v1 官方仓库的早期文生图样本，保留了原来的完整横幅；网页使用压缩后的 JPEG 副本。"
+  },
+  "dall-e-2": {
+    "type": "image",
+    "src": "./assets/history/dall-e-2-2022-cherries.png",
+    "alt": "DALL·E 2于2022年4月6日系统卡中展示的一碗樱桃绘画生成结果",
+    "caption": "DALL·E 2 在 2022 年 4 月预览系统卡中展示的样本，提示词是一碗樱桃的油画。这里保留了当时的输出。",
+    "sourceTitle": "DALL·E 2 Preview — System Card 2022-04-06",
+    "sourceUrl": "https://github.com/openai/dalle-2-preview/blob/main/system-card_04062022.md",
+    "credit": "OpenAI，DALL·E 2 原始系统卡样本；未发现独立媒体再分发许可。",
+    "date": "2022-04-06",
+    "displayCaption": "DALL·E 2 在 2022 年 4 月预览系统卡中展示的样本，提示词是一碗樱桃的油画。这里保留了当时的输出。"
+  },
+  "controlnet": {
+    "type": "image",
+    "src": "./assets/history/controlnet-original-canny.png",
+    "alt": "ControlNet初代官方演示界面：鸟照片、Canny边缘图和多张受控生成结果",
+    "caption": "ControlNet 初代官方 Canny 演示：输入照片、边缘图与五张生成结果。页面按原截图坐标裁切展示；切换只改变观看区域，不修改原图。完整界面可从资料索引打开。",
+    "sourceTitle": "ControlNet — Official Repository",
+    "sourceUrl": "https://github.com/lllyasviel/ControlNet",
+    "credit": "Lvmin Zhang / ControlNet 作者；官方仓库 Apache-2.0，示例媒体未单独标注许可。 页面展示原截图中的三个局部，中文标签由本站添加，完整截图可在索引中查看。",
+    "date": "2023",
+    "displayCaption": "同一份轮廓，五种羽毛与背景。点击下方编号，比较 2023 年官方演示里已生成的结果；这些是原截图中的局部，并非现场生成。",
+    "imageSize": [
+      1522,
+      1177
+    ],
+    "panels": [
+      {
+        "label": "输入照片",
+        "alt": "原始照片中的橙胸小鸟，站在横向树枝上",
+        "crop": [
+          301,
+          55,
+          160,
+          240
+        ]
+      },
+      {
+        "label": "提取轮廓",
+        "alt": "从同一照片提取的小鸟和树枝边缘线",
+        "crop": [
+          838,
+          63,
+          239,
+          359
+        ]
+      },
+      {
+        "label": "生成结果",
+        "alt": "保留大致姿态和构图、换成蓝绿黄色羽毛的生成小鸟",
+        "crop": [
+          1205,
+          63,
+          239,
+          359
+        ]
+      },
+      {
+        "label": "生成结果 2",
+        "alt": "原始演示中的橙胸蓝头小鸟",
+        "crop": [
+          838,
+          430,
+          239,
+          359
+        ]
+      },
+      {
+        "label": "生成结果 3",
+        "alt": "原始演示中的黄胸蓝羽小鸟",
+        "crop": [
+          1205,
+          430,
+          239,
+          359
+        ]
+      },
+      {
+        "label": "生成结果 4",
+        "alt": "原始演示中的蓝胸小鸟",
+        "crop": [
+          838,
+          797,
+          239,
+          359
+        ]
+      },
+      {
+        "label": "生成结果 5",
+        "alt": "原始演示中的棕头白胸小鸟",
+        "crop": [
+          1205,
+          797,
+          239,
+          359
+        ]
+      }
+    ],
+    "explore": true
+  },
+  "comfyui": {
+    "type": "image",
+    "src": "./assets/history/comfyui-2023-01-original.png",
+    "alt": "ComfyUI在2023年1月官方仓库中保存的原版节点界面截图",
+    "caption": "2023 年 1 月 31 日 ComfyUI 官方仓库里的界面截图。加载模型、输入提示词、采样和保存图片，被连成了一条节点流程。",
+    "sourceTitle": "ComfyUI — Historical Official Repository Snapshot",
+    "sourceUrl": "https://github.com/Comfy-Org/ComfyUI/tree/9d611a90e85eb271e6eeef890a5a77e2e0e6919b",
+    "credit": "comfyanonymous / ComfyUI 官方仓库；历史截图，媒体未单独标注许可。",
+    "date": "2023-01-31",
+    "displayCaption": "2023 年 1 月 31 日 ComfyUI 官方仓库里的界面截图。加载模型、输入提示词、采样和保存图片，被连成了一条节点流程。"
+  },
+  "aaron": {
+    "type": "image",
+    "src": "./assets/history/aaron-cohen-c1982.jpg",
+    "alt": "约1982年Harold Cohen为AARON绘图机器人生成的轮廓上色",
+    "caption": "约 1982 年，Harold Cohen 正在给 AARON 绘图机器人的线稿上色。照片拍摄于波士顿计算机博物馆，数字化时间未注明。",
+    "sourceTitle": "Harold Cohen and AARON—A 40-Year Collaboration — Computer History Museum",
+    "sourceUrl": "https://computerhistory.org/blog/harold-cohen-and-aaron-a-40-year-collaboration/",
+    "credit": "Collection of the Computer History Museum，馆藏编号 102627459。",
+    "date": "约1982年",
+    "displayCaption": "约 1982 年，Harold Cohen 正在给 AARON 绘图机器人的线稿上色。照片拍摄于波士顿计算机博物馆，数字化时间未注明。",
+    "presentation": "photograph"
+  },
+  "eliza": {
+    "type": "image",
+    "src": "./assets/history/eliza-original-printout-1966.jpg",
+    "alt": "1966年Emily White运行ELIZA时保存的原始电传打印稿",
+    "caption": "1966 年 Emily White 使用 ELIZA 时留下的电传打印稿。纸上记录了人与程序的对话，扫描时间未注明。",
+    "sourceTitle": "Chatbots Decoded: Exploring AI — ELIZA Printout — Computer History Museum",
+    "sourceUrl": "https://computerhistory.org/stories/chatbots-decoded/",
+    "credit": "Computer History Museum；Gift of Emily White，馆藏编号 102805275。",
+    "date": "1966年（原始打印稿）",
+    "displayCaption": "1966 年 Emily White 使用 ELIZA 时留下的电传打印稿。纸上记录了人与程序的对话，扫描时间未注明。",
+    "reading": true,
+    "experience": "eliza",
+    "sourceNote": "交互区为本站制作的中文关键词规则示意，不是 1966 年 ELIZA 原程序，也不调用语言模型。原始打印稿保留在“1966 打印稿”页签；输入仅在本页处理，刷新即清空。"
+  },
+  "vae": {
+    "type": "image",
+    "src": "./assets/history/vae-2013-v1-figure3-manifold.png",
+    "alt": "VAE 2013年初稿第8页图3，人脸与手写数字在二维潜在空间中连续变化",
+    "displayCaption": "左边的人脸、右边的数字，都是模型生成的。沿着图格移动，表情和笔画也跟着改变。这是 2013 年 VAE 论文中的结果。",
+    "caption": "2013年12月20日提交的 VAE 原始论文 v1，第8页图3。左为 Frey Face，右为 MNIST，展示模型学到的二维潜在空间。保留完整图像、分图标签与英文图注，只裁去其他正文和页边空白。",
+    "sourceTitle": "Auto-Encoding Variational Bayes — v1, Figure 3",
+    "sourceUrl": "https://arxiv.org/abs/1312.6114v1",
+    "credit": "Diederik P. Kingma / Max Welling；原论文图文，署名与许可依原件。",
+    "date": "2013-12-20"
+  },
+  "neural-style-transfer": {
+    "type": "image",
+    "src": "./assets/history/neural-style-transfer-2015-v1-figure2.png",
+    "alt": "2015年神经风格迁移论文图2，图宾根河岸照片与五种名画风格的合成结果，含完整英文图注",
+    "displayCaption": "同一张图宾根河岸照片，被换成《星月夜》等名画的风格。每张结果左下角的小图，是提供风格的原作。",
+    "caption": "2015年8月26日提交的《A Neural Algorithm of Artistic Style》v1，第5页图2。A 为原照片，B—F 为不同艺术作品风格的合成结果，左下角小图为对应风格来源。完整保留六幅图、字母标签和英文图注，没有重新拼接或重画。",
+    "sourceTitle": "A Neural Algorithm of Artistic Style — v1, Figure 2",
+    "sourceUrl": "https://arxiv.org/abs/1508.06576v1",
+    "credit": "Leon A. Gatys / Alexander S. Ecker / Matthias Bethge；原论文配图及所引作品署名依原件。",
+    "date": "2015-08-26"
+  },
+  "wavenet": {
+    "type": "audio",
+    "src": "./assets/history/wavenet-2016-mandarin-chinese-wavenet-1.wav",
+    "poster": "./assets/history/wavenet-2016-official-dilated-convolution.gif",
+    "alt": "DeepMind 2016年WaveNet首发博客的普通话语音对照，参数合成、拼接合成与WaveNet各一段",
+    "caption": "DeepMind 2016年9月8日首发博客的普通话第一组语音样例。三段分别来自参数合成、拼接合成和 WaveNet，保存官方原始 WAV，没有变速或降噪。配图是同一博客中说明 WaveNet 分层结构的原始动图。博客日期早于9月12日的 arXiv 论文。",
+    "displayCaption": "听听 2016 年的合成语音。这里是 DeepMind 发布时给出的普通话对照：参数合成、拼接合成和 WaveNet。点开三段，比较声音的衔接和语调。",
+    "sourceTitle": "WaveNet: A generative model for raw audio — Mandarin Chinese samples",
+    "sourceUrl": "https://deepmind.google/blog/wavenet-a-generative-model-for-raw-audio/",
+    "credit": "Aäron van den Oord、Sander Dieleman / DeepMind；官方原始语音样例，未标注单独的开放媒体许可。",
+    "date": "2016-09-08",
+    "samples": [
+      {
+        "label": "参数合成",
+        "src": "./assets/history/wavenet-2016-mandarin-chinese-parametric-1.wav",
+        "mime": "audio/wav",
+        "durationSeconds": 4.8585,
+        "sourceUrl": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/mandarin-chinese-parametric-1.wav"
+      },
+      {
+        "label": "拼接合成",
+        "src": "./assets/history/wavenet-2016-mandarin-chinese-concatenative-1.wav",
+        "mime": "audio/wav",
+        "durationSeconds": 4.97975,
+        "sourceUrl": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/mandarin-chinese-concatenative-1.wav"
+      },
+      {
+        "label": "WaveNet",
+        "src": "./assets/history/wavenet-2016-mandarin-chinese-wavenet-1.wav",
+        "mime": "audio/wav",
+        "durationSeconds": 4.9124375,
+        "sourceUrl": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/mandarin-chinese-wavenet-1.wav"
+      }
+    ]
+  },
+  "gpt-3": {
+    "type": "image",
+    "src": "./assets/history/gpt-3-paper-v1-page1.webp",
+    "alt": "Language Models are Few-Shot Learners，arXiv v1 原始论文第一页",
+    "caption": "GPT-3 2020 年论文初稿的首页。论文讨论给模型少量示例后，它能完成哪些语言任务。",
+    "sourceTitle": "Language Models are Few-Shot Learners — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/2005.14165v1",
+    "credit": "Tom B. Brown 等 / OpenAI；原论文页面，署名及许可依原件。",
+    "date": "2020-05-28",
+    "displayCaption": "GPT-3 2020 年论文初稿的首页。论文讨论给模型少量示例后，它能完成哪些语言任务。"
+  },
+  "lora": {
+    "type": "image",
+    "src": "./assets/history/lora-2021-v1-figure1.png",
+    "alt": "LoRA 2021年初稿图1，蓝色为预训练权重，橙色为新增矩阵A和B，附英文图注",
+    "displayCaption": "蓝色部分是保留不动的原模型，橙色 A、B 是新增并训练的两组参数。这张 2021 年的论文原图，说明了 LoRA 怎样少改参数来适应新任务。",
+    "caption": "2021年6月17日提交的 LoRA 原始论文 v1，第1页图1。保留预训练权重 W、新增矩阵 A 和 B、箭头、公式及完整英文图注。仅从原 PDF 裁取该图，没有改字或重新绘制。",
+    "sourceTitle": "LoRA: Low-Rank Adaptation of Large Language Models — v1, Figure 1",
+    "sourceUrl": "https://arxiv.org/abs/2106.09685v1",
+    "credit": "Edward J. Hu 等 / Microsoft；原论文图文，署名与许可依原件。",
+    "date": "2021-06-17"
+  },
+  "latent-diffusion": {
+    "type": "image",
+    "src": "./assets/history/latent-diffusion-paper-v1-page1.webp",
+    "alt": "High-Resolution Image Synthesis with Latent Diffusion Models，arXiv v1 原始论文第一页",
+    "caption": "2021 年潜在扩散论文初稿的首页。作者把去噪过程放进压缩后的图像表示中，以减少计算量。",
+    "sourceTitle": "High-Resolution Image Synthesis with Latent Diffusion Models — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/2112.10752v1",
+    "credit": "Robin Rombach 等 / CompVis；原论文页面，署名及许可依原件。",
+    "date": "2021-12-20",
+    "displayCaption": "2021 年潜在扩散论文初稿的首页。作者把去噪过程放进压缩后的图像表示中，以减少计算量。"
+  },
+  "dreamfusion": {
+    "type": "video",
+    "src": "./assets/history/dreamfusion-2022-bread-rgb-geometry.mp4",
+    "poster": "./assets/history/dreamfusion-2022-bread-poster.png",
+    "alt": "DreamFusion 2022年作者项目的切片面包三维旋转演示，左边彩色外观，右边灰色几何",
+    "displayCaption": "同一块面包转起来了：左边看彩色外观，右边看灰色几何。这段 8 秒演示来自 DreamFusion 2022 年的作者项目页。",
+    "caption": "DreamFusion 作者项目页保存的切片面包演示。原片左右并列彩色渲染与灰色几何，完整保留 2:1 画幅，时长 8 秒。预览帧取自原片。",
+    "sourceTitle": "DreamFusion — Original 2022 gallery: a sliced loaf of fresh bread",
+    "sourceUrl": "https://dreamfusion3d.github.io/",
+    "credit": "Ben Poole、Ajay Jain、Jonathan T. Barron、Ben Mildenhall / Google Research、UC Berkeley；作者项目原始视频。",
+    "date": "2022 年",
+    "loop": true,
+    "muted": true
+  },
+  "dall-e": {
+    "type": "image",
+    "src": "./assets/history/dall-e-paper-v1-page1.webp",
+    "alt": "Zero-Shot Text-to-Image Generation，arXiv v1 原始论文第一页",
+    "caption": "DALL·E 2021 年论文初稿的首页。论文发表于当年 2 月，晚于 1 月的官方介绍；当前下载副本可能经过后续重编译。",
+    "sourceTitle": "Zero-Shot Text-to-Image Generation — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/2102.12092v1",
+    "credit": "Aditya Ramesh 等 / OpenAI；原论文整页渲染为 WebP。CC BY 4.0：https://creativecommons.org/licenses/by/4.0/ 。",
+    "date": "2021-02-24",
+    "displayCaption": "DALL·E 2021 年论文初稿的首页。论文发表于当年 2 月，晚于 1 月的官方介绍；当前下载副本可能经过后续重编译。"
+  },
+  "clip": {
+    "type": "image",
+    "src": "./assets/history/clip-paper-v1-page1.webp",
+    "alt": "Learning Transferable Visual Models From Natural Language Supervision，arXiv v1 原始论文第一页",
+    "caption": "CLIP 2021 年论文初稿的首页，介绍怎样让文字和图片学到相互对应的表示。论文提交于 2 月，晚于 1 月的官方介绍。",
+    "sourceTitle": "Learning Transferable Visual Models From Natural Language Supervision — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/2103.00020v1",
+    "credit": "Alec Radford 等 / OpenAI；原论文整页渲染为 WebP。版权及许可依原论文；arXiv 非独占分发许可不等同通用开放再授权。",
+    "date": "2021-02-26",
+    "displayCaption": "CLIP 2021 年论文初稿的首页，介绍怎样让文字和图片学到相互对应的表示。论文提交于 2 月，晚于 1 月的官方介绍。"
+  },
+  "gpt-4": {
+    "type": "image",
+    "src": "./assets/history/gpt-4-paper-v1-page1.webp",
+    "alt": "GPT-4 Technical Report，arXiv v1 原始论文第一页",
+    "caption": "GPT-4 2023 年技术报告初稿的首页。报告介绍了模型的能力与限制，论文提交日期为 3 月 15 日。",
+    "sourceTitle": "GPT-4 Technical Report — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/2303.08774v1",
+    "credit": "OpenAI；原论文整页渲染为 WebP。版权及许可依原论文；arXiv 非独占分发许可不等同通用开放再授权。",
+    "date": "2023-03-15",
+    "displayCaption": "GPT-4 2023 年技术报告初稿的首页。报告介绍了模型的能力与限制，论文提交日期为 3 月 15 日。"
+  },
+  "deepseek-r1": {
+    "type": "image",
+    "src": "./assets/history/deepseek-r1-paper-v1-page1.webp",
+    "alt": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning，arXiv v1 原始论文第一页",
+    "caption": "DeepSeek-R1 在 2025 年 1 月 22 日公开的论文初稿首页，介绍用强化学习训练推理能力的实验。",
+    "sourceTitle": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/2501.12948v1",
+    "credit": "DeepSeek-AI；原论文整页渲染为 WebP。版权及许可依原论文；arXiv 非独占分发许可不等同通用开放再授权。",
+    "date": "2025-01-22",
+    "displayCaption": "DeepSeek-R1 在 2025 年 1 月 22 日公开的论文初稿首页，介绍用强化学习训练推理能力的实验。"
+  },
+  "wan-2-1": {
+    "type": "image",
+    "src": "./assets/history/wan-2-1-paper-v1-page1.webp",
+    "alt": "Wan: Open and Advanced Large-Scale Video Generative Models，arXiv v1 原始论文第一页",
+    "caption": "Wan 团队在 2025 年 3 月 26 日公开的技术报告初稿首页，介绍视频生成模型及其训练。",
+    "sourceTitle": "Wan: Open and Advanced Large-Scale Video Generative Models — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/2503.20314v1",
+    "credit": "Wan Team / Alibaba；原论文整页渲染为 WebP。版权及许可依原论文；arXiv 非独占分发许可不等同通用开放再授权。",
+    "date": "2025-03-26",
+    "displayCaption": "Wan 团队在 2025 年 3 月 26 日公开的技术报告初稿首页，介绍视频生成模型及其训练。"
+  },
+  "seedance-1": {
+    "type": "image",
+    "src": "./assets/history/seedance-1-paper-v1-page1.webp",
+    "alt": "Seedance 1.0: Exploring the Boundaries of Video Generation Models，arXiv v1 原始论文第一页",
+    "caption": "Seedance 1.0 在 2025 年 6 月 10 日公开的技术报告初稿首页，介绍文生视频和图生视频的方法。",
+    "sourceTitle": "Seedance 1.0: Exploring the Boundaries of Video Generation Models — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/2506.09113v1",
+    "credit": "Seed Vision Team / ByteDance；原论文整页渲染为 WebP。版权及许可依原论文；arXiv 非独占分发许可不等同通用开放再授权。",
+    "date": "2025-06-10",
+    "displayCaption": "Seedance 1.0 在 2025 年 6 月 10 日公开的技术报告初稿首页，介绍文生视频和图生视频的方法。"
+  },
+  "gpt-4o": {
+    "type": "image",
+    "src": "./assets/history/gpt-4o-2024-robot-typewriter.jpg",
+    "alt": "GPT-4o 2024 年首发页的能力探索样本：机器人在打字机上写日记",
+    "caption": "GPT-4o 在 2024 年 5 月发布页展示的“机器人打字日记”。这是当时的能力探索样本，图片输出尚未在首发日向所有人开放。",
+    "sourceTitle": "Hello GPT-4o — Robot writer’s block",
+    "sourceUrl": "https://openai.com/index/hello-gpt-4o/",
+    "credit": "© OpenAI；首发页官方生成样本，未发现独立开放媒体许可。",
+    "date": "2024-05-13",
+    "displayCaption": "GPT-4o 在 2024 年 5 月发布页展示的“机器人打字日记”。这是当时的能力探索样本，图片输出尚未在首发日向所有人开放。"
+  },
+  "transformer": {
+    "type": "image",
+    "src": "./assets/history/transformer-paper-v1.png",
+    "alt": "Attention Is All You Need 论文 arXiv v1 第一页",
+    "caption": "《Attention Is All You Need》2017 年 6 月 12 日提交的论文初稿首页。标题、作者和摘要都保留在原页中。",
+    "displayCaption": "《Attention Is All You Need》2017 年 6 月 12 日提交的论文初稿首页。标题、作者和摘要都保留在原页中。",
+    "sourceTitle": "Attention Is All You Need — arXiv v1",
+    "sourceUrl": "https://arxiv.org/abs/1706.03762v1",
+    "credit": "Vaswani et al.；原论文内容归作者及相应权利人，本站只渲染第一页。",
+    "date": "2017-06-12"
+  },
+  "adobe-firefly": {
+    "type": "image",
+    "src": "./assets/history/firefly-2023-launch-visual.jpg",
+    "alt": "Adobe Firefly 2023 年发布公告中的彩色抽象主视觉",
+    "caption": "Adobe 在 2023 年 3 月发布 Firefly 时使用的公告配图。它介绍这组生成式创作工具，没有展示编辑器的实际操作。",
+    "sourceTitle": "Adobe Unveils Firefly, a Family of new Creative Generative AI",
+    "sourceUrl": "https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI/default.aspx",
+    "credit": "© Adobe；官方公告配图，未发现独立开放媒体许可。",
+    "date": "2023-03-21",
+    "displayCaption": "Adobe 在 2023 年 3 月发布 Firefly 时使用的公告配图。它介绍这组生成式创作工具，没有展示编辑器的实际操作。"
+  },
+  "suno-v3": {
+    "type": "image",
+    "src": "./assets/history/suno-v3-2024-launch-visual.jpg",
+    "alt": "Suno Introducing v3 发布页的隧道式品牌主视觉",
+    "caption": "Suno 2024 年 3 月 v3 发布文章的主视觉。文章介绍了歌曲生成的更新，画面本身是公告配图。",
+    "sourceTitle": "Suno — Introducing v3",
+    "sourceUrl": "https://www.suno.com/blog/v3",
+    "credit": "© Suno；发布页配图，未发现独立开放媒体许可。",
+    "date": "2024-03-21",
+    "displayCaption": "Suno 2024 年 3 月 v3 发布文章的主视觉。文章介绍了歌曲生成的更新，画面本身是公告配图。"
+  },
+  "flux-1": {
+    "type": "image",
+    "src": "./assets/history/flux-1-2024-aspect-ratio-samples.webp",
+    "alt": "FLUX.1 首发公告中的不同画幅生成样本：滑板柯基与黑森林列车",
+    "caption": "FLUX.1 在 2024 年 8 月首发公告中展示的生成样本。滑板柯基和列车被放进不同宽高比的画幅，可以看到构图随比例变化。",
+    "sourceTitle": "Announcing Black Forest Labs — FLUX.1 aspect-ratio examples",
+    "sourceUrl": "https://bfl.ai/blog/24-08-01-bfl",
+    "credit": "© Black Forest Labs；官方发布样本拼图，未发现独立开放媒体许可。",
+    "date": "2024-08-01",
+    "displayCaption": "FLUX.1 在 2024 年 8 月首发公告中展示的生成样本。滑板柯基和列车被放进不同宽高比的画幅，可以看到构图随比例变化。"
+  },
+  "claude-computer-use": {
+    "type": "image",
+    "src": "./assets/history/claude-computer-use-2024-announcement.png",
+    "alt": "Claude computer use 官方公告主视觉：手指、光标和连接线",
+    "caption": "Anthropic 2024 年 10 月发布电脑操作功能时的概念插画，取自当时的官方公告。",
+    "sourceTitle": "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku",
+    "sourceUrl": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+    "credit": "© Anthropic；官方公告配图，未发现独立开放媒体许可。",
+    "date": "2024-10-22",
+    "displayCaption": "Anthropic 2024 年 10 月发布电脑操作功能时的概念插画，取自当时的官方公告。"
+  },
+  "gpt-4o-image-generation": {
+    "type": "image",
+    "src": "./assets/history/gpt-4o-image-2025-whiteboard.webp",
+    "alt": "4o 原生生图官方示例：人物在玻璃白板上写多模态模型说明",
+    "caption": "2025 年 3 月 GPT-4o 生图发布页的白板示例，人物、白板和文字均由模型生成。官方注明这是 8 次生成中选出的一次。",
+    "sourceTitle": "Introducing 4o Image Generation — Whiteboard session",
+    "sourceUrl": "https://openai.com/index/introducing-4o-image-generation/",
+    "credit": "© OpenAI；官方生成样本，未发现独立开放媒体许可。",
+    "date": "2025-03-25",
+    "displayCaption": "2025 年 3 月 GPT-4o 生图发布页的白板示例，人物、白板和文字均由模型生成。官方注明这是 8 次生成中选出的一次。"
+  },
+  "veo-3-flow": {
+    "type": "image",
+    "src": "./assets/history/google-genmedia-2025-launch-collage.webp",
+    "alt": "Google 2025 年 Veo 3、Imagen 4 与 Flow 联合发布公告主视觉拼图",
+    "caption": "Google 在 2025 年 5 月联合介绍 Veo 3、Imagen 4 和 Flow 时使用的主视觉。拼图包含多种媒体示例，不能全部算作 Veo 3 视频画格。",
+    "sourceTitle": "Google I/O 2025 — Generative media models",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/generative-media-models-io-2025/",
+    "credit": "© Google；官方联合发布主视觉，未发现独立开放媒体许可。",
+    "date": "2025-05-20",
+    "displayCaption": "Google 在 2025 年 5 月联合介绍 Veo 3、Imagen 4 和 Flow 时使用的主视觉。拼图包含多种媒体示例，不能全部算作 Veo 3 视频画格。"
+  },
+  "word2vec": {
+    "type": "image",
+    "src": "./assets/history/word2vec-original-page1.webp",
+    "alt": "Efficient Estimation of Word Representations in Vector Space 原始文献第一页",
+    "caption": "word2vec 在 2013 年公开的论文初稿首页，介绍如何把词变成可以计算和比较的向量。",
+    "displayCaption": "word2vec 在 2013 年公开的论文初稿首页，介绍如何把词变成可以计算和比较的向量。",
+    "sourceTitle": "Efficient Estimation of Word Representations in Vector Space",
+    "sourceUrl": "https://arxiv.org/abs/1301.3781v1",
+    "credit": "Tomas Mikolov 等 / Google；原论文页面。",
+    "date": "2013-01-16"
+  },
+  "neural-attention": {
+    "type": "image",
+    "src": "./assets/history/neural-attention-original-page1.webp",
+    "alt": "Neural Machine Translation by Jointly Learning to Align and Translate 原始文献第一页",
+    "caption": "2014 年注意力机制论文初稿的首页。作者研究机器翻译时，怎样让模型在生成每个词时关注输入的不同部分。",
+    "displayCaption": "2014 年注意力机制论文初稿的首页。作者研究机器翻译时，怎样让模型在生成每个词时关注输入的不同部分。",
+    "sourceTitle": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "sourceUrl": "https://arxiv.org/abs/1409.0473v1",
+    "credit": "Dzmitry Bahdanau / Kyunghyun Cho / Yoshua Bengio；原论文页面。",
+    "date": "2014-09-01"
+  },
+  "seq2seq": {
+    "type": "image",
+    "src": "./assets/history/seq2seq-original-page1.webp",
+    "alt": "Sequence to Sequence Learning with Neural Networks 原始文献第一页",
+    "caption": "2014 年序列到序列学习论文初稿的首页。作者用一个网络读入句子，再用另一个网络生成输出。",
+    "displayCaption": "2014 年序列到序列学习论文初稿的首页。作者用一个网络读入句子，再用另一个网络生成输出。",
+    "sourceTitle": "Sequence to Sequence Learning with Neural Networks",
+    "sourceUrl": "https://arxiv.org/abs/1409.3215v1",
+    "credit": "Ilya Sutskever / Oriol Vinyals / Quoc Le · Google；原论文页面。",
+    "date": "2014-09-10"
+  },
+  "diffusion-origin": {
+    "type": "image",
+    "src": "./assets/history/diffusion-origin-original-page1.webp",
+    "alt": "Deep Unsupervised Learning using Nonequilibrium Thermodynamics 原始文献第一页",
+    "caption": "2015 年扩散模型论文初稿的首页，提出先逐步破坏数据、再学习反向还原的生成方法。",
+    "displayCaption": "2015 年扩散模型论文初稿的首页，提出先逐步破坏数据、再学习反向还原的生成方法。",
+    "sourceTitle": "Deep Unsupervised Learning using Nonequilibrium Thermodynamics",
+    "sourceUrl": "https://arxiv.org/abs/1503.03585v1",
+    "credit": "Jascha Sohl-Dickstein 等；原论文页面。",
+    "date": "2015-03-12"
+  },
+  "u-net": {
+    "type": "image",
+    "src": "./assets/history/u-net-original-page1.webp",
+    "alt": "U-Net: Convolutional Networks for Biomedical Image Segmentation 原始文献第一页",
+    "caption": "U-Net 在 2015 年公开的论文初稿首页，研究怎样识别医学图像中的区域。",
+    "displayCaption": "U-Net 在 2015 年公开的论文初稿首页，研究怎样识别医学图像中的区域。",
+    "sourceTitle": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+    "sourceUrl": "https://arxiv.org/abs/1505.04597v1",
+    "credit": "Olaf Ronneberger 等 / 弗莱堡大学；原论文页面。",
+    "date": "2015-05-18"
+  },
+  "dcgan": {
+    "type": "image",
+    "src": "./assets/history/dcgan-original-page1.webp",
+    "alt": "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks 原始文献第一页",
+    "caption": "DCGAN 在 2015 年公开的论文初稿首页，研究用卷积网络训练生成对抗模型。",
+    "displayCaption": "DCGAN 在 2015 年公开的论文初稿首页，研究用卷积网络训练生成对抗模型。",
+    "sourceTitle": "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks",
+    "sourceUrl": "https://arxiv.org/abs/1511.06434v1",
+    "credit": "Alec Radford / Luke Metz / Soumith Chintala；原论文页面。",
+    "date": "2015-11-19"
+  },
+  "vgan": {
+    "type": "image",
+    "src": "./assets/history/vgan-original-page1.webp",
+    "alt": "Generating Videos with Scene Dynamics 原始文献第一页",
+    "caption": "2016 年《Generating Videos with Scene Dynamics》论文初稿首页，研究怎样生成同时包含背景和运动的视频。",
+    "displayCaption": "2016 年《Generating Videos with Scene Dynamics》论文初稿首页，研究怎样生成同时包含背景和运动的视频。",
+    "sourceTitle": "Generating Videos with Scene Dynamics",
+    "sourceUrl": "https://arxiv.org/abs/1609.02612v1",
+    "credit": "Carl Vondrick / Hamed Pirsiavash / Antonio Torralba；原论文页面。",
+    "date": "2016-09-08"
+  },
+  "pix2pix": {
+    "type": "image",
+    "src": "./assets/history/pix2pix-original-page1.webp",
+    "alt": "Image-to-Image Translation with Conditional Adversarial Networks 原始文献第一页",
+    "caption": "pix2pix 在 2016 年公开的论文初稿首页，介绍如何学习成对图片之间的转换。",
+    "displayCaption": "pix2pix 在 2016 年公开的论文初稿首页，介绍如何学习成对图片之间的转换。",
+    "sourceTitle": "Image-to-Image Translation with Conditional Adversarial Networks",
+    "sourceUrl": "https://arxiv.org/abs/1611.07004v1",
+    "credit": "Phillip Isola 等 / 加州大学伯克利分校；原论文页面。",
+    "date": "2016-11-21"
+  },
+  "tacotron": {
+    "type": "image",
+    "src": "./assets/history/tacotron-original-page1.webp",
+    "alt": "Tacotron: Towards End-to-End Speech Synthesis 原始文献第一页",
+    "caption": "Tacotron 在 2017 年公开的论文初稿首页，介绍从文字到语音的端到端模型。",
+    "displayCaption": "Tacotron 在 2017 年公开的论文初稿首页，介绍从文字到语音的端到端模型。",
+    "sourceTitle": "Tacotron: Towards End-to-End Speech Synthesis",
+    "sourceUrl": "https://arxiv.org/abs/1703.10135v1",
+    "credit": "Yuxuan Wang 等 / Google；原论文页面。",
+    "date": "2017-03-29"
+  },
+  "vq-vae": {
+    "type": "image",
+    "src": "./assets/history/vq-vae-original-page1.webp",
+    "alt": "Neural Discrete Representation Learning 原始文献第一页",
+    "caption": "VQ-VAE 在 2017 年公开的论文初稿首页，介绍用离散编码表示数据的生成方法。",
+    "displayCaption": "VQ-VAE 在 2017 年公开的论文初稿首页，介绍用离散编码表示数据的生成方法。",
+    "sourceTitle": "Neural Discrete Representation Learning",
+    "sourceUrl": "https://arxiv.org/abs/1711.00937v1",
+    "credit": "Aaron van den Oord 等 / DeepMind；原论文页面。",
+    "date": "2017-11-02"
+  },
+  "biggan": {
+    "type": "image",
+    "src": "./assets/history/biggan-original-page1.webp",
+    "alt": "Large Scale GAN Training for High Fidelity Natural Image Synthesis 原始文献第一页",
+    "caption": "BigGAN 在 2018 年公开的论文初稿首页，研究扩大训练规模后图像生成质量的变化。",
+    "displayCaption": "BigGAN 在 2018 年公开的论文初稿首页，研究扩大训练规模后图像生成质量的变化。",
+    "sourceTitle": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
+    "sourceUrl": "https://arxiv.org/abs/1809.11096v1",
+    "credit": "Andrew Brock / Jeff Donahue / Karen Simonyan；原论文页面。",
+    "date": "2018-09-28"
+  },
+  "bert": {
+    "type": "image",
+    "src": "./assets/history/bert-original-page1.webp",
+    "alt": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding 原始文献第一页",
+    "caption": "BERT 在 2018 年公开的论文初稿首页，介绍利用上下文训练语言表示的方法。",
+    "displayCaption": "BERT 在 2018 年公开的论文初稿首页，介绍利用上下文训练语言表示的方法。",
+    "sourceTitle": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "sourceUrl": "https://arxiv.org/abs/1810.04805v1",
+    "credit": "Jacob Devlin 等 / Google；原论文页面。",
+    "date": "2018-10-11"
+  },
+  "t5": {
+    "type": "image",
+    "src": "./assets/history/t5-original-page1.webp",
+    "alt": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer 原始文献第一页",
+    "caption": "T5 在 2019 年公开的论文初稿首页。研究者把不同语言任务统一成了文字输入、文字输出。",
+    "displayCaption": "T5 在 2019 年公开的论文初稿首页。研究者把不同语言任务统一成了文字输入、文字输出。",
+    "sourceTitle": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+    "sourceUrl": "https://arxiv.org/abs/1910.10683v1",
+    "credit": "Colin Raffel 等 / Google；原论文页面。",
+    "date": "2019-10-23"
+  },
+  "scaling-laws": {
+    "type": "image",
+    "src": "./assets/history/scaling-laws-original-page1.webp",
+    "alt": "Scaling Laws for Neural Language Models 原始文献第一页",
+    "caption": "2020 年语言模型规模规律论文初稿的首页，研究模型大小、数据量和计算量与预测误差的关系。",
+    "displayCaption": "2020 年语言模型规模规律论文初稿的首页，研究模型大小、数据量和计算量与预测误差的关系。",
+    "sourceTitle": "Scaling Laws for Neural Language Models",
+    "sourceUrl": "https://arxiv.org/abs/2001.08361v1",
+    "credit": "Jared Kaplan 等 / OpenAI；原论文页面。",
+    "date": "2020-01-23"
+  },
+  "rag": {
+    "type": "image",
+    "src": "./assets/history/rag-original-page1.webp",
+    "alt": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks 原始文献第一页",
+    "caption": "RAG 在 2020 年公开的论文初稿首页。作者让模型先检索外部资料，再根据检索结果生成回答。",
+    "displayCaption": "RAG 在 2020 年公开的论文初稿首页。作者让模型先检索外部资料，再根据检索结果生成回答。",
+    "sourceTitle": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "sourceUrl": "https://arxiv.org/abs/2005.11401v1",
+    "credit": "Patrick Lewis 等 / Facebook AI、UCL、纽约大学；原论文页面。",
+    "date": "2020-05-22"
+  },
+  "laion-400m": {
+    "type": "image",
+    "src": "./assets/history/laion-400m-original-page1.webp",
+    "alt": "LAION-400M: Open Dataset of CLIP-Filtered 400 Million Image-Text Pairs 原始文献第一页",
+    "caption": "LAION-400M 在 2021 年公开的数据集论文初稿首页，介绍如何整理和筛选四亿组图文配对。",
+    "displayCaption": "LAION-400M 在 2021 年公开的数据集论文初稿首页，介绍如何整理和筛选四亿组图文配对。",
+    "sourceTitle": "LAION-400M: Open Dataset of CLIP-Filtered 400 Million Image-Text Pairs",
+    "sourceUrl": "https://arxiv.org/abs/2111.02114v1",
+    "credit": "LAION 研究社区；原论文页面。",
+    "date": "2021-11-03"
+  },
+  "glide": {
+    "type": "image",
+    "src": "./assets/history/glide-original-page1.webp",
+    "alt": "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models 原始文献第一页",
+    "caption": "GLIDE 在 2021 年公开的论文初稿首页，介绍用文字引导扩散模型生成和编辑图片。",
+    "displayCaption": "GLIDE 在 2021 年公开的论文初稿首页，介绍用文字引导扩散模型生成和编辑图片。",
+    "sourceTitle": "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models",
+    "sourceUrl": "https://arxiv.org/abs/2112.10741v1",
+    "credit": "Alex Nichol 等 / OpenAI；原论文页面。",
+    "date": "2021-12-20"
+  },
+  "instructgpt": {
+    "type": "image",
+    "src": "./assets/history/instructgpt-page3.webp",
+    "alt": "InstructGPT 原论文 v1 第 3 页的训练流程：收集示范、比较回答、根据人类反馈优化模型",
+    "caption": "InstructGPT 论文初稿第 3 页的训练流程：先收集人工示范，再让人比较回答，最后用这些反馈训练模型。",
+    "displayCaption": "InstructGPT 论文初稿第 3 页的训练流程：先收集人工示范，再让人比较回答，最后用这些反馈训练模型。",
+    "sourceTitle": "Training language models to follow instructions with human feedback",
+    "sourceUrl": "https://arxiv.org/abs/2203.02155v1",
+    "credit": "OpenAI / Long Ouyang 等；原论文页面。",
+    "date": "2022-03-04"
+  },
+  "dreambooth": {
+    "type": "image",
+    "src": "./assets/history/dreambooth-original-page1.webp",
+    "alt": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation 原始文献第一页",
+    "caption": "DreamBooth 在 2022 年公开的论文初稿首页，研究用少量照片教模型识别并生成特定对象。",
+    "displayCaption": "DreamBooth 在 2022 年公开的论文初稿首页，研究用少量照片教模型识别并生成特定对象。",
+    "sourceTitle": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+    "sourceUrl": "https://arxiv.org/abs/2208.12242v1",
+    "credit": "Nataniel Ruiz 等 / Google Research、Boston University；原论文页面。",
+    "date": "2022-08-25"
+  },
+  "ip-adapter": {
+    "type": "image",
+    "src": "./assets/history/ip-adapter-original-page1.webp",
+    "alt": "IP-Adapter: Text Compatible Image Prompt Adapter 原始文献第一页",
+    "caption": "IP-Adapter 在 2023 年公开的论文初稿首页，介绍怎样让参考图片与文字一起引导生成。",
+    "displayCaption": "IP-Adapter 在 2023 年公开的论文初稿首页，介绍怎样让参考图片与文字一起引导生成。",
+    "sourceTitle": "IP-Adapter: Text Compatible Image Prompt Adapter",
+    "sourceUrl": "https://arxiv.org/abs/2308.06721v1",
+    "credit": "Hu Ye 等 / Tencent AI Lab；原论文页面。",
+    "date": "2023-08-13"
+  },
+  "mcculloch-pitts": {
+    "type": "image",
+    "src": "./assets/history/mcculloch-pitts-page7.webp",
+    "alt": "1943 年论文中的逻辑神经元图，取自 1990 年重印本第 7 页（原刊页码 105）",
+    "caption": "1943 年论文里的逻辑神经元图：简单的连接怎样表达逻辑关系。此页取自 1990 年重印本第 7 页，原刊页码为 105。",
+    "displayCaption": "1943 年论文里的逻辑神经元图：简单的连接怎样表达逻辑关系。此页取自 1990 年重印本第 7 页，原刊页码为 105。",
+    "sourceTitle": "A Logical Calculus — 1943 text, 1990 reprint, p.7 (original p.105)",
+    "sourceUrl": "https://www.cs.cmu.edu/~epxing/Class/10715/reading/McCulloch.and.Pitts.pdf",
+    "credit": "Warren S. McCulloch / Walter Pitts；1943 原文的 1990 重印本，由 Carnegie Mellon University 课程页托管。",
+    "date": "1990",
+    "sourceNote": "展出的是 1990 年重印本第 7 页，原刊页码 105。1943 年是论文发表年；这里没有使用后来绘制的神经网络示意。 本站选取两页供切换阅览，并非完整文献；页序以控件标注为准。",
+    "reading": true,
+    "pages": [
+      {
+        "src": "./assets/history/mcculloch-pitts-page7.webp",
+        "label": "重印本第 7 页 · 原刊页码 105",
+        "alt": "1943 年论文中的逻辑神经元图，取自 1990 年重印本第 7 页（原刊页码 105）"
+      },
+      {
+        "src": "./assets/history/mcculloch-pitts-original-page1.webp",
+        "label": "重印本第 1 页 · 原刊页码 99",
+        "alt": "A Logical Calculus — 1943 text, 1990 reprint, p.7 (original p.105) — 重印本第 1 页 · 原刊页码 99"
+      }
+    ]
+  },
+  "backpropagation": {
+    "type": "image",
+    "src": "./assets/history/backpropagation-page2.webp",
+    "alt": "Rumelhart、Hinton 与 Williams 1986 年 Nature 论文第 2 页：网络连接、学习过程和内部表示",
+    "caption": "1986 年 Nature 论文第 2 页，图中画出了网络连接和学习过程，也记录了网络学到的内部表示。",
+    "displayCaption": "1986 年 Nature 论文第 2 页，图中画出了网络连接和学习过程，也记录了网络学到的内部表示。",
+    "sourceTitle": "Learning representations by back-propagating errors",
+    "sourceUrl": "https://www.cs.toronto.edu/~hinton/absps/naturebp.pdf",
+    "credit": "David Rumelhart / Geoffrey Hinton / Ronald Williams；原论文页面。",
+    "date": "1986-10",
+    "reading": true,
+    "pages": [
+      {
+        "src": "./assets/history/backpropagation-page2.webp",
+        "label": "论文第 2 页 · 网络与学习",
+        "alt": "Rumelhart、Hinton 与 Williams 1986 年 Nature 论文第 2 页：网络连接、学习过程和内部表示"
+      },
+      {
+        "src": "./assets/history/backpropagation-original-page1.webp",
+        "label": "论文第 1 页",
+        "alt": "Learning representations by back-propagating errors — 论文第 1 页"
+      }
+    ],
+    "sourceNote": "本站选取两页供切换阅览，并非完整文献；页序以控件标注为准。"
+  },
+  "alexnet": {
+    "type": "image",
+    "src": "./assets/history/alexnet-page5.webp",
+    "alt": "2012 年 AlexNet 论文第 5 页",
+    "caption": "2012 年 AlexNet 论文第 5 页。上方的架构图画出了网络如何分配到两块 GPU 上运行。",
+    "displayCaption": "上下两路，分别交给两块 GPU。2012 年 AlexNet 原论文的这张结构图，画出了网络怎样分配计算，虚线标出了部分跨 GPU 连接。",
+    "sourceTitle": "ImageNet Classification with Deep Convolutional Neural Networks",
+    "sourceUrl": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+    "credit": "Alex Krizhevsky / Ilya Sutskever / Geoffrey Hinton；原论文页面。",
+    "date": "2012",
+    "imageSize": [
+      1160,
+      1500
+    ],
+    "panels": [
+      {
+        "alt": "AlexNet原论文图2及完整图注，分别在两块GPU上运行的上下两组网络",
+        "crop": [
+          198,
+          148,
+          770,
+          365
+        ]
+      }
+    ],
+    "originalLabel": "查看完整论文页",
+    "sourceNote": "原论文第 5 页图 2及完整英文图注。页面只放大这一区域，未修改原图；完整论文页也可在上方打开。 本站选取两页供切换阅览，并非完整文献；页序以控件标注为准。",
+    "pages": [
+      {
+        "src": "./assets/history/alexnet-page5.webp",
+        "label": "论文第 5 页 · 网络结构",
+        "alt": "2012 年 AlexNet 论文第 5 页"
+      },
+      {
+        "src": "./assets/history/alexnet-original-page1.webp",
+        "label": "论文第 1 页",
+        "alt": "ImageNet Classification with Deep Convolutional Neural Networks — 论文第 1 页"
+      }
+    ]
+  },
+  "dartmouth": {
+    "type": "image",
+    "src": "./assets/history/dartmouth-original-page1.webp",
+    "alt": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence 原始文献第一页",
+    "caption": "1955 年 8 月 31 日的达特茅斯研究计划书首页。作者在这里提出了次年夏季研究项目的设想，所用的是公开副本。",
+    "displayCaption": "1955 年 8 月 31 日的达特茅斯研究计划书首页。作者在这里提出了次年夏季研究项目的设想，所用的是公开副本。",
+    "sourceTitle": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence",
+    "sourceUrl": "https://people.csail.mit.edu/brooks/idocs/DartmouthProposal.pdf",
+    "credit": "达特茅斯学院 / McCarthy 等；原论文页面。",
+    "date": "1955-08-31"
+  },
+  "gpt-2": {
+    "type": "image",
+    "src": "./assets/history/gpt-2-page20.webp",
+    "alt": "2019 年 GPT-2 技术报告中的“会说话的独角兽”续写样本",
+    "caption": "GPT-2 在 2019 年技术报告中续写的“会说话的独角兽”故事。灰框是人写的开头，后面的文字由模型接着写。",
+    "displayCaption": "GPT-2 在 2019 年技术报告中续写的“会说话的独角兽”故事。灰框是人写的开头，后面的文字由模型接着写。",
+    "sourceTitle": "Language Models are Unsupervised Multitask Learners",
+    "sourceUrl": "https://openai.com/index/better-language-models/",
+    "credit": "OpenAI；原论文页面。",
+    "date": "2019-02-14",
+    "pages": [
+      {
+        "src": "./assets/history/gpt-2-page20.webp",
+        "label": "报告第 20 页 · 独角兽续写",
+        "alt": "2019 年 GPT-2 技术报告中的“会说话的独角兽”续写样本"
+      },
+      {
+        "src": "./assets/history/gpt-2-original-page1.webp",
+        "label": "报告首页",
+        "alt": "Language Models are Unsupervised Multitask Learners — 报告首页"
+      }
+    ],
+    "sourceNote": "本站选取两页供切换阅览，并非完整文献；页序以控件标注为准。"
+  },
+  "lstm": {
+    "type": "image",
+    "sourceTitle": "Long Short-Term Memory — author copy",
+    "sourceUrl": "https://people.idsia.ch/~juergen/lstm1997-2024head.pdf",
+    "credit": "Sepp Hochreiter、Jürgen Schmidhuber；作者机构公开的论文副本。",
+    "src": "./assets/history/lstm-page1.webp",
+    "caption": "1997 年 LSTM 论文的首页。这是作者后来公开的副本，带有 2024 年页眉标记。",
+    "displayCaption": "1997 年 LSTM 论文的首页。这是作者后来公开的副本，带有 2024 年页眉标记。",
+    "date": "2024",
+    "alt": "Hochreiter 与 Schmidhuber 1997 年 LSTM 论文的作者公开副本首页"
+  },
+  "turing-imitation-game": {
+    "type": "image",
+    "src": "./assets/history/turing-1950-typescript-page1.webp",
+    "alt": "图灵1950年Computing machinery and intelligence打字稿原件第一页",
+    "caption": "图灵 1950 年《计算机器与智能》的打字稿首页，开头介绍了“模仿游戏”。扫描来自剑桥大学国王学院图灵档案 AMT/B/9；原件由 Sara Turing 遗产转入，1977 年入藏。",
+    "displayCaption": "图灵 1950 年《计算机器与智能》的打字稿首页，开头介绍了“模仿游戏”。扫描来自剑桥大学国王学院图灵档案 AMT/B/9；原件由 Sara Turing 遗产转入，1977 年入藏。",
+    "sourceTitle": "The Turing Digital Archive — AMT/B/9",
+    "sourceUrl": "https://turingarchive.kings.cam.ac.uk/publications-lectures-and-talks-amtb/amt-b-9",
+    "credit": "King’s College, Cambridge / The Turing Digital Archive，AMT/B/9；馆方注明原文经 Oxford University Press 许可展示。",
+    "date": "1950-10"
+  },
+  "chatgpt": {
+    "type": "image",
+    "src": "./assets/history/chatgpt-2022-training-diagram.webp",
+    "alt": "2022年ChatGPT首次发布公告中的三步训练方法原图",
+    "caption": "ChatGPT 在 2022 年 11 月首次发布时的训练方法图。人工示范、回答排序和反馈训练，组成了图里的三个阶段。",
+    "displayCaption": "ChatGPT 在 2022 年 11 月首次发布时的训练方法图。人工示范、回答排序和反馈训练，组成了图里的三个阶段。",
+    "sourceTitle": "Introducing ChatGPT — original training diagram",
+    "sourceUrl": "https://openai.com/index/chatgpt/",
+    "credit": "© OpenAI；官方发布文章配图。",
+    "date": "2022-11-30"
+  },
+  "sora-preview": {
+    "type": "embed",
+    "src": "https://player.vimeo.com/video/1119149135?h=1a04ad7308&autoplay=1&controls=1&loop=0&muted=0",
+    "poster": "./assets/history/sora-2024-tokyo-poster.webp",
+    "alt": "Sora 2024年官方研究预览中的东京街头女性行走样片",
+    "caption": "Sora 在 2024 年 2 月研究预览中展示的东京街头样片。人物、霓虹街道和镜头运动由模型生成，播放器来自官方原文。",
+    "displayCaption": "Sora 在 2024 年 2 月研究预览中展示的东京街头样片。人物、霓虹街道和镜头运动由模型生成，播放器来自官方原文。",
+    "sourceTitle": "Sora — Creating video from text",
+    "sourceUrl": "https://openai.com/index/sora/",
+    "credit": "© OpenAI；官方研究预览样片，由其原文所嵌入的 Vimeo 播放器提供。",
+    "date": "2024-02-15"
+  },
+  "midjourney-v3": {
+    "type": "image",
+    "src": "./assets/history/midjourney-2022-theatre-copyright-record.png",
+    "alt": "Jason Allen 使用 Midjourney 参与创作的 Théâtre D’opéra Spatial，2023年美国版权局文件所载图片",
+    "caption": "Jason Allen 在 2022 年用 Midjourney、Photoshop 等工具完成的《太空歌剧院》。图片取自美国版权局 2023 年复核文件，该文件没有确认模型的具体版本。",
+    "displayCaption": "Jason Allen 在 2022 年用 Midjourney、Photoshop 等工具完成的《太空歌剧院》。图片取自美国版权局 2023 年复核文件，该文件没有确认模型的具体版本。",
+    "sourceTitle": "U.S. Copyright Office — Théâtre D’opéra Spatial decision, 2023",
+    "sourceUrl": "https://copyright.gov/rulings-filings/review-board/docs/Theatre-Dopera-Spatial.pdf",
+    "credit": "Jason M. Allen；作品图片取自美国版权局公开决定书。",
+    "date": "2022"
+  },
+  "openai-o1": {
+    "type": "image",
+    "src": "./assets/history/o1-preview-2024-system-card.webp",
+    "alt": "2024年9月o1-preview与o1-mini系统卡第一页",
+    "caption": "o1-preview 和 o1-mini 在 2024 年 9 月的系统卡首页，记录了预览版的训练说明与安全评估。原文日期为 9 月 12 日，当前官方文件名带 9 月 17 日。",
+    "displayCaption": "o1-preview 和 o1-mini 在 2024 年 9 月的系统卡首页，记录了预览版的训练说明与安全评估。原文日期为 9 月 12 日，当前官方文件名带 9 月 17 日。",
+    "sourceTitle": "OpenAI o1-preview System Card — September 2024",
+    "sourceUrl": "https://cdn.openai.com/o1-preview-system-card-20240917.pdf",
+    "credit": "© OpenAI；官方系统卡。",
+    "date": "2024-09"
+  },
+  "gpt-6-family": {
+    "type": "embed",
+    "src": "https://www.youtube-nocookie.com/embed/-TTyyY3VWh8?autoplay=1&rel=0",
+    "poster": "./assets/history/gpt-6-astra-official-first-impressions.webp",
+    "alt": "GPT-6 Astra 官方开发者初体验访谈",
+    "caption": "GPT-6 Astra 发布后的官方开发者访谈《First Impressions》，由官方介绍文章链接。受访者聊到模型在工作中的使用，访谈未标为首发当天的录像。",
+    "displayCaption": "GPT-6 Astra 发布后的官方开发者访谈《First Impressions》，由官方介绍文章链接。受访者聊到模型在工作中的使用，访谈未标为首发当天的录像。",
+    "sourceTitle": "GPT-6 Astra — next-generation work, official First Impressions",
+    "sourceUrl": "https://openai.com/index/gpt-6-astra-next-generation-work/",
+    "credit": "© OpenAI；官方文章链接的 YouTube 原视频与封面。",
+    "date": "2026"
+  },
+  "kling-ai": {
+    "type": "image",
+    "src": "./assets/history/kling-2024-original-press-release.webp",
+    "alt": "快手2024年6月10日可灵开放测试新闻稿第一页",
+    "caption": "快手在 2024 年 6 月 10 日发布的可灵新闻稿首页，介绍测试申请和技术能力。可灵此前已于 6 月 6 日开始接受测试申请。",
+    "displayCaption": "快手在 2024 年 6 月 10 日发布的可灵新闻稿首页，介绍测试申请和技术能力。可灵此前已于 6 月 6 日开始接受测试申请。",
+    "sourceTitle": "Kuaishou — Kling testing announcement, June 10, 2024",
+    "sourceUrl": "https://ir.kuaishou.com/node/9646/pdf",
+    "credit": "© Kuaishou Technology；官方发布 PDF。",
+    "date": "2024-06-10"
+  },
+  "c2pa": {
+    "type": "image",
+    "src": "./assets/history/c2pa-v1-2021-architecture.webp",
+    "alt": "C2PA 1.0技术规范图3：媒体内容、声明与数字签名的关系",
+    "caption": "C2PA 1.0 规范图 3，印刷页码 11、PDF 第 15 页。文档版本标记为 2021-12-21；1.0 公开发布公告为 2022-01-26。事件日期仍是 2021-02-22 的组织成立日期。",
+    "displayCaption": "媒体文件、编辑记录和数字签名怎样关联？这张结构图来自 C2PA 1.0 规范。它记录内容的来路，不替观众判断内容是否真实。",
+    "sourceTitle": "C2PA Technical Specification 1.0 — Figure 3",
+    "sourceUrl": "https://spec.c2pa.org/specifications/specifications/1.0/specs/_attachments/C2PA_Specification.pdf",
+    "credit": "Coalition for Content Provenance and Authenticity；官方规范原页。",
+    "date": "2021-12-21",
+    "sourceNote": "图 3，印刷第 11 页（PDF 第 15 页）。文档版本标记 2021-12-21；1.0 公开发布公告为 2022-01-26，晚于组织成立。"
+  },
+  "model-context-protocol": {
+    "type": "image",
+    "src": "./assets/history/mcp-2024-original-schema-excerpt.png",
+    "alt": "MCP 2024-11-05修订版InitializeRequest原始JSON Schema节录排印",
+    "caption": "MCP 2024-11-05 版规范中的初始化请求，按官方仓库原文节录排印。连接建立时，客户端要先声明协议版本和支持的能力。",
+    "displayCaption": "MCP 2024-11-05 版规范中的初始化请求，按官方仓库原文节录排印。连接建立时，客户端要先声明协议版本和支持的能力。",
+    "sourceTitle": "MCP 2024-11-05 — InitializeRequest JSON Schema",
+    "sourceUrl": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2024-11-05/schema.json",
+    "credit": "Model Context Protocol contributors；官方旧版规范节录，本站排印。",
+    "date": "2024-11-05",
+    "reading": true
+  },
+  "ai-content-labeling": {
+    "type": "image",
+    "src": "./assets/history/ai-labeling-2025-newspaper-report.webp",
+    "alt": "2025年4月3日杨浦时报资讯版的AI生成合成内容标识办法报道剪报",
+    "caption": "2025 年 4 月 3 日《杨浦时报》转引新华社的报道剪报，介绍 AI 生成合成内容标识办法。报道写明办法将于当年 9 月 1 日施行。",
+    "displayCaption": "2025 年 4 月 3 日《杨浦时报》转引新华社的报道剪报，介绍 AI 生成合成内容标识办法。报道写明办法将于当年 9 月 1 日施行。",
+    "sourceTitle": "杨浦时报 — 2025-04-03 资讯版 PDF",
+    "sourceUrl": "https://yptimes.shyp.gov.cn/resfile/2025-04-03/07/ypsb-20250403-007.pdf",
+    "credit": "杨浦时报 / 新华社；公开报纸 PDF 原文剪报。",
+    "date": "2025-04-03"
+  },
+  "elevenlabs-beta": {
+    "type": "image",
+    "src": "./assets/history/elevenlabs-cofounders-official-press.webp",
+    "alt": "ElevenLabs 官方新闻资料提供的联合创始人合影",
+    "caption": "ElevenLabs 两位联合创始人 Mati Staniszewski 与 Piotr Dąbkowski 的官方合影。照片未注明拍摄日期，这里用作人物资料。",
+    "displayCaption": "ElevenLabs 两位联合创始人 Mati Staniszewski 与 Piotr Dąbkowski 的官方合影。照片未注明拍摄日期，这里用作人物资料。",
+    "sourceTitle": "ElevenLabs Press — Co-founders image",
+    "sourceUrl": "https://elevenlabs.io/press",
+    "credit": "© ElevenLabs；官方新闻资料照片，拍摄日期未注明。",
+    "date": "undated"
+  },
+  "gpt-5-4": {
+    "type": "image",
+    "src": "./assets/history/gpt-5-4-spreadsheet-comparison.webp",
+    "alt": "GPT-5.4发布页中的两份旅行计划表格对照，左为GPT-5.4，右为GPT-5.2",
+    "displayCaption": "同样是做旅行计划表，左边是 GPT-5.4 的结果，右边是 GPT-5.2 的结果。这是 OpenAI 发布时选出的对照样本。",
+    "caption": "OpenAI 在 2026 年 3 月 5 日发布页中展示的表格对照：左为 GPT-5.4，右为 GPT-5.2。保存完整官方配图；这是厂商选出的案例，不代表每次生成的水平。",
+    "sourceTitle": "Introducing GPT-5.4 — Spreadsheets example",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-5-4/",
+    "credit": "© OpenAI；官方发布页配图，未标注单独的开放媒体许可。",
+    "date": "2026-03-05"
+  },
+  "seedance-2-5": {
+    "type": "video",
+    "src": "./assets/history/seedance-2-5-launch-singer.mp4",
+    "poster": "./assets/history/seedance-2-5-launch-singer-poster.jpg",
+    "alt": "Seedance2.5官方30秒演示，歌手从后台走上舞台并开始表演",
+    "displayCaption": "歌手从化妆间走过后台，再和舞者一起登台。这个 30 秒长镜头来自 Seedance 2.5 的发布演示，人物、表演和声音都由 AI 生成。",
+    "caption": "2026 年 7 月 31 日 Seedance 2.5 发布页的 30 秒长镜头样片：歌手在化妆间准备，走过后台，与舞者登台演出。保存官方完整 MP4，未重新剪辑；预览帧由本地 Quick Look 从该视频提取。",
+    "sourceTitle": "Introducing Seedance 2.5 — 30-second one-take singer demonstration",
+    "sourceUrl": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+    "credit": "© ByteDance Seed；官方生成演示，未标注单独的开放媒体许可。",
+    "date": "2026-07-31"
+  },
+  "claude-opus-5-5": {
+    "type": "image",
+    "src": "./assets/history/claude-opus-5-5-reward-hacking-page98.png",
+    "alt": "Claude Opus5.5官方系统卡第98页，包含三个模型在训练中成功钻评分规则空子的比例图和一段训练记录",
+    "displayCaption": "这页报告记录了模型“钻评分规则空子”的情况。上面的柱状图比较发生比例，下面保留了一段训练记录；数据来自 Anthropic 自己的测试。",
+    "caption": "Claude Opus 5.5 官方系统卡（2026 年 9 月 22 日）第 98 页，含图 6.2.1.A 与训练记录 6.2.1.B。图中比较三个模型在共同训练环境里成功 reward hacking 的比例，误差线为 95% 置信区间。整页从官方 PDF 只读渲染，未改动图文。",
+    "sourceTitle": "Claude Opus 5.5 System Card — Page 98",
+    "sourceUrl": "https://www.anthropic.com/claude-opus-5-5-system-card",
+    "credit": "© Anthropic；官方系统卡原页，未标注单独的开放媒体许可。",
+    "date": "2026-09-22",
+    "reading": true
+  },
+  "gemini-4-argon": {
+    "type": "embed",
+    "src": "https://www.youtube-nocookie.com/embed/LVEfFyijQ2c?autoplay=1&rel=0",
+    "poster": "./assets/history/gemini-4-argon-chromium-poster.webp",
+    "alt": "Google DeepMind官方视频，工程师介绍用Gemini4Argon整理Chromium大型代码库",
+    "displayCaption": "Google 工程师介绍如何用 Gemini 4 Argon 整理 Chromium 的老代码。视频来自 Google DeepMind 官方频道，展示的是工程案例。",
+    "caption": "Google 在 2026 年 10 月 13 日 Gemini 4 Argon 发布文章中嵌入的官方视频《Applying Gemini 4 for large-scale codebase maintenance in Chromium》。Google DeepMind 频道发布，时长约 2 分 35 秒；工程师 Erik Chen 介绍大型代码库重构工作。使用官方播放器，不保存或改剪视频。",
+    "sourceTitle": "Gemini 4 Argon — Chromium engineering video",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "credit": "© Google / Google DeepMind；官方 YouTube 视频与封面。",
+    "date": "2026-10-13"
+  },
+  "perceptron": {
+    "type": "image",
+    "src": "./assets/history/perceptron-1958-rosenblatt-wightman.jpg",
+    "alt": "1958年12月，Frank Rosenblatt（左）和Charles W. Wightman调试感知机的装置部件",
+    "caption": "1958 年 12 月，Frank Rosenblatt（左）和 Charles W. Wightman 调试后来成为第一台感知机的装置部件。康奈尔大学 2019 年回顾文章刊登的馆藏照片；1958 年是照片年代，2019 年是网页发表年。",
+    "displayCaption": "1958 年 12 月，Rosenblatt（左）与 Wightman 正在调试感知机的装置部件。学习算法背后，是这样一台由电路和旋钮组成的机器。",
+    "sourceUrl": "https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon",
+    "sourceTitle": "Professor’s perceptron paved the way for AI – 60 years too soon — Cornell Chronicle",
+    "credit": "Cornell University, Division of Rare and Manuscript Collections；原照片，数字化时间及独立媒体许可未注明。",
+    "date": "1958-12",
+    "presentation": "photograph"
+  },
+  "elman-rnn": {
+    "type": "image",
+    "src": "./assets/history/elman-1990-figure2.png",
+    "alt": "Elman 1990年论文图2，隐藏层的状态经实线复制到上下文层，再与新输入一起送入网络",
+    "caption": "Jeffrey L. Elman《Finding Structure in Time》（1990 年 3 月）第 184 页、PDF 第 6 页图 2。实线把隐藏层的激活值逐一复制到上下文层，权重固定为 1；虚线为可训练连接。保留原图及完整英文图注，仅裁去其余正文和页边空白。",
+    "displayCaption": "这条回线让网络把上一步的内部状态带到下一步。1990 年 Elman 论文的原图中，实线把隐藏层的状态复制到上下文层。",
+    "sourceUrl": "https://doi.org/10.1207/S15516709COG1402_1",
+    "sourceTitle": "Finding Structure in Time — Figure 2, Cognitive Science 14 (1990)",
+    "credit": "Jeffrey L. Elman；原期刊论文扫描图，扫描文件形成于 2003 年，原文发表于 1990 年。署名及许可依原件。",
+    "date": "1990-03"
+  },
+  "neural-language-model": {
+    "type": "image",
+    "src": "./assets/history/neural-language-model-2003-figure1.png",
+    "alt": "2003年神经概率语言模型论文图1，词索引经共享矩阵C变为词向量，再预测下一个词的概率",
+    "caption": "《A Neural Probabilistic Language Model》（JMLR，2003 年 2 月）第 1142 页、PDF 第 6 页图 1。底部的词索引经共享矩阵 C 变成词向量，网络据此前文计算下一个词的概率。保留原图及完整英文图注，没有重绘。",
+    "displayCaption": "底部输入前面的词，中间把词变成可学习的数字，顶部预测下一个词。这是 2003 年论文中把词表示与语言预测一起训练的原始结构图。",
+    "sourceUrl": "https://jmlr.org/papers/v3/bengio03a.html",
+    "sourceTitle": "A Neural Probabilistic Language Model — Figure 1, JMLR 3 (2003)",
+    "credit": "Yoshua Bengio、Réjean Ducharme、Pascal Vincent、Christian Jauvin；JMLR 原论文图文，署名及许可依原件。",
+    "date": "2003-02"
+  },
+  "deep-belief-net": {
+    "type": "image",
+    "src": "./assets/history/deep-belief-net-2006-figure8.png",
+    "alt": "2006年深度信念网络论文图8，每行是固定数字类别后由模型生成的10个手写数字样本",
+    "caption": "《A fast learning algorithm for deep belief nets》作者托管待刊稿第 9 页图 8；首页标注“To appear in Neural Computation 2006”。每行固定一个数字标签，展示 10 个生成样本；样本间执行 1000 次交替 Gibbs 采样。保留原图及完整英文图注。",
+    "displayCaption": "每行指定一个数字类别，模型就生成十种不同写法。这些手写数字来自 2006 年深度信念网络论文的生成实验。",
+    "sourceUrl": "https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf",
+    "sourceTitle": "A fast learning algorithm for deep belief nets — author-hosted 2006 preprint, Figure 8",
+    "credit": "Geoffrey E. Hinton、Simon Osindero、Yee-Whye Teh；作者托管论文图文，署名及许可依原件。",
+    "date": "2006"
+  },
+  "imagenet": {
+    "type": "image",
+    "src": "./assets/history/imagenet-2009-figure1.png",
+    "alt": "ImageNet 2009年论文图1，展示从哺乳动物到哈士奇、从交通工具到三体帆船的图片类别层级",
+    "caption": "《ImageNet: A Large-Scale Hierarchical Image Database》（CVPR 2009）第 2 页图 1。上排是哺乳动物分支，下排是交通工具分支；每个词义类别随机展示 9 张图片。保留完整图、类别文字及英文图注。图中是数据集收集的照片，不是生成图片。",
+    "displayCaption": "从“哺乳动物”一路分到“哈士奇”，从“交通工具”分到“三体帆船”。2009 年 ImageNet 论文用这些照片展示图片怎样按语义层级组织。",
+    "sourceUrl": "https://www.image-net.org/static_files/papers/imagenet_cvpr09.pdf",
+    "sourceTitle": "ImageNet: A Large-Scale Hierarchical Image Database — Figure 1, CVPR 2009",
+    "credit": "Jia Deng、Wei Dong、Richard Socher、Li-Jia Li、Kai Li、Li Fei-Fei；原论文图文，所收集照片的权利归原权利人。",
+    "date": "2009"
+  },
+  "gpt": {
+    "type": "image",
+    "src": "./assets/history/gpt-2018-figure1.png",
+    "alt": "初代GPT 2018年论文图1，左为12层Transformer结构，右为分类、蕴含、相似度和多选任务的输入形式",
+    "caption": "初代 GPT《Improving Language Understanding by Generative Pre-Training》第 4 页图 1；OpenAI 于 2018 年 6 月 11 日发布论文与代码。左边是模型结构与训练目标，右边展示四类任务怎样转为文字序列供同一模型微调。保留原图及完整英文图注。",
+    "displayCaption": "左边是一套模型，右边是四类任务的输入方式。初代 GPT 先从大量文字预训练，再通过不同输入格式和微调处理分类、推理与问答。",
+    "sourceUrl": "https://openai.com/index/language-unsupervised/",
+    "sourceTitle": "Improving language understanding with unsupervised learning — original 2018 paper, Figure 1",
+    "credit": "Alec Radford、Karthik Narasimhan、Tim Salimans、Ilya Sutskever / OpenAI；原论文图文，署名及许可依原件。",
+    "date": "2018-06-11"
+  },
+  "codex-2021": {
+    "type": "embed",
+    "src": "https://www.youtube-nocookie.com/embed/Zm9B-DvwOgw?autoplay=1&rel=0",
+    "poster": "./assets/history/codex-2021-space-game-poster.jpg",
+    "alt": "OpenAI 2021年Codex官方演示，用英语指令逐步编写和修改太空小游戏",
+    "caption": "OpenAI 官方频道于 2021 年 8 月 10 日发布的《Creating a Space Game with OpenAI Codex》，约 8 分 42 秒。演示者用英语指令编写并修改网页太空小游戏；画面右侧是代码，左侧显示执行结果。这是 2021 年 Codex 的同期演示。",
+    "displayCaption": "一句句英语指令，逐步变成能玩的太空小游戏。这段 2021 年官方演示同时展示生成的代码和运行结果。",
+    "sourceUrl": "https://www.youtube.com/watch?v=Zm9B-DvwOgw",
+    "sourceTitle": "Creating a Space Game with OpenAI Codex — OpenAI, 10 August 2021",
+    "credit": "© OpenAI；官方频道原片，由 YouTube 播放器提供。海报为该视频的官方缩略图，未发现独立媒体许可。",
+    "date": "2021-08-10"
+  },
+  "jukebox": {
+    "type": "image",
+    "src": "./assets/history/jukebox-2020-figure4-reconstruction.png",
+    "alt": "Jukebox 2020年原论文图4，原始声音与不同压缩层级及训练方式重建声音的梅尔频谱对照",
+    "caption": "OpenAI 于 2020 年 4 月 30 日发布的 Jukebox 原论文，第 8 页图 4。顶部是原始声音，下方对照不同压缩层级和训练方式重建的声音；横轴是时间，纵轴是频率。这是音频重建实验的频谱，不是生成歌曲的试听。保留完整图、坐标和英文图注，仅裁去其他正文与页边空白。",
+    "displayCaption": "顶部是原始声音。下方每列提高压缩程度，每行换一种重建或训练方式；可以比较它们分别丢掉了哪些声音细节。",
+    "sourceUrl": "https://cdn.openai.com/papers/jukebox.pdf",
+    "sourceTitle": "Jukebox: A Generative Model for Music — Figure 4, original OpenAI paper (2020)",
+    "credit": "Prafulla Dhariwal、Heewoo Jun、Christine Payne、Jong Wook Kim、Alec Radford、Ilya Sutskever / OpenAI；原论文图文，署名及许可依原件。",
+    "date": "2020-04-30",
+    "sourceNote": "原论文第 8 页图 4。行与列比较的条件不同：列是压缩级别，行是完整方法、去掉频谱损失、改变层次结构及 Opus 基线；不是生成歌曲的试听。"
+  },
+  "runway-gen-1": {
+    "type": "video",
+    "src": "./assets/history/runway-gen1-2023-film.mp4",
+    "poster": "./assets/history/runway-gen1-2023-film-poster.jpg",
+    "alt": "Runway 2023年Gen-1官方演示，比较输入视频与经过风格化、遮罩和渲染处理的结果",
+    "displayCaption": "同一个镜头，可以换成另一种画风。Runway 在 2023 年 2 月的 Gen-1 演示里，把原视频和处理结果放在一起，展示风格化、局部修改和渲染。",
+    "caption": "Runway Gen-1 原研究页的完整演示片，时长约 1 分 53 秒。片中包含输入视频、参考材料和模型处理结果，演示 Stylization、Storyboard、Mask、Render、Customization 五种方式。页面署名日期为 2023 年 2 月；预览图取自原片约 28 秒处，未裁切。",
+    "sourceUrl": "https://runway.com/research/gen-1",
+    "sourceTitle": "Gen-1: The Next Step Forward for Generative AI — official demonstration",
+    "credit": "© Runway；原研究页公开的完整演示视频，未发现单独的开放媒体许可。",
+    "date": "2023-02"
+  },
+  "sdxl": {
+    "type": "image",
+    "src": "./assets/history/sdxl-2023-original-samples.png",
+    "alt": "SDXL 1.0发布文章的四张并列生成样本：林间人物、海滩上跑步的人和狗、舞厅与小狗",
+    "displayCaption": "发光的树林、海滩上奔跑的人和狗、舞厅里的剪影。这四张图片来自 SDXL 1.0 在 2023 年 7 月发布时的官方样本。",
+    "caption": "Stability AI 在 2023 年 7 月 26 日《Announcing SDXL 1.0》中展示的完整四图横幅，对应原文的空间构图与风格示例。保存官方图片 CDN 提供的 2500×625 版本，没有拆图、裁切或补绘。",
+    "sourceUrl": "https://stability.ai/news-updates/stable-diffusion-sdxl-1-announcement",
+    "sourceTitle": "Announcing SDXL 1.0 — spatial configuration and style samples",
+    "credit": "© Stability AI；官方发布文章配图，未发现单独的开放媒体许可。",
+    "date": "2023-07-26"
+  },
+  "dall-e-3-chatgpt": {
+    "type": "image",
+    "src": "./assets/history/dall-e-3-2023-sample-page4.webp",
+    "alt": "DALL·E 3研究论文第四页图2，含太空海报、罐中雪貂、花园侏儒等六张生成样本和对应提示词",
+    "displayCaption": "带英文标语的太空海报、挤进糖果罐的雪貂、守卫花园的小人。2023 年 DALL·E 3 论文把生成图片与对应提示词放在一起，方便逐项对照。",
+    "caption": "《Improving Image Generation with Better Captions》2023 年研究论文第 4 页、图 2，包含六张 DALL·E 3 生成样本和完整提示词。整页从 OpenAI 官方 PDF 渲染，未重排或裁图。这是模型效果材料，材料年份与 2023 年 10 月 19 日进入 ChatGPT 的产品事件分开记录。",
+    "sourceUrl": "https://cdn.openai.com/papers/dall-e-3.pdf",
+    "sourceTitle": "Improving Image Generation with Better Captions — Figure 2, page 4",
+    "credit": "James Betker、Gabriel Goh、Li Jing 等 / OpenAI；官方研究论文原页，未发现单独的开放媒体许可。",
+    "date": "2023",
+    "reading": true
+  },
+  "gemini-1": {
+    "type": "embed",
+    "src": "https://www.youtube-nocookie.com/embed/K4pX1VAxaAI?autoplay=1&rel=0",
+    "poster": "./assets/history/gemini-1-2023-math-physics-poster.webp",
+    "alt": "Google首次介绍Gemini 1.0时发布的Math and physics with AI官方演示视频",
+    "displayCaption": "让模型同时理解文字和图像，再解释数学、物理中的推理。这段官方演示来自 Google 在 2023 年 12 月介绍 Gemini 1.0 的文章。",
+    "caption": "Google 于 2023 年 12 月 6 日发布 Gemini 1.0 时嵌入的《Math & physics with AI | Gemini》。原文把它放在理解文字、图像和音频的说明下，预览图也取自该处。使用原文对应的官方 YouTube 视频，不把演示片称为独立测评。",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+    "sourceTitle": "Introducing Gemini: our largest and most capable AI model — Math & physics with AI",
+    "credit": "© Google / Google DeepMind；首次发布文章中的官方 YouTube 视频与预览图。",
+    "date": "2023-12-06"
+  },
+  "veo-1": {
+    "type": "video",
+    "src": "./assets/history/veo-1-2024-launch-supercut.mp4",
+    "poster": "./assets/history/veo-1-2024-launch-supercut-poster.jpg",
+    "alt": "2024年初代Veo发布文章的36秒官方样片合集，包括高山湖泊、针织大象与黑白夜景",
+    "displayCaption": "高山湖泊、针织大象、黑白街景，出现在初代 Veo 的官方样片合集中。这段 36 秒的短片，来自 Google 在 2024 年 5 月的发布文章。",
+    "caption": "2024 年 5 月 14 日《Introducing Veo and Imagen 3》原文中的 Veo Supercut，含片头和多段模型生成示例。保存官方完整 36 秒 MP4，没有重新剪辑；这是一段发布合集，不是一条连续生成的长镜头。预览图取自原片第 18 秒。",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/google-generative-ai-veo-imagen-3/",
+    "sourceTitle": "Introducing Veo and Imagen 3 — Veo Supercut",
+    "credit": "© Google / Google DeepMind；官方发布文章的样片合集，未发现单独的开放媒体许可。",
+    "date": "2024-05-14",
+    "muted": true
+  },
+  "hunyuan3d-2": {
+    "type": "image",
+    "src": "./assets/history/hunyuan3d-2-original-e2e.gif",
+    "alt": "混元3D 2.0首次发布仓库的原始GIF，两个人偶三维结果在粉色背景上旋转展示",
+    "displayCaption": "正面、侧面、背面，都能转过去看。这两个带纹理的人偶，来自混元 3D 2.0 在 2025 年 1 月首次发布时的官方生成结果动图。",
+    "caption": "Hunyuan3D 2.0 官方仓库 2025 年 1 月 21 日首次提交中的 e2e-1.gif。两个生成的带纹理三维角色旋转展示，原动图为 79 帧、约 5.53 秒。已将本地文件与首次提交的文件逐字节校验，内容一致。",
+    "sourceUrl": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2/tree/53a429772ae1f5928fd3718eb45a850ba6797537",
+    "sourceTitle": "Hunyuan3D 2.0 — initial official repository, generation results",
+    "credit": "© Tencent Hunyuan / Hunyuan3D 2.0 作者；官方首次提交中的生成结果 GIF，媒体未单独标注许可。",
+    "date": "2025-01-21"
+  },
+  "nano-banana": {
+    "type": "video",
+    "src": "./assets/history/nano-banana-2025-image-fusion.mp4",
+    "poster": "./assets/history/nano-banana-2025-image-fusion-poster.jpg",
+    "alt": "Nano Banana初代官方Home Canvas演示，把一张台灯图片融合进卧室场景",
+    "displayCaption": "把台灯拖进卧室，模型就把它放到床头柜上。这是初代 Nano Banana 在 2025 年 8 月发布时，用 Home Canvas 展示的多图融合案例；原演示缩短了等待过程。",
+    "caption": "2025 年 8 月 26 日 Gemini 2.5 Flash Image（Nano Banana）发布文章的多图融合演示。Google AI Studio 的 Home Canvas 把独立的台灯图片融合进卧室，视频约 7.03 秒。保存官方 MP4，原文注明“Sequences shortened”；预览图取自约 6.67 秒处。",
+    "sourceUrl": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/",
+    "sourceTitle": "Introducing Gemini 2.5 Flash Image — Multi-image fusion / Home Canvas",
+    "credit": "© Google；官方开发者博客的应用演示，未发现单独的开放媒体许可。",
+    "date": "2025-08-26",
+    "muted": true
+  },
+  "sora-2": {
+    "type": "embed",
+    "src": "https://www.youtube-nocookie.com/embed/gzneGhpXwjU?autoplay=1&rel=0",
+    "poster": "./assets/history/sora-2-2025-official-launch-poster.jpg",
+    "alt": "OpenAI官方频道的Introducing Sora 2介绍视频",
+    "displayCaption": "OpenAI 官方频道的《Introducing Sora 2》。这是一段介绍视频，用来回看 Sora 2 与新 Sora 应用发布时的演示。",
+    "caption": "OpenAI 官方 YouTube 频道的《Introducing Sora 2》，使用官方播放器与封面。Sora 2 产品发布事件为 2025 年 9 月 30 日；当前可核验的 oEmbed 记录确认了标题与官方频道，没有提供精确上传日期，因此材料日期只记为 2025 年。",
+    "sourceUrl": "https://www.youtube.com/watch?v=gzneGhpXwjU",
+    "sourceTitle": "Introducing Sora 2 — OpenAI official YouTube video",
+    "credit": "© OpenAI；官方 YouTube 视频与封面。",
+    "date": "2025"
+  },
+  "midjourney-8-2": {
+    "type": "image",
+    "src": "./assets/history/midjourney-8-2-2026-official-samples.jpg",
+    "alt": "Midjourney 8.2官方发布文章的二十张样本网格，含人物、绘画、摄影感与奇幻场景",
+    "displayCaption": "人物、插画、奇幻场景与摄影感画面，被排进同一张二十图网格。这是 Midjourney 在 2026 年 7 月发布 8.2 时展示的官方样本。",
+    "caption": "Midjourney 2026 年 7 月 24 日《Version 8.2》发布文章中的完整二十图样本网格，保存原文链接的 v82-grid-v82-white-10650x8737-small.jpg，实际文件为 2000×1600。原文将更新重点列为美学、画质和个性化；图片未逐张标注提示词与创作者。没有用其他版本或当前通用官网图替代。",
+    "sourceUrl": "https://updates.midjourney.com/version-8-2/",
+    "sourceTitle": "Version 8.2 — official launch sample grid",
+    "credit": "© Midjourney；V8.2 官方发布文章配图，原文未逐张署名，未发现单独的开放媒体许可。",
+    "date": "2026-07-24"
+  },
+  "pika-chatgpt": {
+    "type": "video",
+    "src": "./assets/history/pika-chatgpt-2026-inline-demo.mp4",
+    "poster": "./assets/history/pika-chatgpt-2026-inline-demo-poster.jpg",
+    "alt": "Pika进入ChatGPT的官方界面演示，在对话中打开Product Shot工具并生成玉米商品图",
+    "displayCaption": "在聊天里打开 Product Shot，选素材和背景，再生成一张玉米商品图。Pika 在 2026 年 10 月的官方发布文章里，用这段界面演示展示应用怎样进入对话。",
+    "caption": "Pika 于 2026 年 10 月 16 日发布《Pika Is Now Inside ChatGPT》时嵌入的 Chat-With-Inline-App-Exp_animated_v5.mp4，时长 24.5 秒。片中在 ChatGPT 对话内调用 Product Shot，选择参考素材并展示生成结果。保存官方文章所嵌入的完整 MP4；预览图取自第 12.25 秒。",
+    "sourceUrl": "https://pika.art/blog/pika-chatgpt-plugin",
+    "sourceTitle": "Pika Is Now Inside ChatGPT — inline Product Shot demonstration",
+    "credit": "© Pika / OpenAI；Pika 官方发布文章中的界面演示，未发现单独的开放媒体许可。",
+    "date": "2026-10-16",
+    "muted": true
+  },
+  "whisper": {
+    "type": "image",
+    "src": "./assets/history/whisper-2022-official-paper-figure1.png",
+    "alt": "Whisper原论文第4页图1：多语言转写、翻译与特殊标记的训练结构",
+    "caption": "Whisper 2022年论文官方PDF第4页图1，保留完整结构图及英文图注，只裁去无关正文与页边。PDF包含首发后的V2训练说明，不能当作2022年9月21日的首发界面。",
+    "displayCaption": "同一套 Whisper 模型怎样转写、翻译和判断有没有语音？2022 年论文把这些任务放进了同一张训练结构图。",
+    "sourceUrl": "https://cdn.openai.com/papers/whisper.pdf",
+    "sourceTitle": "Robust Speech Recognition via Large-Scale Weak Supervision — Figure 1",
+    "credit": "Alec Radford、Jong Wook Kim 等 / OpenAI；官方论文图文，页面未单列图片许可。",
+    "date": "2022年论文；官方PDF未标修订日期（模型开放：2022-09-21）",
+    "sourceNote": "官方论文 PDF 第 4 页图 1。此 PDF 含首发后的 V2 训练说明，修订日未标，不是 2022 年 9 月 21 日的首发界面。"
+  },
+  "llama": {
+    "type": "image",
+    "src": "./assets/history/llama-2023-v1-ai-watch-generation.png",
+    "alt": "初代LLaMA论文v1第20页，Jerry与George围绕AI手表的虚构对话生成样本",
+    "caption": "初代LLaMA论文v1第20页下半页的完整样本框。粗体是提示，其后是未经指令微调的LLaMA-65B续写；这是虚构场景。论文于2月27日公开，比模型发布晚三天。",
+    "displayCaption": "“我的手表还是个微型电脑。”初代 LLaMA-65B 接着写出了这段关于 AI 手表的虚构对话；粗体是研究者给的开头。",
+    "sourceUrl": "https://arxiv.org/abs/2302.13971v1",
+    "sourceTitle": "LLaMA: Open and Efficient Foundation Language Models — v1, Appendix C, p.20",
+    "credit": "Hugo Touvron 等 / Meta AI；论文采用 CC BY 4.0。截取原样本框，未改写内容。",
+    "date": "2023-02-27（论文v1；模型发布：2023-02-24）",
+    "sourceNote": "论文 v1 附录 C，第 20 页。这里是未经指令微调的 LLaMA-65B 续写，粗体是输入提示；LLaMA-I 的实验另见附录 D。"
+  },
+  "claude": {
+    "type": "image",
+    "src": "./assets/history/claude-2023-poe-original.png",
+    "alt": "2023年Claude首发公告中的Poe手机界面，询问东京樱花观赏地点",
+    "caption": "2023年3月14日《Introducing Claude》中的Poe产品界面配图，保留原图。用户询问东京樱花观赏地点，Claude给出地点建议；这是首发时的合作方界面。",
+    "displayCaption": "2023 年 Claude 首发公告里的 Poe 界面。用户问东京哪里能看樱花，模型列出公园和景点，并给出追问建议。",
+    "sourceUrl": "https://www.anthropic.com/news/introducing-claude",
+    "sourceTitle": "Introducing Claude — Poe integration image",
+    "credit": "© Anthropic / Poe；官方发布配图，未发现独立开放媒体许可。",
+    "date": "2023-03-14"
+  },
+  "qwen-open-models": {
+    "type": "video",
+    "src": "./assets/history/qwen-7b-2023-08-16-web-demo-playback.mp4",
+    "alt": "2023年8月16日官方仓库提交中的Qwen-7B-Chat原始网页演示动图",
+    "caption": "2023年8月16日官方仓库提交512f90a069d418613209a91cdc5c379a795cad59中的assets/web_demo.gif。画面展示Qwen-7B-Chat聊天与代码回答，晚于8月3日模型开放。 播放版由原 GIF 转为 H.264 MP4，保留原尺寸、全部帧和逐帧时序；原 GIF 仍可在资料索引中打开。",
+    "displayCaption": "Qwen-7B-Chat 的早期网页演示：在同一个聊天框里提问、写代码、继续对话。动图来自 2023 年 8 月 16 日的官方仓库记录。",
+    "sourceUrl": "https://github.com/QwenLM/Qwen/blob/512f90a069d418613209a91cdc5c379a795cad59/assets/web_demo.gif",
+    "sourceTitle": "Qwen official repository — assets/web_demo.gif, 2023-08-16 commit",
+    "credit": "Qwen Team / Alibaba Cloud；历史仓库演示动图，模型许可与示例媒体权利应分别查看。",
+    "date": "2023-08-16（仓库动图；模型开放：2023-08-03）",
+    "originalSrc": "./assets/history/qwen-7b-2023-08-16-web-demo.gif",
+    "poster": "./assets/history/qwen-7b-2023-08-16-web-demo-poster.jpg",
+    "muted": true,
+    "loop": true,
+    "sourceNote": "原官方动图的播放副本，时长 62.64 秒。仅转为较轻的 MP4，保留完整画面和原时序；原 GIF 也在下方。"
+  },
+  "openai-agents-sdk": {
+    "type": "image",
+    "src": "./assets/history/agents-sdk-2025-v0-0-1-tracing.png",
+    "alt": "Agents SDK v0.0.1官方仓库的Tracing界面，列出任务转交与工具调用",
+    "caption": "Agents SDK v0.0.1的docs/assets/images/orchestration.png，提交f21b0c108c9aaaba48b98ca94e9c7b6d68aced2d时间为2025年3月11日。界面显示3月8日创建的示例记录；保留原始截图。",
+    "displayCaption": "一次 Agent 运行里，谁接手了任务、调用了什么工具、花了多久，都能展开查看。这是 Agents SDK 首发版本保存的运行追踪界面。",
+    "sourceUrl": "https://github.com/openai/openai-agents-python/blob/v0.0.1/docs/assets/images/orchestration.png",
+    "sourceTitle": "OpenAI Agents SDK v0.0.1 — Tracing UI (orchestration.png)",
+    "credit": "© OpenAI；官方仓库v0.0.1配图。代码仓库采用MIT，截图未单独声明媒体许可。",
+    "date": "2025-03-11（v0.0.1仓库；图内记录：2025-03-08）"
+  },
+  "qwen3": {
+    "type": "image",
+    "src": "./assets/history/qwen3-2025-thinking-budget-original.png",
+    "alt": "Qwen3首发文章的四项思考预算曲线，比较思考与非思考模式",
+    "caption": "2025年4月29日Qwen3官方首发文章的thinking_budget.png。横轴是思考预算（千token），纵轴是相应评测分数。曲线来自团队测试，不能视作所有任务的普遍收益。",
+    "displayCaption": "给模型更多思考时间，结果会怎样？Qwen3 首发文章用四组评测曲线展示预算变化，虚线则是不启用思考模式的成绩。",
+    "sourceUrl": "https://qwenlm.github.io/blog/qwen3/",
+    "sourceTitle": "Qwen3: Think Deeper, Act Faster — Thinking Budget",
+    "credit": "Qwen Team / Alibaba；官方发布图，保留原图、坐标与脚注，未重绘。",
+    "date": "2025-04-29"
+  },
+  "claude-4": {
+    "type": "video",
+    "src": "./assets/history/claude-4-2025-game-memory-original-playback.mp4",
+    "alt": "Claude Opus 4首发演示动图：游玩宝可梦时将导航和脱困经验写入笔记",
+    "caption": "2025年5月22日Claude 4官方公告的原始动图。官方注明左侧为Opus 4游玩Pokémon时记录的真实笔记，右侧为游戏画面。材料说明文件记忆的使用方式。 播放版由原 GIF 转为 H.264 MP4，保留原尺寸、全部帧和逐帧时序；原 GIF 仍可在资料索引中打开。",
+    "displayCaption": "玩游戏卡住后，Claude Opus 4 把“换个方向”“记录失败方法”写进文件。左边是它当时留下的笔记，右边是游戏画面。",
+    "sourceUrl": "https://www.anthropic.com/news/claude-4",
+    "sourceTitle": "Introducing Claude 4 — Memory / Claude Plays Pokémon",
+    "credit": "© Anthropic；官方演示动图。Pokémon游戏画面版权属于相应权利人；未发现独立媒体再分发许可。",
+    "date": "2025-05-22",
+    "originalSrc": "./assets/history/claude-4-2025-game-memory-original.gif",
+    "poster": "./assets/history/claude-4-2025-game-memory-original-poster.jpg",
+    "muted": true,
+    "loop": true,
+    "sourceNote": "原官方动图的播放副本，时长 9.60 秒。仅转为较轻的 MP4，保留完整画面和原时序；原 GIF 也在下方。"
+  },
+  "gpt-5": {
+    "type": "embed",
+    "src": "https://www.youtube-nocookie.com/embed/0Uu_VJeVVfo?autoplay=1&rel=0",
+    "poster": "./assets/history/gpt-5-2025-official-launch-poster.jpg",
+    "alt": "OpenAI在2025年8月7日公开的GPT-5官方发布会回放",
+    "caption": "OpenAI官方YouTube频道《Introducing GPT-5》发布会回放，发布于2025年8月7日。保留发布时的介绍和演示，由YouTube提供播放器；封面为原视频封面。",
+    "displayCaption": "2025 年 8 月 7 日的 GPT-5 发布会回放。可以看到官方当时怎样介绍系统、现场展示任务，以及解释快速回答与深入思考的选择。",
+    "sourceUrl": "https://www.youtube.com/watch?v=0Uu_VJeVVfo",
+    "sourceTitle": "Introducing GPT-5 — OpenAI official livestream replay",
+    "credit": "© OpenAI；OpenAI官方频道原片，由YouTube播放器提供，本站保存原视频封面。",
+    "date": "2025-08-07"
+  },
+  "udio-umg": {
+    "type": "image",
+    "src": "./assets/history/udio-2025-umg-download-announcement-excerpt.png",
+    "alt": "Udio在2025年10月29日公告中宣布平台停止下载的原文节录排印",
+    "caption": "2025年10月29日Udio CEO Andrew Sanchez发布《A New Era of Music - Udio with Universal Music Group》，在The Transition段落宣布即日起平台停止下载。图为该句原文节录排印，不是网页截图或音乐样本。",
+    "displayCaption": "“即日起，平台将不再提供下载。”Udio 与环球音乐合作的公告中，这句话直接改变了用户保存作品的方式。这里展示公告原文节录。",
+    "sourceUrl": "https://www.udio.com/blog/a-new-era",
+    "sourceTitle": "A New Era of Music - Udio with Universal Music Group — The Transition",
+    "credit": "© Udio / Andrew Sanchez；官方公告原文短句节录，本站排印。",
+    "date": "2025-10-29"
+  },
+  "sora-discontinuation": {
+    "type": "image",
+    "src": "./assets/history/sora-2026-discontinuation-original-excerpt.png",
+    "alt": "OpenAI官方Sora历史页关于2026年4月26日停止提供产品的原文节录排印",
+    "caption": "OpenAI Sora历史页现存的终止说明，2026年10月27日核验。原文指2026年4月26日产品停止提供；帮助中心区分网页与应用为4月26日、API为9月24日。本站排印，不是停服当日截图。",
+    "displayCaption": "Sora 历史页后来加上了这句终止说明：自 2026 年 4 月 26 日起，产品不再提供。这里保留官方原文；网页、应用与 API 的关闭日期需分别看。",
+    "sourceUrl": "https://openai.com/index/sora/",
+    "sourceTitle": "Sora: Creating video from text — discontinuation notice",
+    "credit": "© OpenAI；官方历史页原文短句节录，本站排印。不同入口的日期以帮助中心分别说明为准。",
+    "date": "2026-04-26（终止日期；页面说明于2026-10-27核验）"
+  },
+  "qwen3-8": {
+    "type": "image",
+    "src": "./assets/history/qwen3-8-2026-repository-news-excerpt.png",
+    "alt": "Qwen3.8官方README的模型介绍和2026年8月12日开放发布记录原文节录排印",
+    "caption": "QwenLM/Qwen3.8官方README中专属于Qwen3.8的介绍首句及News中2026年8月12日Qwen3.8-2.4T-A95B开放记录。2026年10月27日核验，本站排印，不是同期截图；未使用Qwen3.5或3.6的旧图冒充。",
+    "displayCaption": "Qwen3.8 的官方仓库记录：2026 年 8 月 12 日，2.4T-A95B 版本开放。这里保留发布记录和介绍原文，明确对应这个版本。",
+    "sourceUrl": "https://github.com/QwenLM/Qwen3.8#news",
+    "sourceTitle": "Qwen3.8 official README — Introduction / News, 2026-08-12",
+    "credit": "Qwen Team / Alibaba；官方README原文节录，仓库标注Apache-2.0；本站排印。",
+    "date": "2026-08-12（发布记录；README于2026-10-27核验）"
+  },
+  "generative-ai-interim-measures": {
+    "type": "image",
+    "src": "./assets/history/generative-ai-2023-interim-measures-excerpt.png",
+    "alt": "《生成式人工智能服务管理暂行办法》第二条与第二十四条的官方原文节录排印",
+    "caption": "中国网信网2023年7月13日公开的《生成式人工智能服务管理暂行办法》，节录第二条首款及第二十四条，保持原文。本站排印，不是公文扫描件；7月13日是网页发布日期，8月15日是施行日期。",
+    "displayCaption": "这份规则管哪些服务、何时开始施行？这里保留第二条的适用范围和第二十四条的施行日期，原文于 2023 年 7 月公开。",
+    "sourceUrl": "https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm",
+    "sourceTitle": "生成式人工智能服务管理暂行办法 — 第二条、第二十四条",
+    "credit": "国家互联网信息办公室等七部门 / 中国网信网；法规原文节录，本站排印。",
+    "date": "2023-07-13（公布网页；施行：2023-08-15）"
+  },
+  "eu-ai-act": {
+    "type": "image",
+    "src": "./assets/history/eu-ai-act-2024-entry-into-force-excerpt.png",
+    "alt": "欧盟委员会2024年8月1日AI Act生效公告首段原文节录排印",
+    "caption": "欧盟委员会2024年8月1日《European Artificial Intelligence Act comes into force》公告首段原文节录。本站排印，不是网页截图或法案全文；公告记载生效，不表示全部条款同一天适用。",
+    "displayCaption": "2024 年 8 月 1 日，欧盟委员会公告 AI Act 生效。这里保留公告开头的原文；各项义务仍按法案安排分阶段适用。",
+    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/european-artificial-intelligence-act-comes-force",
+    "sourceTitle": "European Artificial Intelligence Act comes into force — 1 August 2024 press release",
+    "credit": "European Commission；官方生效公告首段节录，本站排印。",
+    "date": "2024-08-01"
+  },
+  "ai-copyrightability-report": {
+    "type": "image",
+    "src": "./assets/history/copyrightability-2025-rose-enigma-page23.png",
+    "alt": "美国版权局2025年AI报告第二部分第23页：Rose Enigma手绘输入与AI生成输出",
+    "caption": "美国版权局2025年1月29日发布的《Copyright and Artificial Intelligence, Part 2: Copyrightability》，正文第23页（PDF第31页）。保留完整页、提示词、输入输出、脚注与页码。Rose Enigma作品登记记录为2023年3月21日。",
+    "displayCaption": "左边的手绘线稿，变成右边的写实图像。美国版权局在 2025 年报告里用 Rose Enigma 案例，分析哪些人的创作表达仍能在生成结果中辨认出来。",
+    "sourceUrl": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf",
+    "sourceTitle": "Copyright and Artificial Intelligence, Part 2: Copyrightability — p.23 (PDF p.31)",
+    "credit": "U.S. Copyright Office；图示作品Rose Enigma：Kris Kashtanova（2023）。报告内第三方作品权利归相应权利人。",
+    "date": "2025-01-29（报告；示例作品登记：2023-03-21）",
+    "reading": true
+  }
+}

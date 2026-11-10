@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+execFileSync(process.execPath,[path.join(root,'scripts/check.mjs')],{stdio:'inherit'});
+const out=path.join(root,'dist');
+fs.mkdirSync(out,{recursive:true});
+for(const name of ['index.html','style.css','app.js','data','assets'])fs.cpSync(path.join(root,name),path.join(out,name),{recursive:true});
+console.log(`Static site built: ${out}`);

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#e3ccbb">
+  <meta name="description" content="AIGC Artifacts，一座生成式 AI 历史博物馆。从早期神经网络到生成式 AI，沿时间线探索论文、影像与产品，每一件展品都有来源。">
+  <title>AIGC Artifacts｜档案</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section class="intro" id="intro" aria-labelledby="intro-title" aria-describedby="intro-subtitle" hidden>
+    <div class="intro-columns" aria-hidden="true"><img class="intro-column intro-column-left" src="./assets/column.webp" alt=""><img class="intro-column intro-column-right" src="./assets/column.webp" alt=""></div>
+    <div class="intro-copy">
+      <h1 class="intro-title" id="intro-title"><span>AIGC</span><span>ARTIFACTS</span></h1>
+      <p class="intro-subtitle" id="intro-subtitle">生成式 AI 发展史</p>
+      <button class="intro-enter" id="intro-enter" disabled>进入 <span aria-hidden="true">→</span></button>
+    </div>
+  </section>
+  <a class="skip" href="#exhibit">跳到展品</a>
+  <header class="header">
+    <a class="brand" href="./" aria-label="AIGC ARTIFACTS 首页">AIGC <span>ARTIFACTS</span></a>
+    <nav class="year-nav" aria-label="选择年代"><div id="years"></div></nav>
+    <button id="catalog-open" class="catalog-open" aria-haspopup="dialog">目录 <span class="menu-lines" aria-hidden="true"></span></button>
+  </header>
+  <main id="exhibit" tabindex="-1" aria-live="polite">
+    <div class="loading">正在打开档案……</div>
+  </main>
+  <div class="orange" aria-hidden="true"></div><div class="vignette" aria-hidden="true"></div>
+  <footer class="exhibit-footer">
+    <div class="controls"><button id="previous" class="museum-button" aria-label="上一件展品">上一件</button><button id="next" class="museum-button">下一件展品 <img src="./assets/next-arrow.svg" alt=""></button></div>
+  </footer>
+  <dialog id="catalog" class="catalog">
+    <div class="catalog-body">
+    <div class="catalog-head"><div><h1>AIGC Artifacts</h1></div><button class="close-button" id="catalog-close" aria-label="关闭目录">关闭 ×</button></div>
+    <nav class="collection-tabs" aria-label="馆藏分类"><button data-tab="timeline" aria-selected="true">历史档案</button><button data-tab="concepts">概念词典</button><button data-tab="platforms">平台谱系</button><button data-tab="about">关于馆藏</button></nav>
+    <div class="catalog-tools"><label class="search-label"><span>搜索馆藏</span><input id="search" type="search" placeholder="搜技术、产品、公司、年份……" autocomplete="off"></label><label id="filter-label"><span>领域</span><select id="category"><option value="all">全部领域</option></select></label></div>
+    <div id="catalog-content"></div>
+    </div>
+    <footer class="catalog-credit">Building by 马路Milo</footer>
+  </dialog>
+  <dialog id="detail" class="detail" aria-label="资料索引"><button class="close-button" id="detail-close" aria-label="关闭详细资料">关闭 ×</button><div id="detail-content"></div></dialog>
+  <noscript>请启用 JavaScript 浏览互动时间线。全部史料也可在项目 data 目录中阅读。</noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

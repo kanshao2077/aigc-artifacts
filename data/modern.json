@@ -1,0 +1,1898 @@
+[
+  {
+    "id": "dall-e-2",
+    "date": "2022-04",
+    "title": "DALL·E 2：描述变成画面",
+    "subtitle": "用一句描述生图，还能接着改",
+    "category": "image",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "DALL·E",
+      "扩散模型",
+      "图像编辑"
+    ],
+    "summary": "DALL·E 2 能把文字中的对象、风格和细节组合成图片，也支持局部补画、生成变体和向画框外扩展。画面比此前更细致，更接近照片或插画。2022 年 4 月先做研究展示，付费测试和取消候补名单都在后面，并非一发布就人人能用。",
+    "why": "用户可以先说出脑中的画面，再挑图、补画、修改。生成图开始能当视觉草稿使用，肖像、偏见和图片来路也随之成为实际问题。",
+    "mechanism": "系统先把文字转成数字表示，预测对应的图像特征，再逐步去掉噪声，得到图片。补画时会保留指定区域，按描述生成其余部分。",
+    "artifact": {
+      "type": "image",
+      "label": "DALL·E 2 · 概念演示",
+      "lines": [
+        "文字描述 → 图像表示",
+        "噪声 → 逐步去噪 → 图像",
+        "变体 / 局部补画 / 扩图"
+      ]
+    },
+    "sources": [
+      {
+        "title": "DALL·E 2",
+        "url": "https://openai.com/index/dall-e-2/"
+      },
+      {
+        "title": "DALL·E 2 预览系统卡",
+        "url": "https://github.com/openai/dalle-2-preview/blob/main/system-card_04062022.md"
+      }
+    ]
+  },
+  {
+    "id": "midjourney-v3",
+    "date": "2022-07",
+    "title": "Midjourney：审美成为入口",
+    "subtitle": "在聊天里生图，也在社区里找灵感",
+    "category": "image",
+    "org": "Midjourney",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "Midjourney",
+      "创意工具",
+      "社区"
+    ],
+    "summary": "Midjourney V3 从 2022 年 7 月到 11 月是默认版本。用户在聊天中输入描述，得到几张候选图，再选择放大或生成变体。官方形容它的构图富有创意，但画面连贯性一般。社区里不断分享的提示词和作品，也成了用户学习生图的材料。",
+    "why": "不懂绘画的人也能试着做出自己的画面。Midjourney 吸引用户的一个直接原因是好看，但风格好看和准确画对要求，仍是两回事。",
+    "mechanism": "早期版本先生成分辨率较低的小图，再通过放大模型补充细节、提高尺寸。",
+    "artifact": {
+      "type": "interface",
+      "label": "Midjourney · 工作方式示意",
+      "lines": [
+        "/imagine 一座云中的图书馆",
+        "候选 A / B / C / D",
+        "选择 → 变体 → 放大"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Midjourney Legacy Features",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/33329788681101-Legacy-Features"
+      }
+    ]
+  },
+  {
+    "id": "stable-diffusion-release",
+    "date": "2022-08-22",
+    "title": "Stable Diffusion 开放权重",
+    "subtitle": "把模型下载下来，在自己的电脑上生图",
+    "category": "image",
+    "org": "Stability AI / CompVis / Runway",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "Stable Diffusion",
+      "开放权重",
+      "潜空间扩散"
+    ],
+    "summary": "Stable Diffusion 公开了模型权重和相关代码。用户可以下载到自己的设备上运行，也能修改模型、开发应用。它采用带有使用限制的开放模型许可。随后出现的操作界面、风格模型和插件，让创作者有了更多自己搭配工具的选择。",
+    "why": "生图不再只能依赖一个网站。开发者和创作者能本地运行、训练自己的风格，也需要自己弄清许可条件、素材来路和使用责任。",
+    "mechanism": "先把图片压缩成较小的数字表示，在这个空间里按文字逐步去噪，最后还原成图片。这样比直接处理每个像素省算力。",
+    "artifact": {
+      "type": "network",
+      "label": "Stable Diffusion · 开放生态",
+      "lines": [
+        "公开模型权重",
+        "本地运行 → 微调 → 扩展",
+        "界面 / 插件 / 社区模型"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Stable Diffusion Public Release",
+        "url": "https://stability.ai/news-updates/stable-diffusion-public-release"
+      }
+    ]
+  },
+  {
+    "id": "whisper",
+    "date": "2022-09-21",
+    "title": "Whisper：声音接入生成工作流",
+    "subtitle": "先把录音变成能编辑的文字",
+    "category": "audio",
+    "org": "OpenAI",
+    "modality": [
+      "语音",
+      "文字"
+    ],
+    "tags": [
+      "Whisper",
+      "语音识别",
+      "开放模型"
+    ],
+    "summary": "OpenAI 开放 Whisper 模型和推理代码，用来识别多种语言的语音，也能把多种语言翻译成英语。它主要是把已有录音转成文字，本身不负责创作新声音。字幕、会议记录、播客整理因此多了一个可自行部署的转写工具。",
+    "why": "录音变成文字后，就能搜索、删改，再交给语言模型做摘要或翻译。它帮创作流程接住了声音素材，而不只是处理打好的字。",
+    "mechanism": "把音频切成片段，转成记录声音频率变化的图，再逐步预测文字。特殊标记用来区分语言、转写、翻译和时间信息。",
+    "artifact": {
+      "type": "waveform",
+      "label": "Whisper · 信息流示意",
+      "lines": [
+        "录音波形 → 声谱图",
+        "识别语言 / 转写 / 翻译",
+        "文字 → 字幕与内容整理"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing Whisper",
+        "url": "https://openai.com/index/whisper/"
+      }
+    ]
+  },
+  {
+    "id": "dreamfusion",
+    "date": "2022-09-29",
+    "title": "DreamFusion：二维知识生成三维",
+    "subtitle": "借助文生图模型，慢慢调整出三维物体",
+    "category": "3d",
+    "org": "Google Research / UC Berkeley",
+    "modality": [
+      "文字",
+      "图像",
+      "三维"
+    ],
+    "tags": [
+      "DreamFusion",
+      "SDS",
+      "NeRF"
+    ],
+    "summary": "DreamFusion 用已经训练好的二维文生图模型指导三维生成，不必先收集大量配有文字说明的三维模型。系统从不同角度渲染一个三维场景，再按图像模型的反馈不断修改。它能生成可转动观察的物体，但生成慢、形状出错和多面脸等问题仍很明显。",
+    "why": "研究者尝试把二维生图积累的知识用到三维：让每个角度看上去都像描述中的对象。这为文字生成三维模型提供了一条可行路线。",
+    "mechanism": "扩散模型检查的是二维渲染图，实际被调整的是三维场景。反复换角度检查，是为了让同一个物体从不同方向看都尽量合理。",
+    "artifact": {
+      "type": "network",
+      "label": "DreamFusion · SDS 示意",
+      "lines": [
+        "文字条件 → 二维扩散模型",
+        "三维场景 → 多视角渲染",
+        "评价画面 → 更新三维场景"
+      ]
+    },
+    "sources": [
+      {
+        "title": "DreamFusion 论文",
+        "url": "https://arxiv.org/abs/2209.14988"
+      },
+      {
+        "title": "DreamFusion 项目页",
+        "url": "https://dreamfusion3d.github.io/"
+      }
+    ]
+  },
+  {
+    "id": "chatgpt",
+    "date": "2022-11-30",
+    "title": "ChatGPT：对话成为通用界面",
+    "subtitle": "打字聊天，就能试用语言模型",
+    "category": "text",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "代码"
+    ],
+    "tags": [
+      "ChatGPT",
+      "RLHF",
+      "对话助手"
+    ],
+    "summary": "ChatGPT 以免费研究预览的形式推出。用户能连续提问，让它写文章、改答案或帮忙编程，不必先学会调用接口。它会参考对话前文，也能承认部分错误。不过，它仍会编造事实，同一个问题换种问法也可能得到不同答案。",
+    "why": "使用门槛降到了打字聊天。普通人可以直接试用语言模型，写作、教学、客服和办公等场景很快出现了大量尝试。",
+    "mechanism": "先用大量文本训练模型预测后续内容，再用人工示范和回答偏好调整它。每次提问时，把对话记录一起交给模型，方便它接着聊。",
+    "artifact": {
+      "type": "interface",
+      "label": "ChatGPT · 原创对话示意",
+      "lines": [
+        "用户：把这个想法讲清楚",
+        "助手：给出第一版解释",
+        "用户：再举个生活例子"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing ChatGPT",
+        "url": "https://openai.com/index/chatgpt/"
+      }
+    ]
+  },
+  {
+    "id": "comfyui",
+    "date": "2023-01",
+    "title": "ComfyUI：生成过程变成节点",
+    "subtitle": "把生图步骤连起来，保存后反复用",
+    "category": "tools",
+    "org": "comfyanonymous / Comfy Org",
+    "modality": [
+      "图像",
+      "视频",
+      "音频",
+      "三维"
+    ],
+    "tags": [
+      "ComfyUI",
+      "节点工作流",
+      "本地生成"
+    ],
+    "summary": "ComfyUI 在 2023 年 1 月进入公开仓库，用节点和连线显示生图过程。加载模型、输入文字、采样、解码、保存图片，都能分别设置。整套流程可以保存和分享。它后来才扩展到更多生成媒介，不能把后来的功能算到最初版本头上。",
+    "why": "做同一批图、组合多个模型时，光有一个提示框不够用。节点图把操作步骤摆出来，方便检查、修改，也能留给下次直接使用。",
+    "mechanism": "每个节点做一件事，连线决定数据往哪里传。程序按先后关系执行，没变的结果可以复用；生成图片也能带上对应的工作流。",
+    "artifact": {
+      "type": "network",
+      "label": "ComfyUI · 节点图示意",
+      "lines": [
+        "加载模型 → 文字编码",
+        "采样器 ← 随机种子 / 步数",
+        "图像解码 → 保存结果"
+      ]
+    },
+    "sources": [
+      {
+        "title": "ComfyUI 官方仓库",
+        "url": "https://github.com/Comfy-Org/ComfyUI"
+      },
+      {
+        "title": "GitHub 仓库元数据",
+        "url": "https://api.github.com/repos/Comfy-Org/ComfyUI"
+      }
+    ]
+  },
+  {
+    "id": "elevenlabs-beta",
+    "date": "2023-01",
+    "title": "ElevenLabs：生成声音走向实用",
+    "subtitle": "输入文字配音，也能参考已有声音",
+    "category": "audio",
+    "org": "ElevenLabs",
+    "modality": [
+      "文字",
+      "语音"
+    ],
+    "tags": [
+      "ElevenLabs",
+      "语音合成",
+      "声音克隆"
+    ],
+    "summary": "ElevenLabs 在 2023 年 1 月推出测试平台，提供文字转语音和声音克隆。用户可以制作有声书、角色配音等内容，声音的语气和表达比机械朗读更受重视。平台后来加入更多语言和检测功能；复制声音的便利也带来了授权和冒充问题。",
+    "why": "配音草稿不必每次都重新录制。但声音越像真人，就越需要说清：这个声音是谁的，谁允许使用，又能用在什么地方。",
+    "mechanism": "模型同时参考文字和目标音色，生成发音、节奏与语气。声音克隆从参考录音中提取说话特征，合成内容未必是本人说过的话。",
+    "artifact": {
+      "type": "waveform",
+      "label": "ElevenLabs · 合成示意",
+      "lines": [
+        "输入文本 + 授权声音参考",
+        "语义 / 节奏 / 音色",
+        "合成语音 → 人工试听"
+      ]
+    },
+    "sources": [
+      {
+        "title": "ElevenLabs 官方回顾测试上线",
+        "url": "https://elevenlabs.io/blog/elevenlabs-launches-new-generative-voice-ai-products-and-announces-19m-series-a-round-led-by-nat-friedman-daniel-gross-and-andreessen-horowitz"
+      }
+    ]
+  },
+  {
+    "id": "runway-gen-1",
+    "date": "2023-02",
+    "title": "Runway：生成进入视频制作",
+    "subtitle": "先改已有视频的样子，再生成新镜头",
+    "category": "video",
+    "org": "Runway",
+    "modality": [
+      "文字",
+      "图像",
+      "视频"
+    ],
+    "tags": [
+      "Runway",
+      "Gen-1",
+      "Gen-2",
+      "视频编辑"
+    ],
+    "summary": "Runway 展示 Gen-1：用文字或参考图改变一段视频的外观，同时尽量保留原有动作和画面结构。随后推出的 Gen-2 可以根据文字、图片或视频生成新镜头。生成技术由此更直接地接入了视频风格化、剪辑和故事板制作。",
+    "why": "创作者有了更具体的用法：改一个现成镜头的风格，或把草图变成动态画面。视频还多了一道难题，前后帧必须接得上。",
+    "mechanism": "模型读取原视频的结构与动作，再按文字或参考图改变外观。生成时还要让前后帧共享信息，减少闪烁和物体变形。",
+    "artifact": {
+      "type": "interface",
+      "label": "Runway · 视频创作示意",
+      "lines": [
+        "输入镜头 + 风格参考",
+        "保留动作，生成新外观",
+        "文字 / 图片 → 新镜头"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Runway Gen-1",
+        "url": "https://runway.com/research/gen-1"
+      },
+      {
+        "title": "Runway Gen-2",
+        "url": "https://runway.com/research/gen-2"
+      }
+    ]
+  },
+  {
+    "id": "controlnet",
+    "date": "2023-02-10",
+    "title": "ControlNet：画面开始可控",
+    "subtitle": "给模型一张姿态图或线稿，约束画面结构",
+    "category": "image",
+    "org": "Lvmin Zhang / Anyi Rao / Maneesh Agrawala",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "ControlNet",
+      "条件控制",
+      "姿态"
+    ],
+    "summary": "ControlNet 给已有的文生图扩散模型增加了结构控制。用户除了写提示词，还能提交边缘图、深度图、人体姿态或分割图，告诉模型物体怎么摆、人物做什么动作。生成结果仍可能偏离要求，但构图不必完全靠反复抽图碰运气。",
+    "why": "分镜、设计和角色创作经常要保留特定构图。ControlNet 让创作者固定动作或轮廓后，再试不同的材质、画风和细节。",
+    "mechanism": "保留原来的生图模型，另加一个网络读取姿态、深度等信息，再把这些信息送入生成过程。新连接从零开始训练，减少对原模型的干扰。",
+    "artifact": {
+      "type": "network",
+      "label": "ControlNet · 结构控制示意",
+      "lines": [
+        "人体姿态 / 边缘 / 深度",
+        "控制网络 → 扩散生成",
+        "结构相近，风格可变"
+      ]
+    },
+    "sources": [
+      {
+        "title": "ControlNet 论文",
+        "url": "https://arxiv.org/abs/2302.05543"
+      }
+    ]
+  },
+  {
+    "id": "llama",
+    "date": "2023-02-24",
+    "title": "LLaMA：开放模型研究加速",
+    "subtitle": "研究者可以拿到权重，自己训练和部署",
+    "category": "text",
+    "org": "Meta",
+    "modality": [
+      "文字",
+      "代码"
+    ],
+    "tags": [
+      "LLaMA",
+      "开放权重",
+      "语言模型"
+    ],
+    "summary": "Meta 发布首代 LLaMA，提供不同参数规模的语言模型，研究者可申请获得权重。首代只采用非商业研究许可，不能套用后续版本的商用规则。它让更多团队能动手微调、量化和本地部署语言模型，而不只是通过聊天网站观察效果。",
+    "why": "有了模型权重，研究者才能修改和比较训练方法，开发者也能尝试本地运行。能下载权重，并不等于许可没有限制。",
+    "mechanism": "这里的基础模型根据给定开头继续写，左侧样本没有做指令微调。论文还单独测试了指令微调版 LLaMA-I，它与这件样本的输出条件不同。",
+    "artifact": {
+      "type": "network",
+      "label": "LLaMA · 模型家族示意",
+      "lines": [
+        "7B / 13B / 33B / 65B",
+        "基础预训练 → 指令微调",
+        "研究许可 ≠ 无条件商用"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing LLaMA",
+        "url": "https://ai.meta.com/blog/large-language-model-Llama-meta-ai/"
+      }
+    ]
+  },
+  {
+    "id": "gpt-4",
+    "date": "2023-03-14",
+    "title": "GPT-4：能力边界继续外推",
+    "subtitle": "读图、写代码，处理更复杂的要求",
+    "category": "text",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像",
+      "代码"
+    ],
+    "tags": [
+      "GPT-4",
+      "多模态",
+      "语言模型"
+    ],
+    "summary": "GPT-4 发布，能接收文字和图像、输出文字，在复杂指令、编程和多学科任务上有所改进。发布材料也说明，它仍会编造内容，可靠性和上下文长度都有局限。图像输入当时仍属研究能力，并非所有用户在发布当天都能用。",
+    "why": "用户开始能把图和问题一起交给通用模型。它能解释更多材料、完成更复杂的任务，但考试分数高，仍不等于每次工作都做得对。",
+    "mechanism": "模型用大量数据学习预测，再通过后续训练调整回答方式。图像会先转换成数字表示，与文字一起参与文字答案的生成。",
+    "artifact": {
+      "type": "paper",
+      "label": "GPT-4 · 能力边界示意",
+      "lines": [
+        "文字 + 图像 → 文字答案",
+        "更复杂的指令与代码任务",
+        "仍可能幻觉，仍需要验证"
+      ]
+    },
+    "sources": [
+      {
+        "title": "GPT-4 Research",
+        "url": "https://openai.com/index/gpt-4-research/"
+      }
+    ]
+  },
+  {
+    "id": "claude",
+    "date": "2023-03-14",
+    "title": "Claude：对齐成为产品路线",
+    "subtitle": "在回答能力之外，也训练助手怎么回应",
+    "category": "text",
+    "org": "Anthropic",
+    "modality": [
+      "文字",
+      "代码"
+    ],
+    "tags": [
+      "Claude",
+      "Constitutional AI",
+      "对齐"
+    ],
+    "summary": "Anthropic 正式推出 Claude，通过聊天界面和 API 提供摘要、问答、写作与编程。公司把有帮助、诚实、无害作为训练目标，并研究怎样让模型按要求行动。这些目标需要持续训练和检验，并不意味着模型已经不会犯错。",
+    "why": "好助手还得知道什么时候照做、什么时候拒绝、什么时候承认不确定。Claude 把这些行为问题和模型能力一起放到了产品设计里。",
+    "mechanism": "在基础训练后，用示范、反馈和行为原则继续调整回答。原则帮助模型评价和修改自己的输出，新场景中的表现还要实际检验。",
+    "artifact": {
+      "type": "paper",
+      "label": "Claude · 行为设计示意",
+      "lines": [
+        "有帮助 / 诚实 / 无害",
+        "示范与反馈 → 调整行为",
+        "对齐目标需要持续评测"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing Claude",
+        "url": "https://www.anthropic.com/news/introducing-claude"
+      }
+    ]
+  },
+  {
+    "id": "adobe-firefly",
+    "date": "2023-03-21",
+    "title": "Firefly：进入专业创作软件",
+    "subtitle": "把生成能力放进设计师熟悉的软件",
+    "category": "image",
+    "org": "Adobe",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "Firefly",
+      "Adobe",
+      "商业创作"
+    ],
+    "summary": "Adobe 发布 Firefly 家族和首个测试版本，先提供图像与文字效果生成，并计划接入 Creative Cloud。首个模型使用 Adobe Stock、公开许可及版权过期内容训练。Adobe 同时讨论商用、创作者补偿和内容凭证，实际使用仍要看具体授权条件。",
+    "why": "设计师可以在已有文件和工具里继续创作，少一些来回搬运。专业使用还得考虑图层怎么改、素材怎么交付，以及来源能否交代清楚。",
+    "mechanism": "模型按文字生成素材，或给选定区域补画。图层、排版、精修和交付仍由设计软件完成，用户可以接着手动调整。",
+    "artifact": {
+      "type": "interface",
+      "label": "Firefly · 工作流示意",
+      "lines": [
+        "描述 → 生成视觉素材",
+        "已有文件 → 选择区域 → 修改",
+        "编辑 / 内容凭证 / 交付"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Adobe Unveils Firefly",
+        "url": "https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI/default.aspx"
+      }
+    ]
+  },
+  {
+    "id": "sdxl",
+    "date": "2023-07-26",
+    "title": "SDXL：开放生图升级",
+    "subtitle": "本地生图也能做出更大的原图",
+    "category": "image",
+    "org": "Stability AI",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "SDXL",
+      "Stable Diffusion",
+      "开放权重"
+    ],
+    "summary": "SDXL 1.0 公开发布，支持原生 1024 像素级生图，由更大的基础模型和可选细化模型组成。它改进了颜色、光照和提示词理解，也方便社区继续做风格微调和结构控制。本地用户获得了更高质量的模型，同时仍要考虑显存和许可。",
+    "why": "创作者可以在共同模型上积累风格和工作流。原图质量提高后，海报、摄影构思等用途也更容易尝试，而不必总依赖在线平台。",
+    "mechanism": "基础模型先确定画面，可选的细化模型再完成后期去噪和细节处理。用户可以按效果和速度要求，决定要不要多做这一步。",
+    "artifact": {
+      "type": "network",
+      "label": "SDXL · 两阶段示意",
+      "lines": [
+        "文字 → 基础扩散模型",
+        "初步画面 → 可选细化模型",
+        "1024 级原生图像"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Announcing SDXL 1.0",
+        "url": "https://stability.ai/news-updates/stable-diffusion-sdxl-1-announcement"
+      }
+    ]
+  },
+  {
+    "id": "qwen-open-models",
+    "date": "2023-08-03",
+    "title": "通义千问开放模型",
+    "subtitle": "中文应用多了一套可下载、可调整的模型",
+    "category": "text",
+    "org": "阿里云 / Qwen Team",
+    "modality": [
+      "文字",
+      "代码"
+    ],
+    "tags": [
+      "Qwen",
+      "通义千问",
+      "开放权重",
+      "中文"
+    ],
+    "summary": "Qwen 团队开放 Qwen-7B 和聊天版本，随后增加不同规模和专门用途的模型。官方仓库提供推理、量化、微调与部署方法，方便开发者适配中文和多语言任务。各时期、各规模的许可有区别，使用时要看对应版本的条款。",
+    "why": "开发者能下载模型，测试它在自己材料上的表现，再按业务需要调整。中文写作、编程和工具调用等应用因此多了一种自建选择。",
+    "mechanism": "基础模型先学习文本规律，聊天版本再学习按指令回答。量化可以少占显存，也可以只训练少量参数，调整领域知识或回答风格。",
+    "artifact": {
+      "type": "network",
+      "label": "Qwen · 开放模型示意",
+      "lines": [
+        "基础模型 + 聊天模型",
+        "推理 / 量化 / 微调 / 部署",
+        "中文应用 → 多语言生态"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Qwen 官方仓库与发布时间表",
+        "url": "https://github.com/QwenLM/Qwen"
+      }
+    ]
+  },
+  {
+    "id": "dall-e-3-chatgpt",
+    "date": "2023-10-19",
+    "title": "DALL·E 3 融入对话",
+    "subtitle": "先聊清楚想法，再生成和修改图片",
+    "category": "image",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "DALL·E 3",
+      "提示遵循",
+      "图像字幕"
+    ],
+    "summary": "DALL·E 3 向 ChatGPT Plus 和 Enterprise 用户开放，生图和修改可以在同一段对话里完成。研究团队用更细致的图像描述改进训练，提升了模型照着提示作画的能力。文字、手部和面部有所改善，复杂排版与物体关系仍可能出错。",
+    "why": "用户可以先讨论构思，再让助手整理描述、生成图片。对开发者来说，它也说明图像配文写得准不准，会直接影响生图效果。",
+    "mechanism": "先训练更好的图像说明器，为训练图片补上细致描述，再用这些图文配对训练生图模型，帮助它学清词语和画面对象的关系。",
+    "artifact": {
+      "type": "paper",
+      "label": "DALL·E 3 · 数据路线示意",
+      "lines": [
+        "图片 → 更详细的图像说明",
+        "改进图文对 → 训练生成模型",
+        "对话 → 描述 → 生成与修改"
+      ]
+    },
+    "sources": [
+      {
+        "title": "DALL·E 3 in ChatGPT",
+        "url": "https://openai.com/index/dall-e-3-is-now-available-in-chatgpt-plus-and-enterprise/"
+      },
+      {
+        "title": "Improving Image Generation with Better Captions",
+        "url": "https://cdn.openai.com/papers/dall-e-3.pdf"
+      }
+    ]
+  },
+  {
+    "id": "gemini-1",
+    "date": "2023-12-06",
+    "title": "Gemini：原生多模态家族",
+    "subtitle": "同一家族面向云端和设备，处理多种输入",
+    "category": "text",
+    "org": "Google DeepMind",
+    "modality": [
+      "文字",
+      "图像",
+      "音频",
+      "视频",
+      "代码"
+    ],
+    "tags": [
+      "Gemini",
+      "多模态",
+      "基础模型"
+    ],
+    "summary": "Google 发布 Gemini 1.0，分为 Ultra、Pro 和 Nano，面向不同性能和部署需求。官方称它从训练开始就同时学习文字、代码、图像、音频与视频。各版本分批接入产品，首日 Bard 使用的是调整后的 Pro，并非整个家族的能力同时开放。",
+    "why": "通用助手接收的材料越来越多，不再只有文字。大模型放在云端，小模型放进设备，使用成本、速度和隐私也随之成为选择条件。",
+    "mechanism": "模型把文字、图像、声音等转成能一起处理的数字表示，学习它们之间的关系。不同规模的版本在能力、速度和算力消耗之间取舍。",
+    "artifact": {
+      "type": "network",
+      "label": "Gemini · 多模态示意",
+      "lines": [
+        "文字 / 图像 / 音频 / 视频",
+        "共享模型表示 → 理解与生成",
+        "Ultra / Pro / Nano"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing Gemini",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/"
+      }
+    ]
+  },
+  {
+    "id": "sora-preview",
+    "date": "2024-02-15",
+    "title": "Sora：视频生成的尺度跃迁",
+    "subtitle": "一分钟视频演示，让人开始细看动作和连续性",
+    "category": "video",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像",
+      "视频"
+    ],
+    "tags": [
+      "Sora",
+      "扩散 Transformer",
+      "世界模型"
+    ],
+    "summary": "Sora 的研究预览展示了最长约一分钟的文生视频，画面包含多个对象和镜头变化。模型把压缩后的时空片段交给扩散 Transformer 处理，适应不同长度和比例。最初只有红队和部分创作者能访问，公众看到的主要是演示。",
+    "why": "视频够清楚后，观众开始看它能否保持人物外观、接好动作和模拟物理。演示里的复杂场面，也暴露了物体关系和运动出错的问题。",
+    "mechanism": "先把视频压缩成带有空间与时间信息的片段，再按文字要求逐步去噪。片段之间相互参考，让前后画面尽量保持一致。",
+    "artifact": {
+      "type": "network",
+      "label": "Sora · 时空片段示意",
+      "lines": [
+        "视频 → 压缩 → 时空片段",
+        "文字条件 + 噪声片段",
+        "联合去噪 → 动态镜头"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Sora 研究预览",
+        "url": "https://openai.com/index/sora/"
+      },
+      {
+        "title": "Video generation models as world simulators",
+        "url": "https://openai.com/index/video-generation-models-as-world-simulators/"
+      }
+    ]
+  },
+  {
+    "id": "suno-v3",
+    "date": "2024-03-21",
+    "title": "Suno v3：一句话生成歌曲",
+    "subtitle": "写下主题或歌词，就能试听一首歌",
+    "category": "audio",
+    "org": "Suno",
+    "modality": [
+      "文字",
+      "音乐",
+      "语音"
+    ],
+    "tags": [
+      "Suno",
+      "音乐生成",
+      "歌曲"
+    ],
+    "summary": "Suno 向所有用户推出 v3，可按简短描述生成最长两分钟、带人声和伴奏的歌曲。官方称新版改善了音质、曲风、提示遵循和结尾。歌曲草稿更容易做了，但能听、能下载和能商用是不同问题，仍要看平台规则和相关权利。",
+    "why": "普通用户也能试着写歌词、选风格，听到完整歌曲。作曲、编曲和演唱被放进一个入口，更多精力花在选题、挑选和修改上。",
+    "mechanism": "用户提供主题、歌词或曲风，模型据此生成音乐和人声。发布页没有公开完整训练细节，不能只听成品就断定内部用了哪种架构。",
+    "artifact": {
+      "type": "waveform",
+      "label": "Suno v3 · 创作示意",
+      "lines": [
+        "主题 / 歌词 / 风格",
+        "人声 + 伴奏 + 歌曲结构",
+        "生成 → 试听 → 选择"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Suno Introducing v3",
+        "url": "https://www.suno.com/blog/v3"
+      }
+    ]
+  },
+  {
+    "id": "gpt-4o",
+    "date": "2024-05-13",
+    "title": "GPT-4o：对话开始有声音",
+    "subtitle": "让语音对话少等一会儿，也听得进语气",
+    "category": "text",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像",
+      "语音",
+      "视频",
+      "代码"
+    ],
+    "tags": [
+      "GPT-4o",
+      "实时语音",
+      "原生多模态"
+    ],
+    "summary": "GPT-4o 发布，尝试用同一模型处理文字、图像和音频，让语音对话更快，也保留更多语气信息。首日先开放文字和图像输入、文字输出，其余功能分批上线。实时语音演示还带来了声音冒充、情感依赖等需要评估的问题。",
+    "why": "语音助手逐渐能听到语气，也能更自然地接话和被打断。面对面的声音与画面开始进入同一次交流，使用体验接近了日常对话。",
+    "mechanism": "传统助手先识别语音，再生成文字，最后把文字读出来。GPT-4o 尝试直接处理声音与文字，减少转换中丢掉语气信息的问题。",
+    "artifact": {
+      "type": "waveform",
+      "label": "GPT-4o · 原生交互示意",
+      "lines": [
+        "声音 / 图像 / 文字输入",
+        "统一模型 → 理解与响应",
+        "首发能力与后续开放分开"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Hello GPT-4o",
+        "url": "https://openai.com/index/hello-gpt-4o/"
+      }
+    ]
+  },
+  {
+    "id": "veo-1",
+    "date": "2024-05-14",
+    "title": "Veo：生成视频进入电影语言",
+    "subtitle": "用航拍、延时等镜头语言描述视频",
+    "category": "video",
+    "org": "Google DeepMind",
+    "modality": [
+      "文字",
+      "图像",
+      "视频"
+    ],
+    "tags": [
+      "Veo",
+      "VideoFX",
+      "电影语言"
+    ],
+    "summary": "Google 介绍 Veo，展示了可超过一分钟的高清生成视频，并通过 VideoFX 向部分创作者提供私密预览。官方强调它能理解延时摄影、航拍等术语，并保持画面连贯。展示视频的长度、工具实际限制和用户开放范围各不相同。",
+    "why": "创作者可以用熟悉的镜头术语表达要求，不只说画面里有什么。运镜、节奏和风格也开始变成视频模型能接收的指令。",
+    "mechanism": "模型学习文字与视频中物体、动作和镜头变化的关系，再按描述生成画面。前后帧需要协调人物外观、位置与运动，才能接得顺。",
+    "artifact": {
+      "type": "interface",
+      "label": "Veo · 镜头语言示意",
+      "lines": [
+        "描述主体 + 动作 + 运镜",
+        "航拍 / 延时 / 电影风格",
+        "生成镜头 → 检查连续性"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing Veo and Imagen 3",
+        "url": "https://blog.google/innovation-and-ai/products/google-generative-ai-veo-imagen-3/"
+      }
+    ]
+  },
+  {
+    "id": "kling-ai",
+    "date": "2024-06-06",
+    "title": "可灵：国产视频模型走向全球",
+    "subtitle": "从申请体验，到更多创作者能实际使用",
+    "category": "video",
+    "org": "快手",
+    "modality": [
+      "文字",
+      "图像",
+      "视频"
+    ],
+    "tags": [
+      "可灵",
+      "Kling",
+      "视频生成",
+      "中国"
+    ],
+    "summary": "快手可灵开始接受体验申请，7 月又向全球用户开放测试网页。用户可以尝试文生视频、图生视频和镜头延长。国产视频模型由此有了更广泛的用户；人物动作、物体关系和运镜效果，也能放到具体创作中比较。",
+    "why": "更多人能自己生成和修改视频，而不只是看厂商演示。模型好不好用，开始体现在一个镜头要试几次、动作是否自然、画面能否接上。",
+    "mechanism": "根据文字或首图确定场景，再生成后续动作。图生视频要保留参考人物或物体，镜头延长则依据已有片段继续生成。",
+    "artifact": {
+      "type": "interface",
+      "label": "可灵 · 创作入口示意",
+      "lines": [
+        "文字生视频 / 图片生视频",
+        "主体动作 + 场景 + 运镜",
+        "生成 → 延长 → 选择镜头"
+      ]
+    },
+    "sources": [
+      {
+        "title": "快手官方可灵全球测试公告",
+        "url": "https://ir.kuaishou.com/news-releases/news-release-details/kuaishou-launches-full-beta-testing-kling-ai-global-users-0"
+      }
+    ]
+  },
+  {
+    "id": "flux-1",
+    "date": "2024-08-01",
+    "title": "FLUX.1：流匹配生图家族",
+    "subtitle": "同一模型家族，提供不同速度和使用许可",
+    "category": "image",
+    "org": "Black Forest Labs",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "FLUX",
+      "流匹配",
+      "开放权重",
+      "Transformer"
+    ],
+    "summary": "Black Forest Labs 发布 FLUX.1 生图家族，结合多模态 Transformer 与流模型，改进提示遵循、细节和图中文字。不同版本分别通过商业 API、非商业开放权重或快速本地生成提供服务，许可不相同。它也很快接入了 ComfyUI 等工具。",
+    "why": "开发者既能接 API，也能按许可选择本地运行的版本。画质、速度和授权需要一起比较，不能把整个家族当成同一种使用条件。",
+    "mechanism": "流匹配学习怎样沿连续路径把噪声变成图片。文字和图像信息在 Transformer 中相互参考，蒸馏版本用更少步骤换取速度。",
+    "artifact": {
+      "type": "network",
+      "label": "FLUX.1 · 家族示意",
+      "lines": [
+        "pro → 商业 API",
+        "dev → 非商业开放权重",
+        "schnell → 快速生成 / Apache 2.0"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Announcing Black Forest Labs",
+        "url": "https://bfl.ai/blog/24-08-01-bfl"
+      }
+    ]
+  },
+  {
+    "id": "openai-o1",
+    "date": "2024-09-12",
+    "title": "o1：先想一会儿再回答",
+    "subtitle": "难题多花些计算，再给出答案",
+    "category": "text",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "代码"
+    ],
+    "tags": [
+      "o1",
+      "推理模型",
+      "强化学习",
+      "思维链"
+    ],
+    "summary": "OpenAI 推出 o1-preview 和 o1-mini，让模型在回答前花更多计算处理数学、代码与科学难题。产品开始把解题过程和思考时间作为可调整的部分。首发预览有功能限制，相关型号后来也已退役，旧发布页不代表今天还能调用。",
+    "why": "模型可以花更多时间尝试和检查答案，而不只靠扩大训练规模。困难任务可能做得更好，代价是等待更久、消耗更多计算。",
+    "mechanism": "训练时奖励有效的解题过程，让模型先做中间推理，再输出答案。额外计算能帮助尝试与纠错，界面上的推理文字并非完整内部过程。",
+    "artifact": {
+      "type": "network",
+      "label": "o1 · 推理计算示意",
+      "lines": [
+        "问题 → 多步分析",
+        "尝试 / 检查 / 修正",
+        "更多计算 ≠ 永远正确"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing OpenAI o1-preview",
+        "url": "https://openai.com/index/introducing-openai-o1-preview/"
+      }
+    ]
+  },
+  {
+    "id": "claude-computer-use",
+    "date": "2024-10-22",
+    "title": "Claude 尝试操作电脑",
+    "subtitle": "看截图、点鼠标，让模型试着操作软件",
+    "category": "tools",
+    "org": "Anthropic",
+    "modality": [
+      "文字",
+      "图像",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "Claude",
+      "Computer Use",
+      "Agent",
+      "提示注入"
+    ],
+    "summary": "Anthropic 为新版 Claude 3.5 Sonnet 推出 computer use 公测。开发者可以让模型看截图、移动鼠标、点击和输入，操作原本给人使用的软件。官方明确表示它还在实验阶段，会笨拙、会出错，工具权限和执行前确认因此必须认真处理。",
+    "why": "没有专用接口的软件，也能让助手试着操作。它点错一下就可能改动真实文件或应用，观察屏幕和获准执行操作需要分清。",
+    "mechanism": "程序把截图交给模型，模型返回鼠标位置或键盘动作。执行后再截图给它看，根据新画面决定下一步，循环推进任务。",
+    "artifact": {
+      "type": "interface",
+      "label": "Computer Use · 操作循环示意",
+      "lines": [
+        "观察截图 → 选择动作",
+        "鼠标 / 键盘 → 新截图",
+        "检查结果 → 继续或停止"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Claude computer use 发布",
+        "url": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+      },
+      {
+        "title": "Developing a computer use model",
+        "url": "https://www.anthropic.com/news/developing-computer-use"
+      }
+    ]
+  },
+  {
+    "id": "model-context-protocol",
+    "date": "2024-11-25",
+    "title": "MCP：连接模型与工具",
+    "subtitle": "让 AI 应用用同一套规则连接工具和资料",
+    "category": "tools",
+    "org": "Anthropic / MCP 社区",
+    "modality": [
+      "文字",
+      "工具",
+      "数据"
+    ],
+    "tags": [
+      "MCP",
+      "Agent",
+      "协议",
+      "连接器"
+    ],
+    "summary": "Anthropic 开放 Model Context Protocol，简称 MCP，同时提供开发工具包、桌面客户端支持和示例服务器。它用统一规则连接 AI 应用与数据源，减少反复编写连接器的工作。协议负责接通，权限和数据安全仍由应用处理。",
+    "why": "一个文件或业务系统接好之后，有机会供多个 AI 应用使用。开发者少做重复连接，用户则能把原有资料和工具带进助手。",
+    "mechanism": "服务器按协议列出可读资料和可用工具，AI 应用负责发现和调用。模型提出要做的操作，应用检查权限、执行后再把结果交回。",
+    "artifact": {
+      "type": "network",
+      "label": "MCP · 连接关系示意",
+      "lines": [
+        "AI 宿主 → MCP 客户端",
+        "统一协议 → 工具服务器",
+        "文件 / 数据库 / 业务应用"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing the Model Context Protocol",
+        "url": "https://www.anthropic.com/news/model-context-protocol"
+      }
+    ]
+  },
+  {
+    "id": "deepseek-r1",
+    "date": "2025-01-20",
+    "title": "DeepSeek-R1：开放推理模型",
+    "subtitle": "开放权重，也提供较小的蒸馏版本",
+    "category": "text",
+    "org": "DeepSeek",
+    "modality": [
+      "文字",
+      "代码"
+    ],
+    "tags": [
+      "DeepSeek",
+      "R1",
+      "强化学习",
+      "蒸馏",
+      "开放权重"
+    ],
+    "summary": "DeepSeek 发布 R1 和技术报告，以 MIT 许可开放权重，并提供较小的蒸馏模型。报告介绍了用强化学习改善数学、代码和推理表现的方法。其基准有各自的测试条件，公开的某项训练成本也不能当成整个项目的研发总支出。",
+    "why": "开发者能自行部署推理模型，也能根据设备选择较小版本。研究团队可以进一步比较训练方法、运行成本，以及结果能否复现。",
+    "mechanism": "用答案是否正确等反馈训练解题行为，再结合示范数据等步骤改善可用性。蒸馏则把大模型生成的解题样本交给小模型学习。",
+    "artifact": {
+      "type": "network",
+      "label": "DeepSeek-R1 · 训练路线示意",
+      "lines": [
+        "基础模型 → 强化学习",
+        "正确性信号 → 改进推理",
+        "大模型样本 → 较小蒸馏模型"
+      ]
+    },
+    "sources": [
+      {
+        "title": "DeepSeek-R1 官方发布",
+        "url": "https://api-docs.deepseek.com/news/news250120"
+      },
+      {
+        "title": "DeepSeek-R1 官方仓库",
+        "url": "https://github.com/deepseek-ai/DeepSeek-R1"
+      }
+    ]
+  },
+  {
+    "id": "hunyuan3d-2",
+    "date": "2025-01-21",
+    "title": "混元 3D 2.0：形状与纹理分工",
+    "subtitle": "先生成形状，再为模型加上外观",
+    "category": "3d",
+    "org": "腾讯混元",
+    "modality": [
+      "图像",
+      "三维"
+    ],
+    "tags": [
+      "Hunyuan3D",
+      "三维生成",
+      "纹理",
+      "开放权重"
+    ],
+    "summary": "腾讯公开混元 3D 2.0 的推理代码和预训练模型，把形状生成与纹理合成分成两个组件。用户能根据图片生成网格，再补上贴图，也能只为已有网格生成纹理。生成的资产仍需检查拓扑、材质和软件兼容性，使用还受许可条件约束。",
+    "why": "三维生成开始能接着已有模型做下去：保留形状，只改外观。可导出、可编辑比单纯能转动查看，更贴近实际资产制作。",
+    "mechanism": "形状模型按图片生成没有贴图的网格，纹理模型再合成表面外观。分开处理几何和颜色，方便分别调整，也更容易接入现有三维软件。",
+    "artifact": {
+      "type": "network",
+      "label": "Hunyuan3D 2.0 · 两阶段示意",
+      "lines": [
+        "参考图片 → 形状模型",
+        "裸网格 → 纹理模型",
+        "三维资产 → 编辑与检查"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Hunyuan3D 2.0 官方仓库",
+        "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2"
+      }
+    ]
+  },
+  {
+    "id": "wan-2-1",
+    "date": "2025-02-25",
+    "title": "万相 2.1：开放视频生成",
+    "subtitle": "视频模型也能下载部署，接入自己的流程",
+    "category": "video",
+    "org": "阿里巴巴 / Wan Team",
+    "modality": [
+      "文字",
+      "图像",
+      "视频"
+    ],
+    "tags": [
+      "Wan",
+      "通义万相",
+      "开放权重",
+      "视频生成"
+    ],
+    "summary": "万相 2.1 开放推理代码和不同规模的模型权重，支持文字与图片生成视频。此后陆续接入 ComfyUI、Diffusers，并增加首尾帧等能力。本地用户能按任务搭建流程，但各模型支持的分辨率、任务类型和显存要求不同。",
+    "why": "开发者可以自己部署，连接控制模块、调整生产流程。选择更多了，硬件、生成速度和日常维护也需要自己承担。",
+    "mechanism": "先把视频压缩成包含画面和时间信息的表示，再按文字或图片生成连续片段，最后解码。小模型更省显存，不同规模的效果和速度有所取舍。",
+    "artifact": {
+      "type": "network",
+      "label": "Wan2.1 · 视频管线示意",
+      "lines": [
+        "文字 / 图片 → 条件编码",
+        "时空潜变量 → 视频生成",
+        "解码 → 连续视频帧"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Wan2.1 官方仓库及发布记录",
+        "url": "https://github.com/Wan-Video/Wan2.1"
+      }
+    ]
+  },
+  {
+    "id": "openai-agents-sdk",
+    "date": "2025-03-11",
+    "title": "Agent 进入开发框架",
+    "subtitle": "把模型调用、工具操作和任务记录连起来",
+    "category": "tools",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "Agent",
+      "Responses API",
+      "Agents SDK",
+      "工具调用"
+    ],
+    "summary": "OpenAI 发布 Responses API、内置搜索与电脑操作等工具，以及组织单个或多个 Agent 的 Agents SDK。开发者能把模型调用、工具执行、任务转交和运行记录放进同一个系统。能否完成任务，仍取决于模型、工具权限和结果检查。",
+    "why": "应用从问一次、答一次，变成能持续调用工具的任务流程。运行记录让开发者知道哪里失败，也方便判断何时需要用户接手。",
+    "mechanism": "给模型一个目标和可用工具，执行它提出的调用，再把结果交回，让它决定下一步。框架管理转交和记录，外部访问仍需要配置与授权。",
+    "artifact": {
+      "type": "code",
+      "label": "Agent · 任务循环示意",
+      "lines": [
+        "目标 → 模型决定下一步",
+        "工具执行 → 返回观察",
+        "验证结果 → 结束 / 继续"
+      ]
+    },
+    "sources": [
+      {
+        "title": "New tools for building agents",
+        "url": "https://openai.com/index/new-tools-for-building-agents/"
+      }
+    ]
+  },
+  {
+    "id": "gpt-4o-image-generation",
+    "date": "2025-03-25",
+    "title": "GPT-4o 原生生图",
+    "subtitle": "在对话里生成图片，再一轮轮修改",
+    "category": "image",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "GPT-4o",
+      "原生生图",
+      "图像编辑",
+      "文字渲染"
+    ],
+    "summary": "OpenAI 在 ChatGPT 中推出 GPT-4o 原生图像生成，重点改善图中文字、复杂要求和参考图修改。用户能沿着同一段对话调整海报、示意图或产品草稿。更逼真的输出也增加了伪造和肖像滥用风险，官方发布了对应系统卡。",
+    "why": "生图开始更适合表达信息和做具体修改。用户能说明哪里要改，继续沿用前文要求，但图中文字、人物和事实细节仍需要逐项检查。",
+    "mechanism": "参考图片、模型的语言知识和对话要求共同参与图像生成。官方未完整公开内部架构，能从产品中确认的主要是输入、输出和编辑方式。",
+    "artifact": {
+      "type": "interface",
+      "label": "原生图像生成 · 修改示意",
+      "lines": [
+        "参考图片 + 具体要求",
+        "生成第一版 → 继续对话",
+        "核对文字 / 构图 / 一致性"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing 4o Image Generation",
+        "url": "https://openai.com/index/introducing-4o-image-generation/"
+      },
+      {
+        "title": "4o image generation system card addendum",
+        "url": "https://openai.com/index/gpt-4o-image-generation-system-card-addendum/"
+      }
+    ]
+  },
+  {
+    "id": "qwen3",
+    "date": "2025-04-29",
+    "title": "Qwen3：思考深度可调",
+    "subtitle": "简单问题快答，难题可以多想一会儿",
+    "category": "text",
+    "org": "阿里巴巴 / Qwen Team",
+    "modality": [
+      "文字",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "Qwen3",
+      "混合专家",
+      "推理",
+      "开放权重"
+    ],
+    "summary": "Qwen3 发布不同规模的稠密模型和混合专家模型，支持切换思考与非思考模式，并改进多语言、编程和工具调用。开发者可以按任务与设备选择版本，再决定给模型多少思考时间。具体收益仍要放进自己的部署环境测试。",
+    "why": "模型不必对每个问题都投入同样计算。常见问题可以快答，难题多花一些时间，本地和云端用户都多了调整成本与效果的空间。",
+    "mechanism": "混合专家版本每次只调用部分网络，减少单次计算。思考模式在答案前多做推理，非思考模式直接回答，速度和效果因任务而异。",
+    "artifact": {
+      "type": "network",
+      "label": "Qwen3 · 计算选择示意",
+      "lines": [
+        "简单任务 → 快速回答",
+        "复杂任务 → 增加思考",
+        "混合专家 → 按需激活"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Qwen3: Think Deeper, Act Faster",
+        "url": "https://qwenlm.github.io/blog/qwen3/"
+      }
+    ]
+  },
+  {
+    "id": "veo-3-flow",
+    "date": "2025-05-20",
+    "title": "Veo 3：视频与声音一起生成",
+    "subtitle": "画面、对白和环境声一起生成",
+    "category": "video",
+    "org": "Google DeepMind",
+    "modality": [
+      "文字",
+      "图像",
+      "视频",
+      "音频"
+    ],
+    "tags": [
+      "Veo 3",
+      "Flow",
+      "音画同步",
+      "Imagen 4"
+    ],
+    "summary": "Google 发布 Veo 3，可同时生成视频、对白、环境声和音效，并推出结合 Veo、Imagen 与 Gemini 的 Flow。用户能管理素材、延续角色和场景，把多次生成组织成镜头。官方演示了音画同步与物理表现的改进，具体片段仍可能出错。",
+    "why": "生成的镜头有了同步声音，短片草稿更接近可观看的成品。创作者少一道单独配音效的工序，也多了对口型和声音时序要检查。",
+    "mechanism": "模型按同一组要求生成画面与声音，让对白、动作和音效在时间上对应。Flow 负责素材管理和镜头控制，帮助用户继续组织和修改。",
+    "artifact": {
+      "type": "waveform",
+      "label": "Veo 3 · 音画联合示意",
+      "lines": [
+        "文字 / 图片 → 场景条件",
+        "视频帧 + 对白 + 环境声",
+        "Flow → 角色 / 场景 / 镜头"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Veo 3、Imagen 4 与 Flow 官方发布",
+        "url": "https://blog.google/innovation-and-ai/products/generative-media-models-io-2025/"
+      }
+    ]
+  },
+  {
+    "id": "claude-4",
+    "date": "2025-05-22",
+    "title": "Claude 4：面向长任务",
+    "subtitle": "一边思考，一边用工具完成较长的任务",
+    "category": "text",
+    "org": "Anthropic",
+    "modality": [
+      "文字",
+      "图像",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "Claude 4",
+      "Agent",
+      "Claude Code",
+      "扩展思考"
+    ],
+    "summary": "Anthropic 发布 Claude Opus 4 和 Sonnet 4，重点介绍编程、长任务与工具使用。模型可以在扩展思考中穿插搜索等操作，Claude Code 也用于持续编程。发布案例来自特定测试和客户环境，不能理解成任何任务都能放心交给它独自做完。",
+    "why": "跨文件修改和长时间操作，光靠一轮回答不够。模型还得记住任务进度、读取工具反馈，再检查自己改出的结果。",
+    "mechanism": "先推理，调用工具取得新材料，再继续修改。长期信息可以写入文件或由应用保留，能记住多少仍取决于这些具体安排。",
+    "artifact": {
+      "type": "code",
+      "label": "Claude 4 · 长任务示意",
+      "lines": [
+        "目标 → 推理 → 调用工具",
+        "观察结果 → 修改代码",
+        "运行检查 → 继续或交付"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing Claude 4",
+        "url": "https://www.anthropic.com/news/claude-4"
+      }
+    ]
+  },
+  {
+    "id": "seedance-1",
+    "date": "2025-06-11",
+    "title": "Seedance：原生多镜头叙事",
+    "subtitle": "一段视频里生成多个镜头，尽量保持角色一致",
+    "category": "video",
+    "org": "字节跳动 Seed",
+    "modality": [
+      "文字",
+      "图像",
+      "视频"
+    ],
+    "tags": [
+      "Seedance",
+      "即梦",
+      "多镜头",
+      "视频生成"
+    ],
+    "summary": "Seed 团队公布 Seedance 1.0 技术报告，支持文字、图片输入和高清输出，重点介绍多镜头生成、主体一致性与动作稳定。同月的 SeedEdit 3.0 在即梦网页测试。模型报告的公布和不同产品入口的开放，并不是同一个时间点。",
+    "why": "多镜头片段能直接承载一小段叙事。创作者希望切镜后仍是同一个角色、同一种风格，少花一些力气修补拼接处的突变。",
+    "mechanism": "用更细的镜头描述训练模型，让它同时学习动作与切镜。后续训练改善稳定性和画面效果，再通过蒸馏与系统优化缩短生成时间。",
+    "artifact": {
+      "type": "interface",
+      "label": "Seedance 1.0 · 叙事示意",
+      "lines": [
+        "远景：人物进入房间",
+        "中景：发现桌上信件",
+        "近景：读信后的表情"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Seedance 1.0 技术报告发布",
+        "url": "https://seed.bytedance.com/zh/blog/tech-report-of-seedance-1-0-is-now-publicly-available"
+      },
+      {
+        "title": "Seedance 1.0 模型页",
+        "url": "https://seed.bytedance.com/en/seedance"
+      },
+      {
+        "title": "SeedEdit 3.0 与即梦测试入口官方公告",
+        "url": "https://seed.bytedance.com/en/blog/bytedance-released-image-editing-model-seededit-3-0-enhanced-image-consistency-and-usability-rate"
+      }
+    ]
+  },
+  {
+    "id": "gpt-5",
+    "date": "2025-08-07",
+    "title": "GPT-5：快速回答与深度思考汇合",
+    "subtitle": "让系统按问题难度选择快答或深入推理",
+    "category": "text",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "GPT-5",
+      "路由",
+      "推理",
+      "Agent"
+    ],
+    "summary": "OpenAI 发布 GPT-5，把快速模型、深度推理模型和实时路由放进一个系统。它按问题复杂度、工具需求和用户要求选择处理方式，改进编程与多步骤任务。入口统一了，不同模式仍有差别，效果也受上下文、工具和推理设置影响。",
+    "why": "用户少了一步挑型号的操作。系统替常见问题和困难任务分配计算，在回答速度、成本和推理效果之间做选择。",
+    "mechanism": "路由器读取对话特征，决定快速回答还是投入更多推理。深度模式还能使用工具；界面上的同一个入口，底层可以走不同路径。",
+    "artifact": {
+      "type": "network",
+      "label": "GPT-5 · 路由示意",
+      "lines": [
+        "输入任务 → 判断复杂度",
+        "快速模型 / 深度推理模型",
+        "工具反馈 → 完成输出"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing GPT-5",
+        "url": "https://openai.com/index/introducing-gpt-5/"
+      }
+    ]
+  },
+  {
+    "id": "nano-banana",
+    "date": "2025-08-26",
+    "title": "Nano Banana：对话式图像编辑",
+    "subtitle": "拿着参考图，用对话继续改",
+    "category": "image",
+    "org": "Google DeepMind",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "Nano Banana",
+      "Gemini 2.5 Flash Image",
+      "图片编辑"
+    ],
+    "summary": "Google 发布 Gemini 2.5 Flash Image，也叫 Nano Banana，支持局部编辑、多图融合和角色一致性。用户能用文字修改照片，或让同一个角色出现在不同画面里。官方同时列出长文字、细节真实性等不足，并为生成和编辑图像加入 SynthID 水印。",
+    "why": "用户能接着一张图往下改，而不必每次重新生成。角色长相、指定区域和其余画面能否保持稳定，成了比单次画质更实际的要求。",
+    "mechanism": "模型一起读取图片和文字，判断哪些部分保留、哪些部分改变。多图输入则让它参考不同图片的主体、场景或风格，再合成新画面。",
+    "artifact": {
+      "type": "interface",
+      "label": "Nano Banana · 编辑示意",
+      "lines": [
+        "参考 A：角色 / 参考 B：场景",
+        "文字要求：保留角色，改变背景",
+        "新图 → 检查细节与一致性"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing Gemini 2.5 Flash Image",
+        "url": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/"
+      }
+    ]
+  },
+  {
+    "id": "sora-2",
+    "date": "2025-09-30",
+    "title": "Sora 2：音画生成与社交产品",
+    "subtitle": "生成带声音的视频，也让用户使用自己的形象",
+    "category": "video",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像",
+      "视频",
+      "音频"
+    ],
+    "tags": [
+      "Sora 2",
+      "音画同步",
+      "角色",
+      "视频社交"
+    ],
+    "summary": "OpenAI 发布 Sora 2 和 Sora 应用，介绍同步对白、音效、多镜头控制，以及经过身份验证的角色功能。用户能把生成视频用于分享和再创作，模型仍会出错。该产品后来停止提供服务，发布时的能力介绍不代表今天仍可使用。",
+    "why": "个人形象被带进了视频生成和分享。用户需要能控制谁可以使用自己的形象，也需要知道怎样撤回授权、识别内容来源。",
+    "mechanism": "模型同时生成画面和声音，切镜时尽量保持场景状态。角色功能使用经过验证的音视频参考，并用权限限制谁能调用这些人物特征。",
+    "artifact": {
+      "type": "interface",
+      "label": "Sora 2 · 创作与授权示意",
+      "lines": [
+        "创作条件 → 视频 + 同步声音",
+        "授权角色 → 可控使用范围",
+        "分享 / 再创作 / 撤回权限"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Sora 2 官方发布",
+        "url": "https://openai.com/index/sora-2/"
+      }
+    ]
+  },
+  {
+    "id": "udio-umg",
+    "date": "2025-10-29",
+    "title": "Udio：音乐生成走向授权合作",
+    "subtitle": "授权合作改变了产品计划，也改变了下载权限",
+    "category": "industry",
+    "org": "Udio / Universal Music Group",
+    "modality": [
+      "文字",
+      "音乐",
+      "语音"
+    ],
+    "tags": [
+      "Udio",
+      "音乐版权",
+      "授权",
+      "创作者"
+    ],
+    "summary": "Udio 宣布与环球音乐集团合作，计划使用获许可的音乐开发新体验，并让艺术家控制声音和风格的使用。平台同时在过渡期停止下载。合作中的新功能仍是计划，而用户眼前能用什么，已经随版权和商业安排发生变化。",
+    "why": "音乐工具的变化会直接影响作品能否导出、分享和继续使用。音质进步之外，授权范围和平台规则也是创作者必须考虑的条件。",
+    "mechanism": "这句原文在 CEO Andrew Sanchez 公告的 The Transition 段。公开合作计划的同时，旧平台的下载规则也已经改变；公告原文能把两件事分开看。",
+    "artifact": {
+      "type": "paper",
+      "label": "Udio · 权利关系示意",
+      "lines": [
+        "艺术家 / 词曲作者 / 曲库",
+        "授权与控制 → 生成产品",
+        "输出能力 ≠ 使用权自动成立"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Udio 与 Universal Music Group 官方公告",
+        "url": "https://www.udio.com/blog/a-new-era"
+      }
+    ]
+  },
+  {
+    "id": "seedance-2",
+    "date": "2026-02-12",
+    "title": "Seedance 2.0：多素材联合生成",
+    "subtitle": "把人物图、动作片段和声音一起交给模型",
+    "category": "video",
+    "org": "字节跳动 Seed",
+    "modality": [
+      "文字",
+      "图像",
+      "视频",
+      "音频"
+    ],
+    "tags": [
+      "Seedance 2.0",
+      "即梦",
+      "多模态参考",
+      "音画联合"
+    ],
+    "summary": "Seed 团队发布 Seedance 2.0，支持文字、图片、音频和视频输入，并联合生成画面与声音。官方介绍，它可参考素材中的构图、动作、运镜和声音，生成多镜头音视频。",
+    "why": "创作者不必全靠文字描述动作和节奏，可以直接提供参考片段。镜头设计更好表达了，也要管理好每份素材分别用来参考什么。",
+    "mechanism": "模型一起读取多种参考，按文字要求协调人物、动作、画面和声音。不同素材给出的条件可能冲突，生成后仍要检查是否用对了。",
+    "artifact": {
+      "type": "network",
+      "label": "Seedance 2.0 · 多素材示意",
+      "lines": [
+        "文字 + 图片 + 视频 + 音频",
+        "参考构图 / 动作 / 运镜 / 声音",
+        "联合生成 → 音视频片段"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Seedance 2.0 Official Launch",
+        "url": "https://seed.bytedance.com/en/blog/seedance-2-0-official-launch"
+      }
+    ]
+  },
+  {
+    "id": "gpt-5-4",
+    "date": "2026-03-05",
+    "title": "GPT-5.4：面向真实工作成果",
+    "subtitle": "从给建议，进一步做到操作软件和制作文件",
+    "category": "text",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "GPT-5.4",
+      "Computer Use",
+      "办公成果",
+      "Agent"
+    ],
+    "summary": "OpenAI 发布 GPT-5.4，把推理、编程和工具使用结合，重点介绍表格、演示与文档制作，并加入原生电脑操作能力。工具搜索帮助模型找到所需连接器。官方测试有特定任务条件，能否交出可用文件，仍要检查实际内容与执行结果。",
+    "why": "用户想得到的是能用的表格、文档或完成的操作。评价模型因此需要打开成果看一遍，也要确认权限是否合适、出错后能否恢复。",
+    "mechanism": "模型可以根据截图操作电脑，或写代码调用软件工具。应用把执行结果传回模型，再让它继续；工具搜索帮助它找到合适的能力。",
+    "artifact": {
+      "type": "interface",
+      "label": "GPT-5.4 · 成果流程示意",
+      "lines": [
+        "需求 → 计划与工具发现",
+        "文档 / 表格 / 演示制作",
+        "读取结果 → 核对与修正"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing GPT-5.4",
+        "url": "https://openai.com/index/introducing-gpt-5-4/"
+      }
+    ]
+  },
+  {
+    "id": "sora-discontinuation",
+    "date": "2026-04-26",
+    "title": "Sora 产品停止提供",
+    "subtitle": "网页与应用先关闭，API 另有停止日期",
+    "category": "industry",
+    "org": "OpenAI",
+    "modality": [
+      "视频",
+      "音频"
+    ],
+    "tags": [
+      "Sora",
+      "产品终止",
+      "数据迁移",
+      "历史边界"
+    ],
+    "summary": "OpenAI 官方页面记载，Sora 网页和应用于 2026 年 4 月 26 日停止提供，帮助中心另列 API 停止日期为 9 月 24 日。两次关闭对应不同使用入口。公告并未据此说明视频生成技术停滞，也不宜自行补上未公开的经营原因。",
+    "why": "创作平台可能停止运营，旧作品和素材却需要留下来。选工具时，能否导出、存档和迁移，同样会影响后续能不能接着做。",
+    "mechanism": "展示文字取自后来仍可访问的 Sora 历史页，由本站排印。帮助中心另列各入口的关闭时间，可以对照保存的旧发布页与当前服务状态。",
+    "artifact": {
+      "type": "paper",
+      "label": "Sora · 生命周期记录",
+      "lines": [
+        "2024：研究预览",
+        "2025：Sora 2 与应用",
+        "2026：网页 / 应用 / API 退场"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Sora 官方历史页的终止说明",
+        "url": "https://openai.com/index/sora/"
+      },
+      {
+        "title": "What to know about the Sora discontinuation",
+        "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+      }
+    ]
+  },
+  {
+    "id": "midjourney-8-2",
+    "date": "2026-07-24",
+    "title": "Midjourney 8.2：编辑与个性化",
+    "subtitle": "按个人偏好生图，再接着编辑",
+    "category": "image",
+    "org": "Midjourney",
+    "modality": [
+      "文字",
+      "图像"
+    ],
+    "tags": [
+      "Midjourney",
+      "V8.2",
+      "个性化",
+      "图像编辑"
+    ],
+    "summary": "Midjourney 官方版本文档记载，V8.2 于 2026 年 7 月 24 日成为默认版本，改进审美、图像质量和个性化。新编辑模型还整合了部分旧参考与重绘功能。不同版本能用哪些参考、怎样编辑仍有差别，旧工作流不能一概照搬。",
+    "why": "个人偏好可以继续沿用，少一些重复描述。编辑功能集中后更方便修改，但版本更新也会影响旧图能否复现、旧素材还能怎么用。",
+    "mechanism": "个性化参考用户选择来影响画面，编辑模型再按素材和指令修改。官方未公开完整训练细节，公开功能能说明的是它如何使用。",
+    "artifact": {
+      "type": "interface",
+      "label": "Midjourney 8.2 · 编辑示意",
+      "lines": [
+        "审美偏好 + 创作描述",
+        "参考与编辑 → 生成变体",
+        "版本设置影响结果与兼容性"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Midjourney 官方版本记录",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+      }
+    ]
+  },
+  {
+    "id": "seedance-2-5",
+    "date": "2026-07-31",
+    "title": "Seedance 2.5：从片段到作品",
+    "subtitle": "生成更长的视频，也能按时间点局部修改",
+    "category": "video",
+    "org": "字节跳动 Seed",
+    "modality": [
+      "文字",
+      "图像",
+      "视频",
+      "音频"
+    ],
+    "tags": [
+      "Seedance 2.5",
+      "长视频",
+      "多模态参考",
+      "视频编辑"
+    ],
+    "summary": "Seedance 2.5 发布，单次可生成最长 30 秒的音视频，并支持多轮延长、更多参考素材和按时间点编辑。它沿用 2.0 的联合音视频架构，方便把片段继续做下去。更长的时长上限，不等于角色、场景和声音在所有长片段中都能稳定保持。",
+    "why": "镜头里只有一处不满意时，可以尝试指定时间点修改，不必总把整段重做。延长与局部调整，让生成结果更容易接近一段完整作品。",
+    "mechanism": "参考素材一起约束生成，延长时接着已有片段往下做。时间点编辑只改指定区间，还要与前后画面和声音接上，避免局部修好、整体断开。",
+    "artifact": {
+      "type": "interface",
+      "label": "Seedance 2.5 · 长叙事示意",
+      "lines": [
+        "多素材参考 → 30 秒片段",
+        "延长 → 接续故事",
+        "时间点编辑 → 局部修正"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing Seedance 2.5",
+        "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5"
+      }
+    ]
+  },
+  {
+    "id": "qwen3-8",
+    "date": "2026-08-12",
+    "title": "Qwen3.8：开放模型面向任务执行",
+    "subtitle": "让开放模型更能规划、调用工具和接着做",
+    "category": "text",
+    "org": "阿里巴巴 / Qwen Team",
+    "modality": [
+      "文字",
+      "图像",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "Qwen3.8",
+      "开放权重",
+      "Agent",
+      "混合架构"
+    ],
+    "summary": "Qwen 官方仓库记录，Qwen3.8 大规模开放模型于 8 月 12 日提供，27B 版本随后发布。它沿用 Qwen3.5 的架构基础，重点改进编程、研究和较长工作流程，并提供思考深度与上下文保留设置。具体效果还取决于运行它的应用和工具。",
+    "why": "开发者可以自行部署能执行任务的模型，再按成本调思考时间。真正要看的，是它能否读懂工具反馈、修正错误并把工作继续做完。",
+    "mechanism": "模型结合混合架构与部分专家网络，并加强规划和反馈训练。应用提供的工具、推理设置，以及保留多少任务记录，都会影响执行结果。",
+    "artifact": {
+      "type": "network",
+      "label": "Qwen3.8 · 任务执行示意",
+      "lines": [
+        "目标 → 自主规划",
+        "工具观察 → 调整步骤",
+        "推理深度 / 上下文保留"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Qwen3.8 官方仓库与发布记录",
+        "url": "https://github.com/QwenLM/Qwen3.8"
+      }
+    ]
+  },
+  {
+    "id": "gpt-6-family",
+    "date": "2026-09-03",
+    "title": "GPT-6：面向复杂工作的模型家族",
+    "subtitle": "Astra 处理复杂工作，后续 Sol 更重视成本",
+    "category": "text",
+    "org": "OpenAI",
+    "modality": [
+      "文字",
+      "图像",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "GPT-6",
+      "Astra",
+      "Sol",
+      "GPT-6.1",
+      "Agent"
+    ],
+    "summary": "OpenAI 从 9 月 3 日分阶段推出 GPT-6 Astra，重点介绍编程、研究、电脑操作和多步骤任务。后续 Sol 系列更重视执行成本，已发布 GPT-6.1 Sol。后者的发布页面向 Work、Codex 和 API，未向普通 Chat 提供，型号与使用入口需要分开看。",
+    "why": "同一家族按工作难度、速度和价格分工。用户除了看回答，还要看模型能否遵守要求、调用工具，并在做错时发现问题、及时改正。",
+    "mechanism": "应用提供文件、工具和权限，模型读取执行反馈后继续操作。不同型号的效果与计算价格不同，公开材料尚不足以还原完整内部架构。",
+    "artifact": {
+      "type": "network",
+      "label": "GPT-6 · 家族与宿主示意",
+      "lines": [
+        "Astra → 高难度工作",
+        "Sol → 能力与成本取舍",
+        "Work / Codex / API：分别核查"
+      ]
+    },
+    "sources": [
+      {
+        "title": "ChatGPT 官方发布记录：2026-09-03",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      },
+      {
+        "title": "GPT-6 Astra 官方介绍",
+        "url": "https://openai.com/index/gpt-6-astra-next-generation-work/"
+      },
+      {
+        "title": "Introducing GPT-6.1 Sol",
+        "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+      }
+    ]
+  },
+  {
+    "id": "claude-opus-5-5",
+    "date": "2026-09-22",
+    "title": "Claude 5.5：能力、效率与行为评测",
+    "subtitle": "长任务要做得稳，也要控制成本和越权",
+    "category": "text",
+    "org": "Anthropic",
+    "modality": [
+      "文字",
+      "图像",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "Claude 5.5",
+      "Agent",
+      "行为评测",
+      "效率"
+    ],
+    "summary": "Anthropic 发布 Claude Opus 5.5，称其改进长任务、编程和知识工作，并降低相对上一代的运行成本。官方同时介绍外部测试、行为审计和提示注入防护，也说明评测仍有局限。Sonnet 与 Haiku 后续加入家族，各型号的开放范围不同。",
+    "why": "助手连续工作时，做得好还得守住权限。运行成本、误操作和被恶意提示带偏的概率，会影响用户是否愿意把实际工作交给它。",
+    "mechanism": "通过后续训练和行为测试，改善任务执行与指令遵循，再用系统措施限制部分高风险操作。训练细节未完整公开，厂商成绩要连同测试条件阅读。",
+    "artifact": {
+      "type": "paper",
+      "label": "Claude 5.5 · 评价维度示意",
+      "lines": [
+        "完成任务 / 成本 / 速度",
+        "遵守边界 / 抵抗提示注入",
+        "长任务行为需要持续检查"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Introducing Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5"
+      },
+      {
+        "title": "Anthropic 官方型号记录",
+        "url": "https://www.anthropic.com/system-cards"
+      }
+    ]
+  },
+  {
+    "id": "gemini-4-argon",
+    "date": "2026-10-13",
+    "title": "Gemini 4 Argon 扩大开放",
+    "subtitle": "从部分合作方试用，扩展到更多使用入口",
+    "category": "text",
+    "org": "Google DeepMind",
+    "modality": [
+      "文字",
+      "图像",
+      "音频",
+      "视频",
+      "代码",
+      "工具"
+    ],
+    "tags": [
+      "Gemini 4",
+      "Argon",
+      "Agent",
+      "专业工作"
+    ],
+    "summary": "Google 先在 9 月底向特定合作方提供 Gemini 4 Argon，10 月 13 日再向开发者、企业和符合条件的消费者扩大开放。官方重点介绍软件工程、知识工作和科学任务。它能接收多种媒介，但 API 的主要输出是文字，其他成果可能来自调用工具。",
+    "why": "模型开始参与更长的工作流程，但谁能用、通过哪个产品用，仍要看开放安排。研究展示、专业场景和大众服务并非同时推进。",
+    "mechanism": "模型读取多种输入，再用代码执行、搜索、函数调用或电脑操作完成任务。工具生成的图片、三维文件，需要与模型直接输出的文字分清。",
+    "artifact": {
+      "type": "network",
+      "label": "Gemini 4 Argon · 工具协作示意",
+      "lines": [
+        "多模态输入 → 推理与计划",
+        "代码 / 搜索 / 电脑操作",
+        "工具产物 → 检查与交付"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Gemini 4 Argon 扩大开放公告",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+      },
+      {
+        "title": "Gemini 4 Argon API 文档",
+        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon/"
+      }
+    ]
+  },
+  {
+    "id": "pika-chatgpt",
+    "date": "2026-10-16",
+    "title": "Pika：创作工具进入对话宿主",
+    "subtitle": "在对话中调用创作应用，接着管理和编辑素材",
+    "category": "tools",
+    "org": "Pika / OpenAI",
+    "modality": [
+      "文字",
+      "图像",
+      "视频",
+      "音频",
+      "工具"
+    ],
+    "tags": [
+      "Pika",
+      "创作平台",
+      "插件",
+      "多模型",
+      "时间线"
+    ],
+    "summary": "Pika 宣布面向 ChatGPT 的插件扩展，把图像、视频、声音工具与素材库、时间线编辑接入对话。用户可在嵌入面板或侧边工作区比较、修改和保存结果。它可以调用外部模型，各账号权限也可能不同，并非平台列出的能力都由 Pika 自研。",
+    "why": "创作时少一些跨网站搬文件的步骤。计划、生成和编辑能接着做，但挑镜头、听声音和调整时间线，仍需要用户在界面里判断。",
+    "mechanism": "对话调用创作应用，由应用选择模型、处理素材、保存结果，再返回界面和作品。时间线组织多个片段，方便用户接着修改。",
+    "artifact": {
+      "type": "interface",
+      "label": "Pika · 对话创作示意",
+      "lines": [
+        "创作意图 → 应用与模型",
+        "素材库 ↔ 对话上下文",
+        "时间线 → 修改 / 配音 / 保存"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Pika Is Now Inside ChatGPT",
+        "url": "https://pika.art/blog/pika-chatgpt-plugin"
+      }
+    ]
+  }
+]

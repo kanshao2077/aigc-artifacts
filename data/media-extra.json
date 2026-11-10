@@ -1,0 +1,72 @@
+{
+  "adobe-firefly": {
+    "type": "image",
+    "src": "./assets/history/firefly-2023-launch-visual.jpg",
+    "alt": "Adobe Firefly 2023 年发布公告中的彩色抽象主视觉",
+    "caption": "2023 年 3 月 21 日 Firefly 官方发布公告的配图，保存自该公告当前页面。它是公告主视觉，不是 Firefly 编辑器截图或独立验证的生成效果对比。",
+    "sourceTitle": "Adobe Unveils Firefly, a Family of new Creative Generative AI",
+    "sourceUrl": "https://news.adobe.com/news/news-details/2023/Adobe-Unveils-Firefly-a-Family-of-new-Creative-Generative-AI/default.aspx",
+    "credit": "© Adobe；官方公告配图，未发现独立开放媒体许可。",
+    "date": "2023-03-21"
+  },
+  "suno-v3": {
+    "type": "image",
+    "src": "./assets/history/suno-v3-2024-launch-visual.jpg",
+    "alt": "Suno Introducing v3 发布页的隧道式品牌主视觉",
+    "caption": "2024 年 3 月 21 日《Introducing v3》发布页所示主视觉，保存自该公告当前页面。它是这篇公告的品牌配图，不是歌曲封面、音频波形或新版本产品截图。",
+    "sourceTitle": "Suno — Introducing v3",
+    "sourceUrl": "https://www.suno.com/blog/v3",
+    "credit": "© Suno；发布页配图，未发现独立开放媒体许可。",
+    "date": "2024-03-21"
+  },
+  "flux-1": {
+    "type": "image",
+    "src": "./assets/history/flux-1-2024-aspect-ratio-samples.webp",
+    "alt": "FLUX.1 首发公告中的不同画幅生成样本：滑板柯基与黑森林列车",
+    "caption": "2024 年 8 月 1 日 FLUX.1 官方首发公告中的不同宽高比生成示例。原图把滑板柯基与列车置于多种画幅；完整保留官方拼图，未重新拼接或重绘。",
+    "sourceTitle": "Announcing Black Forest Labs — FLUX.1 aspect-ratio examples",
+    "sourceUrl": "https://bfl.ai/blog/24-08-01-bfl",
+    "credit": "© Black Forest Labs；官方发布样本拼图，未发现独立开放媒体许可。",
+    "date": "2024-08-01"
+  },
+  "claude-computer-use": {
+    "type": "image",
+    "src": "./assets/history/claude-computer-use-2024-announcement.png",
+    "alt": "Claude computer use 官方公告主视觉：手指、光标和连接线",
+    "caption": "2024 年 10 月 22 日 Anthropic 发布 computer use 与新版 Claude 3.5 模型时的官方公告主视觉。它是概念插画，不是电脑操作录像截图；保留原图边界。",
+    "sourceTitle": "Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku",
+    "sourceUrl": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+    "credit": "© Anthropic；官方公告配图，未发现独立开放媒体许可。",
+    "date": "2024-10-22"
+  },
+  "gpt-4o": {
+    "type": "image",
+    "src": "./assets/history/gpt-4o-2024-robot-typewriter.jpg",
+    "alt": "GPT-4o 2024 年首发页的能力探索样本：机器人在打字机上写日记",
+    "caption": "2024 年 5 月 13 日《Hello GPT-4o》首发页“Explorations of capabilities”的官方生成样本：机器人打字日记。它是能力探索样本，不代表图片输出在首发当天已向所有用户开放，也不是 2025 年 4o 生图产品的示例。",
+    "sourceTitle": "Hello GPT-4o — Robot writer’s block",
+    "sourceUrl": "https://openai.com/index/hello-gpt-4o/",
+    "credit": "© OpenAI；首发页官方生成样本，未发现独立开放媒体许可。",
+    "date": "2024-05-13"
+  },
+  "gpt-4o-image-generation": {
+    "type": "image",
+    "src": "./assets/history/gpt-4o-image-2025-whiteboard.webp",
+    "alt": "4o 原生生图官方示例：人物在玻璃白板上写多模态模型说明",
+    "caption": "2025 年 3 月 25 日《Introducing 4o Image Generation》的白板生成示例。画面中的人物、白板和文字都是展示用生成内容，并非真实会议照片；官方标注“Best of 8”，不能当成单次稳定成功率。",
+    "sourceTitle": "Introducing 4o Image Generation — Whiteboard session",
+    "sourceUrl": "https://openai.com/index/introducing-4o-image-generation/",
+    "credit": "© OpenAI；官方生成样本，未发现独立开放媒体许可。",
+    "date": "2025-03-25"
+  },
+  "veo-3-flow": {
+    "type": "image",
+    "src": "./assets/history/google-genmedia-2025-launch-collage.webp",
+    "alt": "Google 2025 年 Veo 3、Imagen 4 与 Flow 联合发布公告主视觉拼图",
+    "caption": "2025 年 5 月 20 日 Google 生成媒体联合发布页的官方主视觉，涵盖 Veo 3、Imagen 4 与 Flow 的发布语境。拼图并非全是 Veo 3 视频画格，不据此推断每一幅图的生成模型。",
+    "sourceTitle": "Google I/O 2025 — Generative media models",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/generative-media-models-io-2025/",
+    "credit": "© Google；官方联合发布主视觉，未发现独立开放媒体许可。",
+    "date": "2025-05-20"
+  }
+}

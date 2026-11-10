@@ -1,0 +1,1940 @@
+[
+  {
+    "id": "mcculloch-pitts",
+    "date": "1943",
+    "title": "把神经元写成逻辑",
+    "subtitle": "用简单的逻辑单元，研究神经网络能算什么。",
+    "category": "foundations",
+    "org": "Warren McCulloch / Walter Pitts",
+    "modality": [
+      "通用"
+    ],
+    "tags": [
+      "神经网络",
+      "计算基础"
+    ],
+    "summary": "麦卡洛克和皮茨把神经细胞简化成一个逻辑单元：接收输入，达到阈值后发出信号。他们用数学研究这些单元连接起来能完成哪些计算。这时还没有现代训练方法，连接主要靠人设计，与今天能生成文字和图像的模型相距很远。",
+    "why": "它让研究者可以用数学讨论神经网络：一个单元很简单，连接成网络后能做什么？后来从数据中学习的网络，也沿用了单元与连接的基本思路。",
+    "mechanism": "每个单元只有开、关两种状态。输入达到阈值就发出信号，再传给其他单元。改变连接方式，就能实现不同的逻辑运算。",
+    "artifact": {
+      "type": "network",
+      "label": "LOGICAL NEURON · 1943",
+      "lines": [
+        "input A ─┐",
+        "input B ─┼─ [ threshold ] → output",
+        "input C ─┘",
+        "概念示意：简单单元，组合计算"
+      ]
+    },
+    "sources": [
+      {
+        "title": "A logical calculus of the ideas immanent in nervous activity · 原始1943年论文出版记录",
+        "url": "https://link.springer.com/article/10.1007/BF02478259"
+      },
+      {
+        "title": "A Logical Calculus of the Ideas Immanent in Nervous Activity（原文重印）",
+        "url": "https://www.cs.cmu.edu/~epxing/Class/10715/reading/McCulloch.and.Pitts.pdf"
+      }
+    ],
+    "related": [
+      "perceptron",
+      "backpropagation"
+    ]
+  },
+  {
+    "id": "turing-imitation-game",
+    "date": "1950-10",
+    "title": "机器能思考吗",
+    "subtitle": "让机器参与文字对话，看看人能否认出它。",
+    "category": "foundations",
+    "org": "Alan Turing / 曼彻斯特大学",
+    "modality": [
+      "文本",
+      "通用"
+    ],
+    "tags": [
+      "图灵测试",
+      "智能评估"
+    ],
+    "summary": "图灵在《计算机器与智能》中，用文字交流的“模仿游戏”讨论机器智能：评判者看不到交谈对象，要判断谁是机器。他还谈到让机器像儿童一样学习。论文没有给出今天的语言模型，讨论的是怎样观察和评价机器的表现。",
+    "why": "聊天程序说得像人，很容易让人觉得它懂了。图灵提出的问题今天仍在：对话表现能说明什么，又有哪些能力不能只靠聊天判断？",
+    "mechanism": "这里讨论的是评价办法，没有给出一套生成回答的算法。图灵从能观察到的交流表现入手，绕开先给“思考”下定义的争论。",
+    "artifact": {
+      "type": "paper",
+      "label": "COMPUTING MACHINERY & INTELLIGENCE",
+      "lines": [
+        "1950 · A. M. Turing",
+        "文字交流 → 行为判断",
+        "学习机器成为研究问题",
+        "本展件为论文主题示意"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Computing machinery and intelligence · The Turing Digital Archive",
+        "url": "https://turingarchive.kings.cam.ac.uk/computing-machinery-and-intelligence"
+      }
+    ],
+    "related": [
+      "eliza",
+      "gpt-3"
+    ]
+  },
+  {
+    "id": "dartmouth",
+    "date": "1956",
+    "title": "人工智能有了名字",
+    "subtitle": "“人工智能”成为一项共同的研究计划。",
+    "category": "foundations",
+    "org": "达特茅斯学院 / McCarthy 等",
+    "modality": [
+      "通用"
+    ],
+    "tags": [
+      "人工智能",
+      "学科起源"
+    ],
+    "summary": "麦卡锡、明斯基、罗切斯特和香农在 1955 年提出研究计划，会议于 1956 年夏天在达特茅斯举行。他们把学习、语言、抽象和自我改进放在“人工智能”这个名字下讨论。生成式 AI 后来沿着多条路线发展，不能把这次会议当成它唯一的起点。",
+    "why": "原本分散在不同学科里的问题，有了共同的名字和研究议程。今天的生成技术仍然需要计算、统计和其他领域的方法一起解决问题。",
+    "mechanism": "研究计划假设：如果能把某种智能活动描述清楚，机器就可能模拟其中一部分。研究者据此把语言、学习和解题拆成具体任务。",
+    "artifact": {
+      "type": "paper",
+      "label": "DARTMOUTH SUMMER RESEARCH PROJECT",
+      "lines": [
+        "proposal · 1955-08-31",
+        "summer research · 1956",
+        "language · abstraction · learning",
+        "一个领域的研究议程"
+      ]
+    },
+    "sources": [
+      {
+        "title": "The Founding and Future of AI · Dartmouth 官方历史",
+        "url": "https://ai.dartmouth.edu/founding-and-future-ai"
+      },
+      {
+        "title": "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence",
+        "url": "https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html"
+      }
+    ],
+    "related": [
+      "turing-imitation-game",
+      "perceptron"
+    ]
+  },
+  {
+    "id": "perceptron",
+    "date": "1958",
+    "title": "感知机学习调整连接",
+    "subtitle": "连接可以根据反馈调整，不必全靠人设定。",
+    "category": "foundations",
+    "org": "Frank Rosenblatt / 康奈尔航空实验室",
+    "modality": [
+      "图像",
+      "通用"
+    ],
+    "tags": [
+      "感知机",
+      "机器学习"
+    ],
+    "summary": "罗森布拉特的感知机给输入分配可调整的权重，让系统根据样本和反馈学习分类。1958 年的论文是这项工作的经典表述。它能处理的模式有限，但展示了一种不同于逐条编写规则的办法：让机器在做错后修改连接，再试一次。",
+    "why": "今天模型的参数也是在训练中反复调整的。感知机能帮助理解这个过程，不过它只是简单分类器，不能拿来等同于现代生成模型。",
+    "mechanism": "把每个输入乘上一个权重，加起来后判断是否超过阈值。猜错时修改权重，反复训练，学出分类的分界线。单层结构能表达的关系有限。",
+    "artifact": {
+      "type": "network",
+      "label": "PERCEPTRON",
+      "lines": [
+        "x₁ × w₁ ─┐",
+        "x₂ × w₂ ─┼─ sum → threshold",
+        "feedback → adjust weights",
+        "示意：从错误中调整连接"
+      ]
+    },
+    "sources": [
+      {
+        "title": "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain",
+        "url": "https://web.stanford.edu/class/psych209a/ReadingsByDate/01_30/Rosenblatt58Perceptron.pdf"
+      }
+    ],
+    "related": [
+      "mcculloch-pitts",
+      "backpropagation"
+    ]
+  },
+  {
+    "id": "eliza",
+    "date": "1966-01",
+    "title": "ELIZA 开始和人聊天",
+    "subtitle": "几条对话规则，也会让人觉得自己被理解。",
+    "category": "text",
+    "org": "Joseph Weizenbaum / MIT",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "聊天机器人",
+      "规则系统"
+    ],
+    "summary": "魏泽鲍姆在 1966 年发表 ELIZA 论文。程序寻找关键词，把用户的句子拆开，再按规则组织回答；著名的 DOCTOR 脚本模仿心理访谈。它没有用海量语料训练语言模型，却能让一些用户产生被倾听、被理解的感觉。",
+    "why": "人们对聊天程序的信任，早在大语言模型出现前就存在。ELIZA 说明，回应听起来贴切，不代表系统真的理解了用户，也不代表它掌握了事实。",
+    "mechanism": "找到关键词后，程序按模板改写用户的话，常常变成一个问题；找不到时就用预设回答。规则和用户自行补充的语境，让对话得以继续。",
+    "artifact": {
+      "type": "terminal",
+      "label": "ELIZA · RULE-BASED DIALOGUE",
+      "lines": [
+        "user input → keyword search",
+        "decomposition → reassembly",
+        "no keyword → fallback response",
+        "交互机制示意，非原始对话摘录"
+      ]
+    },
+    "sources": [
+      {
+        "title": "ELIZA—A Computer Program For the Study of Natural Language Communication Between Man and Machine",
+        "url": "https://doi.org/10.1145/365153.365168"
+      }
+    ],
+    "related": [
+      "turing-imitation-game",
+      "gpt-2"
+    ]
+  },
+  {
+    "id": "aaron",
+    "date": "1973",
+    "title": "AARON 把绘画知识写进代码",
+    "subtitle": "哈罗德·科恩把绘画经验写进程序。",
+    "category": "image",
+    "org": "Harold Cohen / 加州大学圣迭戈分校",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "生成艺术",
+      "符号规则",
+      "绘图机"
+    ],
+    "summary": "艺术家哈罗德·科恩从 1960 年代末探索计算机绘画，AARON 在 1970 年代初成形，后来持续发展数十年。这里采用惠特尼博物馆展件标示的 1973 年。程序按照科恩写入的构图、造型规则生成图像，再交给绘图或绘画装置执行。",
+    "why": "在深度学习之前，艺术家已经用程序生成作品。AARON 也留下一个至今仍在讨论的问题：当人写规则、机器执行时，作品该怎样理解和署名？",
+    "mechanism": "科恩把形态、空间安排和画线方式写成规则。程序在规则范围内选择、组合，再输出绘图指令；它用的是人工编码的绘画知识，不是海量图片训练。",
+    "artifact": {
+      "type": "image",
+      "label": "AARON · GENERATIVE DRAWING",
+      "lines": [
+        "encoded drawing knowledge",
+        "composition → contours",
+        "plotter commands → marks",
+        "原创机制示意，非 AARON 作品复制"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Harold Cohen: AARON · Whitney Museum of American Art",
+        "url": "https://whitney.org/exhibitions/harold-cohen-aaron"
+      },
+      {
+        "title": "Whitney AARON exhibition checklist（标示 AARON, 1973–）",
+        "url": "https://whitneymedia.org/assets/generic_file/3053/Harold_Cohen_AARON_FINAL_checklist.pdf"
+      }
+    ],
+    "related": [
+      "neural-style-transfer",
+      "gan"
+    ]
+  },
+  {
+    "id": "backpropagation",
+    "date": "1986-10",
+    "title": "让误差向后传播",
+    "subtitle": "算清每个连接该怎么改，多层网络才能继续学。",
+    "category": "foundations",
+    "org": "David Rumelhart / Geoffrey Hinton / Ronald Williams",
+    "modality": [
+      "通用"
+    ],
+    "tags": [
+      "反向传播",
+      "训练",
+      "表示学习"
+    ],
+    "summary": "鲁梅尔哈特、辛顿和威廉姆斯在论文中，把输出误差逐层向后传，用来训练多层网络学习内部表示。反向传播已有更早的数学和研究基础；1986 年这篇论文的影响，在于让这套训练方法在多层神经网络研究中广为人知。",
+    "why": "网络答错了，光知道“错了多少”还不够，还要知道各处参数该怎么调。反向传播负责算出这些调整的依据，今天的大模型训练仍在用它。",
+    "mechanism": "先做一次预测，算出与训练目标的差距，再倒着计算各个参数对误差的影响。优化器根据这些结果调整参数，网络随后再试一次。",
+    "artifact": {
+      "type": "network",
+      "label": "ERROR BACK-PROPAGATION",
+      "lines": [
+        "forward → prediction",
+        "compare → loss",
+        "backward → gradients",
+        "update → repeat"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Learning representations by back-propagating errors",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/naturebp.pdf"
+      }
+    ],
+    "related": [
+      "perceptron",
+      "lstm",
+      "transformer"
+    ]
+  },
+  {
+    "id": "elman-rnn",
+    "date": "1990-03",
+    "title": "网络开始保留上下文",
+    "subtitle": "读到新内容时，网络还能带上前一步的信息。",
+    "category": "foundations",
+    "org": "Jeffrey Elman / 加州大学圣迭戈分校",
+    "modality": [
+      "文本",
+      "通用"
+    ],
+    "tags": [
+      "RNN",
+      "序列",
+      "上下文"
+    ],
+    "summary": "埃尔曼在《在时间中发现结构》中研究简单循环网络，把上一时刻的隐藏状态带到下一时刻，让网络通过预测后续内容学习序列规律。循环网络还有其他研究来源，这篇论文则用具体实验说明，前文信息可以怎样留在网络内部。",
+    "why": "读句子、听音乐都需要联系前后内容。循环网络能保存一份不断更新的状态，但早先的信息容易在更新中丢失，长距离关系尤其难学。",
+    "mechanism": "每读入一个新词，网络都把它与上一份内部状态合起来，生成新的状态。状态传给下一步继续使用，但反复更新可能冲淡较早的信息。",
+    "artifact": {
+      "type": "network",
+      "label": "RECURRENT STATE",
+      "lines": [
+        "input(t) + state(t−1)",
+        "          ↓",
+        "       state(t)",
+        "          → next step"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Finding Structure in Time",
+        "url": "https://doi.org/10.1207/S15516709COG1402_1"
+      }
+    ],
+    "related": [
+      "lstm",
+      "seq2seq"
+    ]
+  },
+  {
+    "id": "lstm",
+    "date": "1997",
+    "title": "给长期记忆加上门",
+    "subtitle": "用记忆单元和门控，让较早的信息更容易留下。",
+    "category": "foundations",
+    "org": "Sepp Hochreiter / Jürgen Schmidhuber",
+    "modality": [
+      "文本",
+      "音频",
+      "通用"
+    ],
+    "tags": [
+      "LSTM",
+      "长期依赖",
+      "门控"
+    ],
+    "summary": "霍赫赖特和施密德胡伯提出长短期记忆网络，用特殊记忆单元和门控机制，缓解循环网络训练中误差信号逐渐衰减的问题。这里采用 1997 年正式期刊论文的日期，技术报告则更早。LSTM 后来被用于语音、翻译和序列生成。",
+    "why": "生成下一个词时，有时需要用到很早的前文。LSTM 让这类信息更容易参与训练，在 Transformer 之前，语音和翻译系统常用它处理序列。",
+    "mechanism": "记忆单元保存信息，网络学习何时写入、何时读出。专门的信息通道让误差信号更稳定地传播，减轻普通循环网络难以学习长距离关系的问题。",
+    "artifact": {
+      "type": "network",
+      "label": "LONG SHORT-TERM MEMORY",
+      "lines": [
+        "input → [write gate]",
+        "memory cell ─────────→",
+        "             [read gate] → output",
+        "门控机制概念示意"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Long Short-Term Memory · JKU 作者机构1997年论文目录",
+        "url": "https://www.jku.at/institut-fuer-machine-learning/forschung/publikationen/older/"
+      },
+      {
+        "title": "Long Short-Term Memory · 作者研究机构论文与软件目录",
+        "url": "https://www.bioinf.jku.at/software/lstm/"
+      }
+    ],
+    "related": [
+      "elman-rnn",
+      "seq2seq",
+      "wavenet"
+    ]
+  },
+  {
+    "id": "neural-language-model",
+    "date": "2003-02",
+    "title": "词语变成可学习的坐标",
+    "subtitle": "把词变成数字表示，再学习预测下一个词。",
+    "category": "text",
+    "org": "Yoshua Bengio 等 / 蒙特利尔大学",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "语言模型",
+      "词向量",
+      "概率"
+    ],
+    "summary": "本吉奥等人让词的数字表示和语言预测网络一起训练。用法相近的词可以共享学到的规律，模型因此更有机会处理没完整见过的词语组合。这项神经概率语言模型研究，把学习词语表示和预测后续文字放到了同一个训练过程里。",
+    "why": "句子的组合太多，逐句记忆并不现实。让相似的词共享规律，模型就能用有限样本处理更多新句子，后来的语言预训练也继续使用预测任务。",
+    "mechanism": "每个词对应一串可训练的数字。网络用前面几个词预测下一个词，猜错后同时修改词的表示和预测网络，逐渐学会利用上下文规律。",
+    "artifact": {
+      "type": "network",
+      "label": "NEURAL PROBABILISTIC LANGUAGE MODEL",
+      "lines": [
+        "words → learned vectors",
+        "context vectors → network",
+        "network → next-word distribution",
+        "共同训练词表示与概率模型"
+      ]
+    },
+    "sources": [
+      {
+        "title": "A Neural Probabilistic Language Model",
+        "url": "https://jmlr.org/papers/v3/bengio03a.html"
+      }
+    ],
+    "related": [
+      "word2vec",
+      "gpt"
+    ]
+  },
+  {
+    "id": "deep-belief-net",
+    "date": "2006",
+    "title": "逐层学习深层表示",
+    "subtitle": "先逐层学习，再把深层网络放在一起调整。",
+    "category": "foundations",
+    "org": "多伦多大学 / 新加坡国立大学",
+    "modality": [
+      "通用",
+      "图像"
+    ],
+    "tags": [
+      "深度学习",
+      "玻尔兹曼机",
+      "预训练"
+    ],
+    "summary": "辛顿、奥辛德罗和 Yee Whye Teh 提出训练深度信念网络的快速算法：先逐层学习，为深层网络准备初始参数，再继续调整。在当时深层网络经常难以训练的情况下，这种方法让较深的结构有了可以实践的训练办法。",
+    "why": "今天训练深层网络很常见，当时却并不容易。逐层预训练给出了能运行的办法；不过今天大模型的结构和训练方式通常已经不同。",
+    "mechanism": "先让第一层从输入中学习规律，再用它的输出训练下一层，逐层往上。各层有了初步表示后，再通过整体训练调整它们之间的配合。",
+    "artifact": {
+      "type": "network",
+      "label": "DEEP BELIEF NET",
+      "lines": [
+        "data → layer 1",
+        "layer 1 → layer 2",
+        "layer 2 → layer 3",
+        "逐层预训练 → 整体调整"
+      ]
+    },
+    "sources": [
+      {
+        "title": "A fast learning algorithm for deep belief nets",
+        "url": "https://www.cs.toronto.edu/~hinton/absps/fastnc.pdf"
+      }
+    ],
+    "related": [
+      "backpropagation",
+      "alexnet",
+      "vae"
+    ]
+  },
+  {
+    "id": "imagenet",
+    "date": "2009",
+    "title": "给视觉学习建一座数据仓库",
+    "subtitle": "整理大量标注图片，让视觉模型有共同的训练材料。",
+    "category": "foundations",
+    "org": "Jia Deng / Li Fei-Fei 等 · 普林斯顿大学",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "数据集",
+      "视觉学习",
+      "基准"
+    ],
+    "summary": "ImageNet 按 WordNet 的语义层级组织大量标注图片，2009 年论文介绍了这项数据工程。它用于训练和比较视觉识别模型，本身不会生成图片。识别网络学出的特征，后来也被用来比较图像、指导风格迁移和图像生成。",
+    "why": "模型能学到什么，也取决于训练材料。ImageNet 让研究者能在较大、统一的数据集上训练和比较模型，减少各用一套小数据带来的差异。",
+    "mechanism": "先建立类别层级，再收集、核验相应图片。模型根据图片和标签学习识别特征，研究者用共同的数据和评测条件比较结果。",
+    "artifact": {
+      "type": "interface",
+      "label": "IMAGENET · DATA INFRASTRUCTURE",
+      "lines": [
+        "semantic hierarchy",
+        "        ↓",
+        "images + labels",
+        "shared training and evaluation"
+      ]
+    },
+    "sources": [
+      {
+        "title": "ImageNet: A Large-Scale Hierarchical Image Database",
+        "url": "https://www.image-net.org/static_files/papers/imagenet_cvpr09.pdf"
+      }
+    ],
+    "related": [
+      "alexnet",
+      "biggan"
+    ]
+  },
+  {
+    "id": "alexnet",
+    "date": "2012",
+    "title": "GPU 推动视觉突破",
+    "subtitle": "卷积网络配合 GPU 训练，在图像识别竞赛中领先。",
+    "category": "foundations",
+    "org": "Alex Krizhevsky / Ilya Sutskever / Geoffrey Hinton",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "GPU",
+      "卷积网络",
+      "深度学习"
+    ],
+    "summary": "克里热夫斯基、苏茨克维和辛顿用 GPU 训练深层卷积网络，结合 ReLU 等设计和防止过拟合的技巧，在 ImageNet 识别任务中取得显著领先。AlexNet 做的是分类，研究结果让更多人开始采用深度网络、大规模数据和加速硬件的组合。",
+    "why": "识别网络学出的视觉特征，后来可以用来比较图像内容和风格。GPU 让大量计算更快完成，也逐渐成为训练生成模型常用的硬件。",
+    "mechanism": "卷积层先寻找局部图案，再逐层组合成复杂特征。训练用标签纠正分类结果，GPU 并行处理大量运算，让这样较深的网络能够完成训练。",
+    "artifact": {
+      "type": "network",
+      "label": "ALEXNET · 2012",
+      "lines": [
+        "image → convolutions",
+        "features → deeper features",
+        "GPU training → classification",
+        "识别突破，为生成研究铺路"
+      ]
+    },
+    "sources": [
+      {
+        "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+        "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+      }
+    ],
+    "related": [
+      "imagenet",
+      "neural-style-transfer",
+      "dcgan"
+    ]
+  },
+  {
+    "id": "word2vec",
+    "date": "2013-01-16",
+    "title": "词向量可以高效训练",
+    "subtitle": "从词语的使用语境里，学出可以复用的数字表示。",
+    "category": "text",
+    "org": "Tomas Mikolov 等 / Google",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "词向量",
+      "CBOW",
+      "Skip-gram"
+    ],
+    "summary": "Mikolov 等人提出高效训练词向量的模型，用较低计算成本处理大规模语料。训练后，词的数字坐标能反映一部分语义和语法关系，供其他语言任务使用。word2vec 不会像聊天模型那样回答问题，同一个词通常也只有一份固定表示。",
+    "why": "词向量让计算机能比较词语的相近程度，而不只是识别不同编号。这些表示可以重复用于多种任务，省去每个任务重新学习全部词语关系的成本。",
+    "mechanism": "模型通过周围的词猜中心词，或者用中心词猜周围的词。使用语境相似的词，训练后往往坐标接近，但这里还不能按不同语境改变同一词的表示。",
+    "artifact": {
+      "type": "network",
+      "label": "WORD2VEC",
+      "lines": [
+        "context ↔ target word",
+        "          ↓",
+        "continuous word vectors",
+        "从共同语境中学习相似性"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Efficient Estimation of Word Representations in Vector Space",
+        "url": "https://arxiv.org/abs/1301.3781"
+      }
+    ],
+    "related": [
+      "neural-language-model",
+      "bert"
+    ]
+  },
+  {
+    "id": "vae",
+    "date": "2013-12-20",
+    "title": "在隐空间里生成新样本",
+    "subtitle": "一边学习压缩样本，一边学习怎样生成新样本。",
+    "category": "foundations",
+    "org": "Diederik Kingma / Max Welling · 阿姆斯特丹大学",
+    "modality": [
+      "图像",
+      "通用"
+    ],
+    "tags": [
+      "VAE",
+      "隐变量",
+      "重参数化"
+    ],
+    "summary": "Kingma 和 Welling 提出自动编码变分贝叶斯方法，把负责推断的编码器与负责生成的网络一起训练。重参数化技巧让带随机变量的模型也能有效优化。VAE 可以把样本压成潜在表示，也能从这个空间抽样，生成新的内容。",
+    "why": "生成系统常要先把复杂图像压缩，再从压缩表示还原。VAE 把压缩、随机采样和联合训练放在一起，后来被用作多种生成系统的部件。",
+    "mechanism": "编码器给出一组概率分布参数，从中抽取隐码，解码器再用隐码重建图片。训练既要让重建像原图，也要约束隐空间，方便从中抽样生成。",
+    "artifact": {
+      "type": "network",
+      "label": "VARIATIONAL AUTOENCODER",
+      "lines": [
+        "image → encoder → μ, σ",
+        "sample z → decoder → image",
+        "reconstruction + regularization",
+        "在紧凑空间中学习与采样"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Auto-Encoding Variational Bayes",
+        "url": "https://arxiv.org/abs/1312.6114"
+      }
+    ],
+    "related": [
+      "vq-vae",
+      "latent-diffusion"
+    ]
+  },
+  {
+    "id": "gan",
+    "date": "2014-06-10",
+    "title": "生成器和判别器互相较量",
+    "subtitle": "一个网络生成样本，另一个练习辨别真假。",
+    "category": "image",
+    "org": "Ian Goodfellow 等 / 蒙特利尔大学",
+    "modality": [
+      "图像",
+      "通用"
+    ],
+    "tags": [
+      "GAN",
+      "对抗训练",
+      "生成模型"
+    ],
+    "summary": "Goodfellow 等人提出生成对抗网络：生成器制造样本，判别器学习区分真实数据和生成结果，两者交替训练。GAN 后来能合成逼真人脸等图像，不过训练容易不稳定，生成结果也可能缺少变化，反复集中在少数样式上。",
+    "why": "生成结果好不好，可以交给另一个网络来学习判断。这种办法提高了图像的真实感，也让合成人脸、身份冒用和真假识别成为实际问题。",
+    "mechanism": "生成器把随机输入变成图片，判别器判断真假。生成器根据判别器的反馈修改参数，判别器也不断学习；两边失去平衡时，训练就容易出问题。",
+    "artifact": {
+      "type": "network",
+      "label": "GENERATIVE ADVERSARIAL NETWORK",
+      "lines": [
+        "noise → generator → sample",
+        "real data ─────┐",
+        "sample ───────┴→ discriminator",
+        "adversarial feedback → generator"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Generative Adversarial Networks",
+        "url": "https://arxiv.org/abs/1406.2661"
+      }
+    ],
+    "related": [
+      "dcgan",
+      "biggan",
+      "stylegan"
+    ]
+  },
+  {
+    "id": "neural-attention",
+    "date": "2014-09-01",
+    "title": "生成每个词时重新看原文",
+    "subtitle": "翻译到哪里，就重新看原文里相关的位置。",
+    "category": "text",
+    "org": "Dzmitry Bahdanau / Kyunghyun Cho / Yoshua Bengio",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "注意力",
+      "机器翻译",
+      "对齐"
+    ],
+    "summary": "Bahdanau、Cho 和 Bengio 让翻译模型在生成每个词时，对原文不同位置分配不同权重。这样不用把整句信息全压进一份固定表示里。论文于 2014 年公开，后在 ICLR 2015 发表，研究的是让对齐和翻译一起学习的注意力方法。",
+    "why": "翻译长句时，模型可以不断回看相关片段，减少遗漏。后来的注意力机制也用于其他媒体，Transformer 则进一步用它组织上下文关系。",
+    "mechanism": "每生成一个词，就给原文各个位置打分，再按权重汇总信息。权重由训练学到，表示当前计算更依赖哪些位置，不能直接当作人的注视或理解。",
+    "artifact": {
+      "type": "network",
+      "label": "LEARNED ALIGNMENT",
+      "lines": [
+        "source: [1] [2] [3] [4]",
+        "weights: ░   █   ▓   ░",
+        "weighted context → next word",
+        "每一步重新分配关注"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+        "url": "https://arxiv.org/abs/1409.0473"
+      }
+    ],
+    "related": [
+      "seq2seq",
+      "transformer"
+    ]
+  },
+  {
+    "id": "seq2seq",
+    "date": "2014-09-10",
+    "title": "把序列转换成另一段序列",
+    "subtitle": "先读入一段序列，再逐步生成另一段序列。",
+    "category": "text",
+    "org": "Ilya Sutskever / Oriol Vinyals / Quoc Le · Google",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "Seq2Seq",
+      "编码器",
+      "解码器"
+    ],
+    "summary": "Sutskever 等人用多层 LSTM 读入句子，再逐词生成译文，在英法翻译中验证了这套方法。输入和输出可以长度不同。与同年的其他编码器、解码器研究一起，这种序列到序列的结构后来被用于翻译、摘要和对话生成。",
+    "why": "译文长度和词序未必与原文一致，需要根据输入重新组织一句话。把读取输入和生成输出分开，让多种文字转换任务可以采用相近结构。",
+    "mechanism": "编码器依次读入原文，形成内部表示。解码器参考这份表示和已生成的词，继续预测下一个词，直到生成结束符号。",
+    "artifact": {
+      "type": "network",
+      "label": "SEQUENCE → SEQUENCE",
+      "lines": [
+        "source sequence → encoder",
+        "             fixed representation",
+        "decoder → target sequence",
+        "输入长度与输出长度可以不同"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Sequence to Sequence Learning with Neural Networks",
+        "url": "https://arxiv.org/abs/1409.3215"
+      }
+    ],
+    "related": [
+      "lstm",
+      "neural-attention",
+      "t5"
+    ]
+  },
+  {
+    "id": "diffusion-origin",
+    "date": "2015-03-12",
+    "title": "学会逆转噪声过程",
+    "subtitle": "先把数据逐渐变成噪声，再学习怎样一步步还原。",
+    "category": "foundations",
+    "org": "Jascha Sohl-Dickstein 等",
+    "modality": [
+      "图像",
+      "通用"
+    ],
+    "tags": [
+      "扩散模型",
+      "去噪",
+      "概率"
+    ],
+    "summary": "Sohl-Dickstein 等人借鉴非平衡热力学，先用许多小步骤破坏数据，再训练模型学习逆向恢复。复杂的数据分布由此与简单的噪声分布联系起来。这项 2015 年的扩散研究，与 2020 年代常用的训练、采样方法仍有区别。",
+    "why": "一次生成完整图像很难，扩散模型把它拆成许多小的恢复步骤。后来从噪点中逐渐生成图片的方法，可以沿着这条研究路线往前追溯。",
+    "mechanism": "训练时一点点给真实图片加噪，再让模型学习每一步该怎样往回走。生成时从随机噪声开始，反复执行逆向步骤，逐渐得到新样本。",
+    "artifact": {
+      "type": "network",
+      "label": "FORWARD / REVERSE DIFFUSION",
+      "lines": [
+        "data → noise → noise → noise",
+        "                       ↓",
+        "sample ← denoise ← denoise",
+        "把恢复过程分成许多小步"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Deep Unsupervised Learning using Nonequilibrium Thermodynamics",
+        "url": "https://arxiv.org/abs/1503.03585"
+      }
+    ],
+    "related": [
+      "score-models",
+      "ddpm",
+      "latent-diffusion"
+    ]
+  },
+  {
+    "id": "u-net",
+    "date": "2015-05-18",
+    "title": "U 形网络连接细节与全局",
+    "subtitle": "缩小图像看整体，再把早期细节接回去。",
+    "category": "foundations",
+    "org": "Olaf Ronneberger 等 / 弗莱堡大学",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "U-Net",
+      "卷积网络",
+      "跳跃连接"
+    ],
+    "summary": "Ronneberger 等人为生物医学图像分割提出 U-Net：先收缩图像表示，再逐步展开，用跨层连接保留位置信息。原论文解决的是分割问题。后来许多图像扩散模型采用类似结构，预测噪声或恢复图像，但不能把原始 U-Net 直接当作文生图模型。",
+    "why": "生成图像既要看整体安排，也要处理边缘和纹理。U-Net 把不同尺度的信息接在一起，后来的不少扩散模型用它同时处理这些需求。",
+    "mechanism": "图像逐层缩小，让网络看到更大范围，再逐层放大。早期的细节通过旁路直接传到后期层，帮助恢复准确位置，不必全靠最深处的压缩表示。",
+    "artifact": {
+      "type": "network",
+      "label": "U-NET",
+      "lines": [
+        "detail ───────────────────┐",
+        "  down → context → up     │",
+        "       └──────────────→ output",
+        "跨层连接保留局部信息"
+      ]
+    },
+    "sources": [
+      {
+        "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+        "url": "https://arxiv.org/abs/1505.04597"
+      }
+    ],
+    "related": [
+      "ddpm",
+      "latent-diffusion"
+    ]
+  },
+  {
+    "id": "neural-style-transfer",
+    "date": "2015-08-26",
+    "title": "内容与画风可以重新组合",
+    "subtitle": "保留一张图的内容，借用另一张图的视觉风格。",
+    "category": "image",
+    "org": "Leon Gatys / Alexander Ecker / Matthias Bethge",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "风格迁移",
+      "感知特征",
+      "计算艺术"
+    ],
+    "summary": "Gatys 等人用卷积网络比较图像特征，把一张图的内容与另一张图的风格组合起来。算法反复修改输出图，使内容特征接近原图，特征统计接近风格图。当时还不能输入一句文字就画图，但照片转成类似画作的效果已经很直观。",
+    "why": "原本用来识别图片的网络，也能反过来指导修改图片。内容和纹理风格可以分别比较、分别约束，后来的图像编辑继续使用了这种思路。",
+    "mechanism": "用预训练视觉网络提取特征，较高层特征帮助保留内容，特征间的统计关系描述部分纹理。反复调整输出像素，在内容和风格两项要求之间折中。",
+    "artifact": {
+      "type": "image",
+      "label": "CONTENT + STYLE",
+      "lines": [
+        "content image → structure",
+        "style image → feature statistics",
+        "optimization → new image",
+        "原创建模示意，不展示原论文作品"
+      ]
+    },
+    "sources": [
+      {
+        "title": "A Neural Algorithm of Artistic Style",
+        "url": "https://arxiv.org/abs/1508.06576"
+      }
+    ],
+    "related": [
+      "alexnet",
+      "aaron",
+      "stylegan"
+    ]
+  },
+  {
+    "id": "dcgan",
+    "date": "2015-11-19",
+    "title": "卷积网络加入对抗生成",
+    "subtitle": "给早期图像 GAN 一套更容易复现的结构选择。",
+    "category": "image",
+    "org": "Alec Radford / Luke Metz / Soumith Chintala",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "DCGAN",
+      "GAN",
+      "无监督表示"
+    ],
+    "summary": "Radford 等人为 GAN 的生成器和判别器提出一组卷积网络设计，并展示网络学到的视觉表示。DCGAN 没有发明对抗生成，但给早期实验提供了常用参考，研究者更容易训练、比较小幅图像生成模型。训练不稳定的问题仍然存在。",
+    "why": "只有思路还不够，研究者还需要能复现的结构和训练办法。DCGAN 把这些选择写得更具体，方便其他团队重复实验和继续修改。",
+    "mechanism": "生成器逐步把短随机向量展开成图像，判别器用卷积特征分辨真假。论文约束两端的结构和训练方式，让它们更容易配合，但仍可能训练失败。",
+    "artifact": {
+      "type": "network",
+      "label": "DEEP CONVOLUTIONAL GAN",
+      "lines": [
+        "latent vector → expand → image",
+        "image → convolutions → real / fake",
+        "generator ↔ discriminator",
+        "可复用结构让实验更容易"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks",
+        "url": "https://arxiv.org/abs/1511.06434"
+      }
+    ],
+    "related": [
+      "gan",
+      "biggan",
+      "stylegan"
+    ]
+  },
+  {
+    "id": "vgan",
+    "date": "2016-09-08",
+    "title": "生成的画面开始运动",
+    "subtitle": "把背景和运动前景分开，尝试生成短视频。",
+    "category": "video",
+    "org": "Carl Vondrick / Hamed Pirsiavash / Antonio Torralba",
+    "modality": [
+      "视频"
+    ],
+    "tags": [
+      "视频生成",
+      "时空卷积",
+      "GAN"
+    ],
+    "summary": "Vondrick 等人用时空卷积对抗网络学习场景运动，把相对静止的背景与变化的前景分开生成。论文演示了低分辨率、约一秒长的视频，还尝试从静态图像预测接下来可能发生什么。画面质量有限，也远没有达到今天视频模型的长度和清晰度。",
+    "why": "一张图合理，不代表连成视频也合理。对象要在连续画面中保持一致，运动还要连贯；这些早期实验已经遇到了后来视频生成反复面对的问题。",
+    "mechanism": "一部分网络生成背景，另一部分生成随时间变化的前景，再学习把两者混合。判别器同时看空间和时间上的变化，判断整段视频是否像真实样本。",
+    "artifact": {
+      "type": "interface",
+      "label": "GENERATING SCENE DYNAMICS",
+      "lines": [
+        "background ─────────────┐",
+        "foreground(t₁,t₂,t₃) ──┴→ video",
+        "spatio-temporal discriminator",
+        "原创短片结构示意"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Generating Videos with Scene Dynamics",
+        "url": "https://arxiv.org/abs/1609.02612"
+      }
+    ],
+    "related": [
+      "gan",
+      "vq-vae"
+    ]
+  },
+  {
+    "id": "wavenet",
+    "date": "2016-09-12",
+    "title": "直接生成声音波形",
+    "subtitle": "直接学习音频波形，让合成语音听起来更自然。",
+    "category": "audio",
+    "org": "Aaron van den Oord 等 / DeepMind",
+    "modality": [
+      "音频"
+    ],
+    "tags": [
+      "语音合成",
+      "自回归",
+      "波形"
+    ],
+    "summary": "WaveNet 根据此前的音频采样点预测下一个点，直接学习原始波形。在论文的英语和普通话语音评价中，它的自然度超过当时的对比系统，也尝试了音乐生成。不过逐点生成需要大量计算，速度成为后来改进语音合成方法要解决的问题。",
+    "why": "同一句话的音色、节奏和细节，会明显影响听感。WaveNet 直接学习声音本身，展示了神经网络改善语音自然度的办法，也暴露了生成速度的成本。",
+    "mechanism": "一秒声音有成千上万个采样点。因果卷积只查看过去的声音，并扩大能参考的时间范围，再预测下一个点的分布；不断采样就得到新波形。",
+    "artifact": {
+      "type": "waveform",
+      "label": "WAVENET · RAW AUDIO",
+      "lines": [
+        "past samples → causal network",
+        "dilated layers → wider context",
+        "distribution → next sample",
+        "▁▂▅▇▅▂▁ 逐点生成波形"
+      ]
+    },
+    "sources": [
+      {
+        "title": "WaveNet: A Generative Model for Raw Audio",
+        "url": "https://arxiv.org/abs/1609.03499"
+      }
+    ],
+    "related": [
+      "tacotron",
+      "jukebox"
+    ]
+  },
+  {
+    "id": "pix2pix",
+    "date": "2016-11-21",
+    "title": "从一种图像翻译到另一种",
+    "subtitle": "给一张草图或标注图，学习生成对应的图像。",
+    "category": "image",
+    "org": "Phillip Isola 等 / 加州大学伯克利分校",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "图像翻译",
+      "条件生成",
+      "配对数据"
+    ],
+    "summary": "pix2pix 用成对样本训练图像转换，例如把边缘图变成照片、把标注图变成街景，或为灰度图上色。生成器参考输入图作图，判别器则判断输入和结果是否像真实配对。论文于 2016 年公开，随后在 CVPR 2017 发表。",
+    "why": "创作者可以用草图或分割图规定画面的结构，比单纯从随机噪声生成更直接。同一类训练办法，也能用于几种不同的图像转换。",
+    "mechanism": "生成器读入一张图，生成目标图。判别器同时检查输入与结果，训练还要求结果接近配对目标，让结构要求和视觉效果一起影响生成器。",
+    "artifact": {
+      "type": "image",
+      "label": "PIX2PIX",
+      "lines": [
+        "edges → photograph",
+        "labels → street scene",
+        "grayscale → color",
+        "paired images → conditional GAN"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Image-to-Image Translation with Conditional Adversarial Networks",
+        "url": "https://arxiv.org/abs/1611.07004"
+      }
+    ],
+    "related": [
+      "gan",
+      "u-net",
+      "neural-style-transfer"
+    ]
+  },
+  {
+    "id": "tacotron",
+    "date": "2017-03-29",
+    "title": "从字符直接走向语音",
+    "subtitle": "从文字学习生成声谱图，再还原成语音。",
+    "category": "audio",
+    "org": "Yuxuan Wang 等 / Google",
+    "modality": [
+      "文本",
+      "音频"
+    ],
+    "tags": [
+      "语音合成",
+      "端到端",
+      "声谱图"
+    ],
+    "summary": "Tacotron 用配对的文字和音频训练，把字符转换成声谱图，再恢复成声音，减少了传统语音系统里人工设计的中间步骤。这里记录 2017 年 3 月公开的首代论文。它的声音重建方法与后来 Tacotron 2 使用的声码器不同。",
+    "why": "机器要把一句话说好，除了声音质量，还要安排发音和节奏。Tacotron 把文字与声学表示连起来，让这段流程可以一起训练。",
+    "mechanism": "编码器读入字符，注意力帮助解码器确定当前说到哪里，再逐帧生成声谱图。首代用信号重建方法恢复声音，并非后来与 WaveNet 声码器组合的版本。",
+    "artifact": {
+      "type": "waveform",
+      "label": "TACOTRON · TEXT TO SPEECH",
+      "lines": [
+        "characters → encoder",
+        "attention → spectrogram frames",
+        "spectrogram → waveform",
+        "从文本与录音配对样本学习"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Tacotron: Towards End-to-End Speech Synthesis",
+        "url": "https://arxiv.org/abs/1703.10135"
+      }
+    ],
+    "related": [
+      "neural-attention",
+      "wavenet"
+    ]
+  },
+  {
+    "id": "transformer",
+    "date": "2017-06-12",
+    "title": "注意力就是关键",
+    "subtitle": "用注意力组织上下文，训练时不用逐词传递循环状态。",
+    "category": "foundations",
+    "org": "Ashish Vaswani 等 / Google",
+    "modality": [
+      "文本",
+      "通用"
+    ],
+    "tags": [
+      "Transformer",
+      "自注意力",
+      "并行训练"
+    ],
+    "summary": "《Attention Is All You Need》提出 Transformer，用注意力构建编码器与解码器，并在机器翻译中验证效果和并行训练优势。原版结构与后来只用解码器的大语言模型不同；自注意力、多头机制和位置表示等设计，随后被用于文字、图像和声音模型。",
+    "why": "循环网络要按顺序传递状态，训练不容易充分并行。Transformer 换了一种处理上下文的方式，让更大规模的训练更容易展开。",
+    "mechanism": "每个位置按内容给其他位置分配权重，汇总相关信息。多组注意力学习不同关系，位置表示补充顺序；这些计算层层叠加，用于预测或生成。",
+    "artifact": {
+      "type": "network",
+      "label": "ATTENTION IS ALL YOU NEED",
+      "lines": [
+        "tokens + position",
+        "query · key · value",
+        "multi-head attention",
+        "feed-forward → next layer"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ],
+    "related": [
+      "neural-attention",
+      "gpt",
+      "bert",
+      "gpt-3"
+    ]
+  },
+  {
+    "id": "vq-vae",
+    "date": "2017-11-02",
+    "title": "把图像和声音压成离散码",
+    "subtitle": "把图像和声音压缩成一串可以继续预测的编号。",
+    "category": "foundations",
+    "org": "Aaron van den Oord 等 / DeepMind",
+    "modality": [
+      "图像",
+      "视频",
+      "音频"
+    ],
+    "tags": [
+      "VQ-VAE",
+      "离散表示",
+      "码本"
+    ],
+    "summary": "VQ-VAE 让编码器从可学习的码本中挑选条目，用离散编号表示内容，再由解码器还原。配合学习编号规律的模型，它可以生成图像、视频和语音。复杂媒体被压成较短的符号序列后，就能用预测序列的方法来处理。",
+    "why": "语言模型能预测一串符号，图像和声音如果也能压成符号，就能借用类似办法。代价是要在压缩大小、细节保留和生成质量之间取舍。",
+    "mechanism": "编码器提取特征，再用码本中最接近的条目替换它们。解码器根据编号重建内容，另一个模型学习编号怎样组合，生成时先预测编号再还原。",
+    "artifact": {
+      "type": "network",
+      "label": "VECTOR QUANTISATION",
+      "lines": [
+        "media → encoder",
+        "nearest codebook entries",
+        "[17] [42] [08] [17]",
+        "discrete codes → decoder → media"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Neural Discrete Representation Learning",
+        "url": "https://arxiv.org/abs/1711.00937"
+      }
+    ],
+    "related": [
+      "vae",
+      "dall-e",
+      "jukebox"
+    ]
+  },
+  {
+    "id": "gpt",
+    "date": "2018-06-11",
+    "title": "先读大量文字，再学习任务",
+    "subtitle": "先用大量文字预训练，再为具体任务微调。",
+    "category": "text",
+    "org": "Alec Radford 等 / OpenAI",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "GPT",
+      "生成式预训练",
+      "迁移学习"
+    ],
+    "summary": "首代 GPT 先用 Transformer 在大量文本中学习预测后续内容，再用带标注的样本微调，在多种语言理解任务中验证了效果。它还不是聊天助手，但同一个预训练模型已经可以经过调整，分别用于分类、推理等不同任务。",
+    "why": "每个任务都从零训练，数据和计算很难重复利用。预训练先学一套通用表示，再针对任务调整，后来的 GPT 模型继续沿着这条路线扩大规模。",
+    "mechanism": "预训练时根据前文预测下一个词元，反复纠正预测误差。微调时再用具体任务的样本调整参数，让已学到的表示适应相应的输入和输出。",
+    "artifact": {
+      "type": "paper",
+      "label": "GENERATIVE PRE-TRAINING",
+      "lines": [
+        "large text corpus",
+        "next-token prediction",
+        "pre-trained Transformer",
+        "task examples → fine-tuning"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Improving language understanding with unsupervised learning",
+        "url": "https://openai.com/index/language-unsupervised/"
+      }
+    ],
+    "related": [
+      "transformer",
+      "gpt-2",
+      "gpt-3"
+    ]
+  },
+  {
+    "id": "biggan",
+    "date": "2018-09-28",
+    "title": "把对抗生成推向更大规模",
+    "subtitle": "扩大 GAN 训练规模，也观察质量和稳定性的代价。",
+    "category": "image",
+    "org": "Andrew Brock / Jeff Donahue / Karen Simonyan",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "BigGAN",
+      "规模化",
+      "条件生成"
+    ],
+    "summary": "BigGAN 扩大对抗网络的模型和训练规模，根据 ImageNet 类别生成高质量图像，并研究大规模训练的不稳定问题。论文还用截断技巧调整输入，在图像逼真程度与样本多样性之间取舍。增加计算改善了结果，也没有自动解决训练难题。",
+    "why": "挑几张好图看不出模型的全貌。BigGAN 的实验让人更容易比较：画面是否逼真、结果是否丰富，以及训练能否稳定完成，往往需要一起权衡。",
+    "mechanism": "生成器接收随机向量和类别条件作图。缩小随机输入的范围，结果通常更集中、更容易逼真，但变化也可能减少；训练规模越大，越需要处理稳定性。",
+    "artifact": {
+      "type": "image",
+      "label": "BIGGAN · SCALE & DIVERSITY",
+      "lines": [
+        "noise + class → large generator",
+        "fidelity ↔ variety",
+        "truncation changes the balance",
+        "规模增加，稳定性仍要解决"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
+        "url": "https://arxiv.org/abs/1809.11096"
+      }
+    ],
+    "related": [
+      "gan",
+      "imagenet",
+      "stylegan"
+    ]
+  },
+  {
+    "id": "bert",
+    "date": "2018-10-11",
+    "title": "把左右上下文一起读进去",
+    "subtitle": "同时参考上下文，学习补回被遮住的词。",
+    "category": "text",
+    "org": "Jacob Devlin 等 / Google",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "BERT",
+      "掩码语言模型",
+      "双向编码"
+    ],
+    "summary": "BERT 用双向 Transformer 编码器学习文字表示，训练时遮住部分词，让模型参考两侧内容补回来，再用于多种语言理解任务。它主要处理理解和表示学习，与从左到右接着写的聊天模型不同，也说明同类结构可以因训练目标而擅长不同任务。",
+    "why": "预训练除了用来续写，也能服务搜索、问答等任务。BERT 展示了另一条常用路线，不能因为用了 Transformer，就把它直接当成 GPT 一类的生成模型。",
+    "mechanism": "随机遮住句子中的词，让模型用左右两边的文字猜答案。训练得到的表示可以接上任务输出层再微调；它看见的上下文范围与自回归生成不同。",
+    "artifact": {
+      "type": "network",
+      "label": "BERT · MASKED LANGUAGE MODEL",
+      "lines": [
+        "left context [MASK] right context",
+        "          ↓ bidirectional encoder",
+        "recover the masked token",
+        "上下文表示 → 下游任务"
+      ]
+    },
+    "sources": [
+      {
+        "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "url": "https://arxiv.org/abs/1810.04805"
+      }
+    ],
+    "related": [
+      "word2vec",
+      "transformer",
+      "gpt"
+    ]
+  },
+  {
+    "id": "stylegan",
+    "date": "2018-12-12",
+    "title": "生成的人脸可以分层控制",
+    "subtitle": "逐层控制风格，分别影响整体形态和细节。",
+    "category": "image",
+    "org": "Tero Karras / Samuli Laine / Timo Aila · NVIDIA",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "StyleGAN",
+      "人脸生成",
+      "潜空间"
+    ],
+    "summary": "StyleGAN 改造 GAN 生成器，用映射网络和逐层风格控制调整不同尺度的特征，另加噪声产生随机细节。它能生成逼真人脸，也能做风格混合和插值。论文于 2018 年首次公开、2019 年正式发表，图中的合成人脸不必对应真实存在的人。",
+    "why": "一张像真的人脸照片，可以完全由模型生成。StyleGAN 让这种区别更难靠肉眼判断；逐层风格控制，也给后来的图像编辑提供了办法。",
+    "mechanism": "先把随机输入变成中间风格表示，再用它调节各层特征。粗尺度常影响姿态和整体结构，细尺度影响纹理，额外噪声产生发丝等随机细节。",
+    "artifact": {
+      "type": "image",
+      "label": "STYLE-BASED GENERATOR",
+      "lines": [
+        "z → mapping network → style",
+        "coarse layers → structure",
+        "fine layers → appearance",
+        "noise → stochastic details"
+      ]
+    },
+    "sources": [
+      {
+        "title": "A Style-Based Generator Architecture for Generative Adversarial Networks",
+        "url": "https://arxiv.org/abs/1812.04948"
+      }
+    ],
+    "related": [
+      "gan",
+      "biggan",
+      "neural-style-transfer"
+    ]
+  },
+  {
+    "id": "gpt-2",
+    "date": "2019-02-14",
+    "title": "连贯长文本引发发布争论",
+    "subtitle": "更连贯的文字续写，让模型发布方式也引起讨论。",
+    "category": "text",
+    "org": "OpenAI",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "GPT-2",
+      "零样本",
+      "负责任发布"
+    ],
+    "summary": "GPT-2 扩大语言模型和互联网语料规模，展示连贯续写，以及无需专门训练的部分翻译、摘要和问答能力。OpenAI 起初以滥用风险为由只放出较小版本，后来分阶段公开。除了生成效果，哪些模型该开放、怎样开放，也成为这次发布的讨论内容。",
+    "why": "生成的文字越像人写，自动写作越方便，批量伪造内容也越容易。GPT-2 的分阶段发布，让能力提升和开放风险被放在一起讨论。",
+    "mechanism": "模型根据已有文字预测下一个词元。更多参数和语料让它学到更多语言模式，用户用提示词引出不同任务；接得流畅，仍然不等于说得真实。",
+    "artifact": {
+      "type": "terminal",
+      "label": "GPT-2 · CONTINUATION",
+      "lines": [
+        "prompt → next-token probabilities",
+        "sample → append → repeat",
+        "coherent text ≠ verified facts",
+        "2019 · staged release debate"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Better language models and their implications",
+        "url": "https://openai.com/index/better-language-models/"
+      }
+    ],
+    "related": [
+      "gpt",
+      "gpt-3"
+    ]
+  },
+  {
+    "id": "score-models",
+    "date": "2019-07-12",
+    "title": "沿着数据分布的方向去噪",
+    "subtitle": "学习怎样把带噪样本，逐步推向更合理的结果。",
+    "category": "foundations",
+    "org": "Yang Song / Stefano Ermon · 斯坦福大学",
+    "modality": [
+      "图像",
+      "通用"
+    ],
+    "tags": [
+      "得分匹配",
+      "朗之万动力学",
+      "去噪"
+    ],
+    "summary": "Song 和 Ermon 训练网络，在不同噪声强度下估计数据分布的梯度，再通过逐渐降低噪声的采样过程生成样本。这里的“得分”指这个梯度，并不是给图片打好坏分。后来得分建模与扩散模型密切联系，也用于图像生成和补全。",
+    "why": "模型可以从随机起点反复修正，而不必一次画完。得分模型把每一步的移动方向变成可以学习的量，帮助解释逐步去噪为什么能够生成样本。",
+    "mechanism": "给样本加入不同程度的噪声，训练网络估计往哪里移动会更符合数据分布。生成时沿估计方向小步更新，同时加入随机扰动并逐渐降低噪声。",
+    "artifact": {
+      "type": "network",
+      "label": "SCORE-BASED GENERATION",
+      "lines": [
+        "high noise → estimated direction",
+        "medium noise → refined direction",
+        "low noise → sample structure",
+        "多噪声尺度下学习修正方向"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Generative Modeling by Estimating Gradients of the Data Distribution",
+        "url": "https://arxiv.org/abs/1907.05600"
+      }
+    ],
+    "related": [
+      "diffusion-origin",
+      "ddpm"
+    ]
+  },
+  {
+    "id": "t5",
+    "date": "2019-10-23",
+    "title": "语言任务统一成文本进出",
+    "subtitle": "翻译、分类和问答，都可以写成文字输入和文字答案。",
+    "category": "text",
+    "org": "Colin Raffel 等 / Google",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "T5",
+      "文本到文本",
+      "迁移学习"
+    ],
+    "summary": "T5 把多种语言任务统一成文本到文本：输入说明要做什么，输出直接给出文字结果。在这套框架中，研究者比较预训练目标、数据和架构，并公开 C4 语料、模型与代码。分类标签、译文和摘要由此可以用相近的训练与使用方式处理。",
+    "why": "任务形式不同，不一定都要设计专门的输出结构。统一成文字输入和输出，方便复用模型，也方便把几个语言任务接在一起使用。",
+    "mechanism": "输入包含任务提示，解码器输出文字答案，可能是一个分类词，也可能是一段译文。预训练先学习恢复被破坏的文本，再用任务样本微调。",
+    "artifact": {
+      "type": "interface",
+      "label": "TEXT-TO-TEXT TRANSFER TRANSFORMER",
+      "lines": [
+        "translate → translated text",
+        "summarize → summary",
+        "classify → label as text",
+        "一个框架，多种文本任务"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+        "url": "https://arxiv.org/abs/1910.10683"
+      }
+    ],
+    "related": [
+      "seq2seq",
+      "transformer",
+      "gpt-3"
+    ]
+  },
+  {
+    "id": "scaling-laws",
+    "date": "2020-01-23",
+    "title": "规模可以被量化研究",
+    "subtitle": "用实验曲线估计：模型、数据和算力增加后，误差会怎样变。",
+    "category": "foundations",
+    "org": "Jared Kaplan 等 / OpenAI",
+    "modality": [
+      "文本",
+      "通用"
+    ],
+    "tags": [
+      "缩放定律",
+      "算力",
+      "训练策略"
+    ],
+    "summary": "Kaplan 等人测量语言模型在不同参数量、数据量和训练计算下的误差，拟合经验规律，用来估计训练预算怎样分配。这些规律来自实验范围，不是智能会无限增长的定理，也不能保证每项任务都随着规模按相同比例进步。",
+    "why": "训练很贵，团队需要在开工前估计钱该花在模型、数据还是计算上。训练误差能帮助决策，但不能直接换算成具体能力或商业价值。",
+    "mechanism": "改变模型大小、数据量和计算投入，训练后测量误差，再拟合变化曲线。根据曲线估计资源瓶颈，使用时也要考虑实验范围和训练方法是否相近。",
+    "artifact": {
+      "type": "paper",
+      "label": "SCALING LAWS",
+      "lines": [
+        "model size ↑",
+        "dataset size ↑",
+        "training compute ↑",
+        "measure loss → fit empirical curves"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Scaling Laws for Neural Language Models",
+        "url": "https://arxiv.org/abs/2001.08361"
+      }
+    ],
+    "related": [
+      "gpt-2",
+      "gpt-3"
+    ]
+  },
+  {
+    "id": "nerf",
+    "date": "2020-03-19",
+    "title": "把场景存进神经网络",
+    "subtitle": "从同一场景的多张照片中，合成没拍过的视角。",
+    "category": "3d",
+    "org": "Ben Mildenhall 等 / UC Berkeley、Google、UC San Diego",
+    "modality": [
+      "三维",
+      "图像"
+    ],
+    "tags": [
+      "NeRF",
+      "神经渲染",
+      "新视角合成"
+    ],
+    "summary": "NeRF 根据相机位置已知的一组照片，学习用神经网络表示场景。网络接收空间位置和观看方向，预测颜色与密度，再通过体渲染生成新视角。原始 NeRF 重建的是拍摄过的场景，不能输入一句话就生成任意三维物体。",
+    "why": "观众可以换个角度看原场景，画面不再局限于一张照片。但合成视角、生成新场景、得到能编辑的三维网格，仍然是不同的能力。",
+    "mechanism": "沿虚拟相机的视线查询多个空间点，把网络预测的颜色和密度合成为像素。训练时与实拍图比较，调整网络，让不同角度的画面能够对得上。",
+    "artifact": {
+      "type": "network",
+      "label": "NEURAL RADIANCE FIELD",
+      "lines": [
+        "photos + camera poses",
+        "(x, y, z, direction) → network",
+        "density + color → volume render",
+        "new camera → novel view"
+      ]
+    },
+    "sources": [
+      {
+        "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+        "url": "https://arxiv.org/abs/2003.08934"
+      }
+    ],
+    "related": [
+      "vq-vae"
+    ]
+  },
+  {
+    "id": "jukebox",
+    "date": "2020-04-30",
+    "title": "生成带歌声的原始音乐",
+    "subtitle": "把音乐压成代码，再学习续写出带音色和歌声的声音。",
+    "category": "audio",
+    "org": "OpenAI",
+    "modality": [
+      "音频"
+    ],
+    "tags": [
+      "音乐生成",
+      "离散压缩",
+      "歌声"
+    ],
+    "summary": "Jukebox 生成音乐原始音频，包括初步的歌声，可以参考曲风、艺术家和歌词。它先把长音频压成分层离散代码，再用 Transformer 预测，最后恢复波形。团队公开了模型和代码，音质、长段结构和生成速度都仍有限，离成熟的作曲工具还有距离。",
+    "why": "生成音符和生成真正的声音，面对的问题不同。Jukebox 处理音色和人声，也让人看到，长音乐需要同时解决压缩、结构和计算成本。",
+    "mechanism": "直接预测整首歌的每个采样点太慢，先压成较短代码再续写。解码器把预测的代码变回声音，不同压缩层次分别处理较长结构和局部细节。",
+    "artifact": {
+      "type": "waveform",
+      "label": "JUKEBOX · MUSIC AS AUDIO",
+      "lines": [
+        "raw music → hierarchical codes",
+        "conditions → Transformer",
+        "generated codes → audio decoder",
+        "曲风 · 歌词 · 声音纹理"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Jukebox",
+        "url": "https://openai.com/index/jukebox/"
+      }
+    ],
+    "related": [
+      "vq-vae",
+      "transformer",
+      "wavenet"
+    ]
+  },
+  {
+    "id": "rag",
+    "date": "2020-05-22",
+    "title": "生成之前先检索资料",
+    "subtitle": "回答前先查资料，让外部文档参与生成。",
+    "category": "tools",
+    "org": "Patrick Lewis 等 / Facebook AI、UCL、纽约大学",
+    "modality": [
+      "文本",
+      "工作流"
+    ],
+    "tags": [
+      "RAG",
+      "检索增强",
+      "知识更新"
+    ],
+    "summary": "Lewis 等人提出 RAG 框架，把预训练生成模型与外部文档索引结合，在需要知识的任务中验证效果。模型可以参考检索到的文本，不必只靠参数里学过的内容。这里记录的是名为 RAG 的这套论文方法，检索与生成结合的研究在此前已经存在。",
+    "why": "模型训练完，参数里的知识不容易随时更新。外部文档可以另行维护、追查来源，但查错资料或生成时用错内容，仍然会让答案出错。",
+    "mechanism": "先根据问题检索相关文档片段，再让模型参考片段生成答案。模型既依赖训练得到的能力，也依赖本次找到的资料，所以检索质量直接影响回答。",
+    "artifact": {
+      "type": "network",
+      "label": "RETRIEVAL-AUGMENTED GENERATION",
+      "lines": [
+        "query → document retriever",
+        "index → relevant passages",
+        "passages + query → generator",
+        "外部资料进入生成上下文"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "url": "https://arxiv.org/abs/2005.11401"
+      }
+    ],
+    "related": [
+      "seq2seq",
+      "t5",
+      "gpt-3"
+    ]
+  },
+  {
+    "id": "gpt-3",
+    "date": "2020-05-28",
+    "title": "几个例子就能指定任务",
+    "subtitle": "在提示里给几个例子，就能让同一个模型尝试不同任务。",
+    "category": "text",
+    "org": "Tom Brown 等 / OpenAI",
+    "modality": [
+      "文本"
+    ],
+    "tags": [
+      "GPT-3",
+      "少样本",
+      "上下文学习"
+    ],
+    "summary": "GPT-3 用 1750 亿参数研究少样本能力：用户写出任务和几个例子，模型不必为本次任务更新参数，就能继续作答。它在多种测试中改善了结果，也暴露出推理错误、不实内容和偏见。示例放在当前上下文中，不等于被模型永久学进参数。",
+    "why": "同一个模型可以通过说明和例子来切换任务，做原型更方便。不过它只是利用眼前的上下文，并不会因为这次对话就永久记住这些例子。",
+    "mechanism": "预训练学习预测文字。使用时把任务说明、示例和新问题一起输入，模型接着预测答案；示例改变了生成条件，这一步没有重新训练参数。",
+    "artifact": {
+      "type": "interface",
+      "label": "GPT-3 · IN-CONTEXT LEARNING",
+      "lines": [
+        "instruction",
+        "example 1 → answer 1",
+        "example 2 → answer 2",
+        "new input → generated answer"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Language Models are Few-Shot Learners",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ],
+    "related": [
+      "gpt",
+      "gpt-2",
+      "scaling-laws",
+      "codex-2021"
+    ]
+  },
+  {
+    "id": "ddpm",
+    "date": "2020-06-19",
+    "title": "去噪扩散获得高质量图像",
+    "subtitle": "用预测噪声的训练办法，一步步生成高质量图像。",
+    "category": "image",
+    "org": "Jonathan Ho / Ajay Jain / Pieter Abbeel · UC Berkeley",
+    "modality": [
+      "图像"
+    ],
+    "tags": [
+      "DDPM",
+      "扩散模型",
+      "噪声预测"
+    ],
+    "summary": "Ho 等人给出去噪扩散概率模型的训练方法，把扩散建模与去噪得分匹配联系起来，生成了高质量图像。扩散研究在此前已经存在，DDPM 改善了这条路线的效果和可复现性，后来被许多图像、音频和视频扩散系统采用。",
+    "why": "反复去噪有了效果较好、别人也能复现的实现办法。不过生成要走很多步，速度较慢，后来的研究因此继续想办法减少步骤和计算量。",
+    "mechanism": "训练时给图片加入不同程度的噪声，让网络预测噪声。生成时从纯噪声出发，按网络预测反复去噪，逐渐形成新图像，而不是检索一张原图。",
+    "artifact": {
+      "type": "image",
+      "label": "DENOISING DIFFUSION PROBABILISTIC MODELS",
+      "lines": [
+        "x₀ → x₁ → … → xₜ",
+        "learn noise ε at each level",
+        "xₜ → … → x₁ → x₀",
+        "随机起点 → 渐进生成"
+      ]
+    },
+    "sources": [
+      {
+        "title": "Denoising Diffusion Probabilistic Models",
+        "url": "https://arxiv.org/abs/2006.11239"
+      }
+    ],
+    "related": [
+      "diffusion-origin",
+      "score-models",
+      "glide",
+      "latent-diffusion"
+    ]
+  },
+  {
+    "id": "dall-e",
+    "date": "2021-01-05",
+    "title": "用一句话组合视觉概念",
+    "subtitle": "用文字描述，把不同的视觉概念组合成图像。",
+    "category": "image",
+    "org": "OpenAI",
+    "modality": [
+      "文本",
+      "图像"
+    ],
+    "tags": [
+      "DALL·E",
+      "文生图",
+      "多模态"
+    ],
+    "summary": "初代 DALL·E 用配对图文训练 Transformer，把文字与离散图像代码放在一起学习，展示物体、属性和场景的组合。它采用逐个预测代码的自回归方式，与后来使用扩散方法的 DALL·E 2 不同。发布演示展示了可能性，也不能代替对稳定效果的判断。",
+    "why": "用户可以直接描述想画的内容，不必先操作绘图软件。文字表达很方便，但精选样例和每次都能稳定生成合意结果，仍有差别。",
+    "mechanism": "先把图像压成离散符号，再将文字与图像符号排成序列。给定文字后，模型逐个预测图像代码，解码器再把代码还原成图片。",
+    "artifact": {
+      "type": "image",
+      "label": "DALL·E · TEXT → IMAGE",
+      "lines": [
+        "text tokens + image tokens",
+        "autoregressive Transformer",
+        "new image codes → decoder",
+        "概念组合的文本入口"
+      ]
+    },
+    "sources": [
+      {
+        "title": "DALL·E: Creating images from text",
+        "url": "https://openai.com/index/dall-e/"
+      }
+    ],
+    "related": [
+      "transformer",
+      "vq-vae",
+      "clip",
+      "glide"
+    ]
+  },
+  {
+    "id": "clip",
+    "date": "2021-01-05",
+    "title": "让文字与图像对上坐标",
+    "subtitle": "学习比较一张图和一句话是否相符。",
+    "category": "foundations",
+    "org": "Alec Radford 等 / OpenAI",
+    "modality": [
+      "文本",
+      "图像"
+    ],
+    "tags": [
+      "CLIP",
+      "对比学习",
+      "图文对齐"
+    ],
+    "summary": "CLIP 从大量互联网图文配对中学习，把图片和文字变成可以比较的数字表示。用类别的文字描述，它也能在不针对新类别重新训练的情况下做分类。CLIP 本身不会画图，但后来常用于图像检索、筛选和生成引导，效果也受数据偏差与评测范围影响。",
+    "why": "文字要影响图像，模型需要先建立两者的联系。CLIP 能计算图文相似度，但相似分数高，不保证图里每个细节都遵守了复杂描述。",
+    "mechanism": "训练时拉近匹配图文的表示，拉开不匹配的表示。使用时分别编码图片和文字，再比较相似度；新类别可以先写成描述，不必重训分类输出层。",
+    "artifact": {
+      "type": "network",
+      "label": "CONTRASTIVE LANGUAGE–IMAGE PRE-TRAINING",
+      "lines": [
+        "image → image encoder ─┐",
+        "text → text encoder ───┴→ similarity",
+        "matched pairs closer",
+        "mismatched pairs farther"
+      ]
+    },
+    "sources": [
+      {
+        "title": "CLIP: Connecting text and images",
+        "url": "https://openai.com/index/clip/"
+      }
+    ],
+    "related": [
+      "dall-e",
+      "laion-400m",
+      "glide"
+    ]
+  },
+  {
+    "id": "lora",
+    "date": "2021-06-17",
+    "title": "用少量参数适配大模型",
+    "subtitle": "保留大模型参数，只训练一小份额外更新。",
+    "category": "tools",
+    "org": "Edward Hu 等 / Microsoft",
+    "modality": [
+      "文本",
+      "工作流"
+    ],
+    "tags": [
+      "LoRA",
+      "低秩适配",
+      "参数高效微调"
+    ],
+    "summary": "LoRA 固定预训练模型的原有权重，在部分层加入较小的可训练矩阵，减少适配任务时需要训练和保存的参数。论文最初研究大语言模型，后来也用于图像模型定制。它节省部分微调成本，仍然需要训练数据和计算资源。",
+    "why": "每个用途都训练、保存一整套大模型，成本很高。把基础模型共用，只分发小份适配权重，定制和分享就更方便，社区也更容易参与。",
+    "mechanism": "固定原来的大矩阵，只训练两个小矩阵，用它们的乘积表示更新。推理时把更新加到原计算中，用较少的可训练参数适应具体任务。",
+    "artifact": {
+      "type": "code",
+      "label": "LOW-RANK ADAPTATION",
+      "lines": [
+        "freeze base weights W",
+        "train small matrices A and B",
+        "adapted computation: W + B × A",
+        "示意公式：更少参数完成适配"
+      ]
+    },
+    "sources": [
+      {
+        "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+        "url": "https://arxiv.org/abs/2106.09685"
+      }
+    ],
+    "related": [
+      "gpt-3",
+      "latent-diffusion"
+    ]
+  },
+  {
+    "id": "codex-2021",
+    "date": "2021-08-10",
+    "title": "自然语言走进代码编辑器",
+    "subtitle": "根据文字说明生成代码，成为早期 Copilot 的技术基础。",
+    "category": "tools",
+    "org": "OpenAI / GitHub",
+    "modality": [
+      "文本",
+      "代码",
+      "工作流"
+    ],
+    "tags": [
+      "Codex",
+      "代码生成",
+      "Copilot"
+    ],
+    "summary": "2021 年的 Codex 沿着 GPT-3 路线，用自然语言和公开代码训练，能够根据说明生成程序，也是早期 GitHub Copilot 的技术基础。8 月 10 日公告开放私有测试 API。这里是当年的代码模型，与 2025 年后同名的软件工程代理产品属于不同阶段。",
+    "why": "生成文字变成生成可运行的程序，结果就需要拿去执行和测试。代码看着像样，不代表依赖、逻辑或安全性已经经过检查。",
+    "mechanism": "模型参考说明、已有代码和上下文，预测后续代码词元。它学到常见接口与编程模式，但生成过程本身不会自动验证程序能否正确运行。",
+    "artifact": {
+      "type": "code",
+      "label": "CODEX · 2021",
+      "lines": [
+        "natural language instruction",
+        "existing code context",
+        "         ↓ model",
+        "generated code → test → review"
+      ]
+    },
+    "sources": [
+      {
+        "title": "OpenAI Codex（2021年历史发布公告）",
+        "url": "https://openai.com/index/openai-codex/"
+      }
+    ],
+    "related": [
+      "gpt-3",
+      "lora"
+    ]
+  },
+  {
+    "id": "laion-400m",
+    "date": "2021-11-03",
+    "title": "图文数据走向开放规模",
+    "subtitle": "整理四亿量级的图文配对，提供公开研究索引。",
+    "category": "foundations",
+    "org": "LAION 研究社区",
+    "modality": [
+      "文本",
+      "图像"
+    ],
+    "tags": [
+      "数据集",
+      "LAION",
+      "图文配对"
+    ],
+    "summary": "LAION-400M 用 CLIP 相似度筛选四亿量级的图文配对，提供表示和近邻检索索引。这里采用 2021 年论文公开日期，不代表数据集当天才首次出现。研究者能据此寻找训练材料，同时也要处理来源、许可、隐私和有害内容。",
+    "why": "自行整理巨型图文数据很难，公共索引降低了研究门槛。不过网页可以访问，不代表其中每张图片都允许任意使用，数据许可仍需另行判断。",
+    "mechanism": "提取网页上的图片链接和文字，用模型筛选相符的配对，再保存表示和检索信息。过滤能去掉部分问题样本，不能彻底解决内容与权利问题。",
+    "artifact": {
+      "type": "interface",
+      "label": "LAION-400M · IMAGE–TEXT PAIRS",
+      "lines": [
+        "web image links + text",
+        "CLIP similarity filter",
+        "embeddings + search index",
+        "规模化数据，也需要来源治理"
+      ]
+    },
+    "sources": [
+      {
+        "title": "LAION-400M: Open Dataset of CLIP-Filtered 400 Million Image-Text Pairs",
+        "url": "https://arxiv.org/abs/2111.02114"
+      }
+    ],
+    "related": [
+      "clip",
+      "latent-diffusion"
+    ]
+  },
+  {
+    "id": "glide",
+    "date": "2021-12-20",
+    "title": "文字开始引导扩散生成",
+    "subtitle": "让文字控制扩散作图，也能指定局部补图。",
+    "category": "image",
+    "org": "Alex Nichol 等 / OpenAI",
+    "modality": [
+      "文本",
+      "图像"
+    ],
+    "tags": [
+      "GLIDE",
+      "文本引导",
+      "无分类器引导"
+    ],
+    "summary": "GLIDE 用扩散模型按文字生成图片，比较 CLIP 引导和无分类器引导，并演示文字控制的局部补图。在论文的人类评价中，无分类器引导的真实感和描述匹配度更受偏好。团队还公开了一个使用过滤数据训练的较小模型。",
+    "why": "随机画出好图还不够，用户往往要指定内容、修改局部。GLIDE 把文字条件与去噪结合，也展示了保留已有画面、只补缺失部分的做法。",
+    "mechanism": "网络同时学习有文字和无文字条件的去噪，生成时组合两种预测，加强描述的影响。补图时保留已知区域，让模型生成能衔接周围画面的缺失内容。",
+    "artifact": {
+      "type": "image",
+      "label": "GLIDE · TEXT-GUIDED DIFFUSION",
+      "lines": [
+        "text condition → denoiser",
+        "noise → guided denoising → image",
+        "known region + mask → inpainting",
+        "文字控制与局部编辑"
+      ]
+    },
+    "sources": [
+      {
+        "title": "GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models",
+        "url": "https://arxiv.org/abs/2112.10741"
+      }
+    ],
+    "related": [
+      "ddpm",
+      "clip",
+      "dall-e",
+      "latent-diffusion"
+    ]
+  },
+  {
+    "id": "latent-diffusion",
+    "date": "2021-12-20",
+    "title": "在压缩空间里扩散",
+    "subtitle": "先压缩图片，再在较小的表示里完成扩散。",
+    "category": "image",
+    "org": "Robin Rombach 等 / 慕尼黑大学、海德堡大学",
+    "modality": [
+      "文本",
+      "图像"
+    ],
+    "tags": [
+      "潜空间扩散",
+      "LDM",
+      "交叉注意力"
+    ],
+    "summary": "潜空间扩散先用自编码器压缩图片，再在较小的表示中训练和运行扩散，用交叉注意力接收文字等条件。论文于 2021 年底公开，2022 年在 CVPR 发表，后来成为 Stable Diffusion 的技术基础。这种办法减少了高分辨率图像生成的计算负担。",
+    "why": "直接对高分辨率像素反复去噪很费计算。先压缩再生成，让扩散模型更容易被研究者和开发者使用，也便于后来在本地运行和定制。",
+    "mechanism": "编码器把图片压成潜在表示，网络在这个较小的空间去噪，最后由解码器恢复像素。交叉注意力接入文字条件，压缩大小则要兼顾速度和细节。",
+    "artifact": {
+      "type": "network",
+      "label": "LATENT DIFFUSION",
+      "lines": [
+        "image → encoder → latent z",
+        "text → cross-attention",
+        "noise z → denoised z",
+        "decoder → high-resolution image"
+      ]
+    },
+    "sources": [
+      {
+        "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "url": "https://arxiv.org/abs/2112.10752"
+      }
+    ],
+    "related": [
+      "vae",
+      "u-net",
+      "ddpm",
+      "lora"
+    ]
+  }
+]

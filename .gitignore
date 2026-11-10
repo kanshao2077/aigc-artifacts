@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+dist/
+research/
+qa/
+.netlify/
+.env
+.env.*

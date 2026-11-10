@@ -1,0 +1,1169 @@
+{
+  "concepts": [
+    {
+      "id": "token",
+      "term": "Token",
+      "alias": "词元 / 文本的小块",
+      "definition": "语言模型通常先把文字切成片段，再把片段变成数字。一个 token 可能是一个字、词的一部分、符号或字节组合；切法取决于分词器。",
+      "analogy": "像先把一段话拆成积木块，再逐块处理；积木并不总与汉字一一对应。",
+      "usedFor": "理解输入长度、输出上限和按 token 计费。估算长文成本时，使用对应模型的分词器。",
+      "pitfall": "别把“1 token = 1 个中文字”当通用公式；同一文本换模型后，token 数可能变化。",
+      "category": "语言与架构",
+      "sources": [
+        {
+          "title": "Hugging Face：Tokenizers",
+          "url": "https://huggingface.co/learn/llm-course/en/chapter2/4"
+        }
+      ]
+    },
+    {
+      "id": "embedding",
+      "term": "Embedding",
+      "alias": "嵌入 / 向量表示",
+      "definition": "把文本、图片等转换成一组数字，用来表示模型学到的特征。用于检索的嵌入模型，会让相关内容在向量空间里更接近。",
+      "analogy": "像给资料标上许多维度的坐标，找答案时先找位置相近的资料。",
+      "usedFor": "语义搜索、去重、推荐、聚类和知识库检索。它帮你找候选资料，本身不负责写出可信答案。",
+      "pitfall": "相似不等于正确，更不等于有权限访问；通常还需要筛选、重排和来源核对。",
+      "category": "语言与架构",
+      "sources": [
+        {
+          "title": "Hugging Face：向量语义检索",
+          "url": "https://huggingface.co/learn/llm-course/en/chapter5/6"
+        }
+      ]
+    },
+    {
+      "id": "transformer",
+      "term": "Transformer",
+      "alias": "以注意力为核心的网络架构",
+      "definition": "2017 年原论文提出的一种序列模型架构。注意力机制让模型根据当前任务，为输入中不同位置分配不同权重。它后来成为许多语言与多模态模型的基础。",
+      "analogy": "读“把桌上的红杯子拿来”时，重点联系“拿、红、杯子”，而不是平均对待每个词。",
+      "usedFor": "机器翻译、语言生成、图像理解，以及与其他方法结合的图像和视频生成。",
+      "pitfall": "Transformer 是架构，扩散是生成方法；二者可以结合，不能简单当成互斥的两条路线。",
+      "category": "语言与架构",
+      "sources": [
+        {
+          "title": "Attention Is All You Need",
+          "url": "https://arxiv.org/abs/1706.03762"
+        }
+      ]
+    },
+    {
+      "id": "autoregressive",
+      "term": "Autoregressive",
+      "alias": "自回归 / 接着已有内容往下生成",
+      "definition": "按顺序生成下一部分，并把已经生成的内容作为后续条件。语言模型常见的形式是：根据前文预测下一个 token，再重复这一过程。",
+      "analogy": "像接龙：每写下一块，都要参考前面已经排好的块。",
+      "usedFor": "理解文字流式输出、生成停止位置，以及前面写错后为什么可能一路错下去。",
+      "pitfall": "预测出顺畅的下一句不代表查证了事实；自回归也不只用于文字。",
+      "category": "生成原理",
+      "sources": [
+        {
+          "title": "Hugging Face：Transformer 工作方式",
+          "url": "https://huggingface.co/learn/llm-course/en/chapter1/4"
+        }
+      ]
+    },
+    {
+      "id": "diffusion",
+      "term": "Diffusion",
+      "alias": "扩散模型 / 学会逐步去噪",
+      "definition": "训练时让模型学习如何处理逐渐加噪的数据；生成时通常从噪声出发，逐步得到样本。潜空间扩散先把图像压缩到较小的表示里，再完成生成。",
+      "analogy": "像从一团沙点中一步步显出画面，但并不是从数据库里找出一张藏好的原图。",
+      "usedFor": "图像、视频、音频生成与编辑；理解为什么常见界面会出现采样器、步数和引导参数。",
+      "pitfall": "“去噪”是机制类比，不保证细节真实；潜空间、像素空间与不同模型的设置也不能直接互抄。",
+      "category": "生成原理",
+      "sources": [
+        {
+          "title": "Denoising Diffusion Probabilistic Models",
+          "url": "https://arxiv.org/abs/2006.11239"
+        },
+        {
+          "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+          "url": "https://arxiv.org/abs/2112.10752"
+        }
+      ]
+    },
+    {
+      "id": "gan",
+      "term": "GAN",
+      "alias": "生成对抗网络",
+      "definition": "2014 年论文提出让生成器与判别器相互训练：生成器尝试造出像真的样本，判别器学习区分训练样本与生成样本。",
+      "analogy": "像一个练习仿作的人和一个练习辨别的人，双方的反馈推动训练。",
+      "usedFor": "理解早期人脸合成、图像生成、风格转换的关键路线，以及生成式 AI 在扩散模型之前的历史。",
+      "pitfall": "它不是所有换脸技术的统称；训练也可能不稳定，或反复生成少数类型的结果。",
+      "category": "生成原理",
+      "sources": [
+        {
+          "title": "Generative Adversarial Nets",
+          "url": "https://arxiv.org/abs/1406.2661"
+        }
+      ]
+    },
+    {
+      "id": "vae",
+      "term": "VAE",
+      "alias": "变分自编码器",
+      "definition": "把数据编码到一个可采样的潜在分布，再学习解码回数据。它是一类生成模型；许多潜空间生成系统也用自编码器完成图像的压缩与还原。",
+      "analogy": "像先把一张图写成一张压缩便条，再根据便条重画。",
+      "usedFor": "理解潜空间，以及部分图像工作流中“VAE 编码 / 解码”节点的作用。",
+      "pitfall": "VAE 和基础生成模型不是同一部件；压缩会损失信息，随便换一个不兼容的 VAE 可能导致异常。",
+      "category": "生成原理",
+      "sources": [
+        {
+          "title": "Auto-Encoding Variational Bayes",
+          "url": "https://arxiv.org/abs/1312.6114"
+        },
+        {
+          "title": "Latent Diffusion Models",
+          "url": "https://arxiv.org/abs/2112.10752"
+        }
+      ]
+    },
+    {
+      "id": "flow-matching",
+      "term": "Flow Matching",
+      "alias": "流匹配",
+      "definition": "通过学习一个随时间变化的速度场，让简单分布逐步变成数据分布的训练框架。它与扩散有联系，也容纳不同的生成路径。",
+      "analogy": "像学习每个时刻该往哪个方向推动一团粒子，最后形成想要的分布。",
+      "usedFor": "阅读较新的图像、视频和音频模型说明；理解为什么某些模型需要专门的 flow matching 调度器。",
+      "pitfall": "它不是界面里的“流式输出”；也不能凭方法名称就判断模型的画质、速度或物理理解能力。",
+      "category": "生成原理",
+      "sources": [
+        {
+          "title": "Flow Matching for Generative Modeling",
+          "url": "https://arxiv.org/abs/2210.02747"
+        }
+      ]
+    },
+    {
+      "id": "pretraining",
+      "term": "Pretraining",
+      "alias": "预训练",
+      "definition": "先在大规模数据上学习通用模式，再把得到的模型用于具体任务。训练目标随模态与架构变化，例如预测后续文字、重建被遮住的内容或学习去噪。",
+      "analogy": "像先积累广泛的阅读与练习，再参加某个岗位的培训；这个比喻不表示模型像人一样理解。",
+      "usedFor": "区分基础能力从哪来，判断“上传了几份 PDF”是否真的等于重新训练模型。",
+      "pitfall": "把资料放进知识库一般不会修改模型参数。训练数据的规模、质量、重复与授权都影响最终结果。",
+      "category": "训练与适配",
+      "sources": [
+        {
+          "title": "Hugging Face：预训练与迁移",
+          "url": "https://huggingface.co/learn/llm-course/en/chapter1/4"
+        }
+      ]
+    },
+    {
+      "id": "fine-tuning",
+      "term": "Fine-tuning",
+      "alias": "微调",
+      "definition": "从已经训练好的模型继续训练，用特定数据调整全部或部分参数，让模型更适合目标任务、格式或风格。",
+      "analogy": "像已有基础的人做专项训练；区别于临时递上一张参考资料。",
+      "usedFor": "需要稳定的输出格式、领域习惯或角色风格，并且已有足够可靠样本与评测集时。",
+      "pitfall": "微调不保证灌进去的事实永远准确；资料经常更新时，先评估检索，别急着训练。",
+      "category": "训练与适配",
+      "sources": [
+        {
+          "title": "Hugging Face：Fine-tuning",
+          "url": "https://huggingface.co/docs/transformers/training"
+        }
+      ]
+    },
+    {
+      "id": "rlhf",
+      "term": "RLHF",
+      "alias": "人类反馈强化学习",
+      "definition": "用人对候选输出的偏好等反馈构建奖励信号，再通过强化学习调整模型行为。InstructGPT 是这条路线的重要实例。",
+      "analogy": "像让评审比较多个答案，再把比较结果变成训练信号。",
+      "usedFor": "理解模型为什么会更愿意按指令回答，以及预训练之后为什么还有“对齐”这一步。",
+      "pitfall": "更合评审偏好不等于每句话都真实；并非所有偏好训练都属于 RLHF，也不能与“安全”画等号。",
+      "category": "训练与适配",
+      "sources": [
+        {
+          "title": "Training language models to follow instructions with human feedback",
+          "url": "https://arxiv.org/abs/2203.02155"
+        }
+      ]
+    },
+    {
+      "id": "lora",
+      "term": "LoRA",
+      "alias": "低秩适配",
+      "definition": "冻结基础模型的大部分或全部原有权重，训练少量新增的低秩参数来适配任务。最初用于语言模型，后来也用于图像模型等。",
+      "analogy": "像在大部头旁加一本薄薄的专项练习册，通常仍要配合原来的基础模型。",
+      "usedFor": "为兼容模型适配角色、物件、画风或特定任务；需要重复生产时，评估它比每次重写提示更划算与否。",
+      "pitfall": "LoRA 不是独立生图软件，也不保证人物永不变脸；基础模型、版本、权重强度与素材授权都要核对。",
+      "category": "训练与适配",
+      "sources": [
+        {
+          "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+          "url": "https://arxiv.org/abs/2106.09685"
+        }
+      ]
+    },
+    {
+      "id": "quantization",
+      "term": "Quantization",
+      "alias": "量化",
+      "definition": "用较低精度表示模型权重或计算中的数值，降低存储与运行所需内存。具体方法会在占用、速度和精度之间做取舍。",
+      "analogy": "像用刻度更粗的尺子记录数字，记录更省空间，但细节可能变少。",
+      "usedFor": "让模型更容易在有限显存或本地设备上运行；阅读 8-bit、4-bit 等模型文件说明。",
+      "pitfall": "更小不一定更快；硬件、运行软件和量化方法不匹配时，可能降速或损失关键任务准确性。",
+      "category": "训练与适配",
+      "sources": [
+        {
+          "title": "Hugging Face：Quantization overview",
+          "url": "https://huggingface.co/docs/transformers/quantization/overview"
+        }
+      ]
+    },
+    {
+      "id": "distillation",
+      "term": "Distillation",
+      "alias": "知识蒸馏",
+      "definition": "用教师模型的输出或行为训练学生模型，把能力迁移到更适合部署的模型。生成任务中也有通过蒸馏减少生成步骤的做法。",
+      "analogy": "像把老师的解题示范整理成学生的专项教材；不是把一个文件简单压缩一下。",
+      "usedFor": "降低部署成本、减少延迟，或让特定任务在小模型与少步数模型上运行。",
+      "pitfall": "蒸馏会继承教师的偏差，也可能损失能力；不能把学生参数量、教师参数量和实际表现混为一谈。",
+      "category": "训练与适配",
+      "sources": [
+        {
+          "title": "Distilling the Knowledge in a Neural Network",
+          "url": "https://arxiv.org/abs/1503.02531"
+        },
+        {
+          "title": "Diffusers：少步数模型与调度器",
+          "url": "https://huggingface.co/docs/diffusers/using-diffusers/schedulers"
+        }
+      ]
+    },
+    {
+      "id": "moe",
+      "term": "MoE",
+      "alias": "混合专家",
+      "definition": "把网络的一部分分成多个“专家”模块，由路由机制选择哪些模块参与处理。稀疏 MoE 通常只激活其中一部分参数。",
+      "analogy": "像接单台把不同材料分给不同工位；这里的专家是神经网络模块，不是真人在回答。",
+      "usedFor": "读懂“总参数”和“每次激活参数”的区别，理解模型扩展与推理成本的取舍。",
+      "pitfall": "不能只看总参数量判断能力或成本；路由、通信、显存和实际任务表现同样重要。",
+      "category": "语言与架构",
+      "sources": [
+        {
+          "title": "Switch Transformers",
+          "url": "https://arxiv.org/abs/2101.03961"
+        }
+      ]
+    },
+    {
+      "id": "multimodal",
+      "term": "Multimodal",
+      "alias": "多模态",
+      "definition": "模型或系统能够处理文字、图像、音频、视频等多种信息形式。不同系统支持的输入、输出组合并不相同。",
+      "analogy": "像同一个工作台能同时接收文字说明和照片，但每个接口能做的事要分别查看。",
+      "usedFor": "看图提问、音视频分析、带参考素材生成，以及把多种输入放进同一创作流程。",
+      "pitfall": "“能看图”不等于“能画图”；“能读视频”也不等于“能生成视频”。必须分别核对输入和输出能力。",
+      "category": "语言与架构",
+      "sources": [
+        {
+          "title": "Gemini: A Family of Highly Capable Multimodal Models",
+          "url": "https://arxiv.org/abs/2312.11805"
+        }
+      ]
+    },
+    {
+      "id": "controlnet",
+      "term": "ControlNet",
+      "alias": "空间条件控制",
+      "definition": "给预训练图像扩散模型加入空间条件控制的一种架构，可利用边缘、深度、人体姿态等条件引导生成。",
+      "analogy": "文字告诉它“画什么”，姿态或深度图再给它一份“按这个位置摆”的草图。",
+      "usedFor": "固定构图、动作骨架与空间布局；把草图、线稿或姿态接入兼容的生成工作流。",
+      "pitfall": "它主要控制结构，不会自动锁住人脸、品牌细节或每根手指；预处理器与模型版本也要对应。",
+      "category": "图像控制",
+      "sources": [
+        {
+          "title": "Adding Conditional Control to Text-to-Image Diffusion Models",
+          "url": "https://arxiv.org/abs/2302.05543"
+        }
+      ]
+    },
+    {
+      "id": "ip-adapter",
+      "term": "IP-Adapter",
+      "alias": "图像提示适配器",
+      "definition": "为预训练文本到图像扩散模型加入图像提示能力的轻量适配器。它让参考图的特征与文字条件一起影响生成。",
+      "analogy": "像除了口头描述，再递给画师一张参考图；它取用特征，不是逐像素复印。",
+      "usedFor": "在兼容模型中参考主体外观、配色、风格等，并与文字提示、结构控制配合使用。",
+      "pitfall": "不是所有平台里的“参考图”都使用 IP-Adapter；身份一致性与精确商品复原仍需逐张检查。",
+      "category": "图像控制",
+      "sources": [
+        {
+          "title": "IP-Adapter: Text Compatible Image Prompt Adapter",
+          "url": "https://arxiv.org/abs/2308.06721"
+        }
+      ]
+    },
+    {
+      "id": "prompt",
+      "term": "Prompt",
+      "alias": "提示 / 任务说明",
+      "definition": "提供给模型的任务、背景、示例、素材和输出要求。好的提示先让目标与成功标准清楚，再按模型能力组织信息。",
+      "analogy": "像给合作者一份简明任务单：做什么、给谁、用哪些材料、怎样算完成。",
+      "usedFor": "写作、编程、图像与视频创作的每一轮沟通。例：主体是谁、发生什么、构图怎样、最后交付什么。",
+      "pitfall": "提示更长不一定更好；堆“高级、电影感、8K”不能代替明确动作与可信素材。",
+      "category": "生成参数",
+      "sources": [
+        {
+          "title": "Anthropic：Prompt engineering overview",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview"
+        }
+      ]
+    },
+    {
+      "id": "seed",
+      "term": "Seed",
+      "alias": "随机种子",
+      "definition": "用于初始化伪随机数生成过程的数值。在生成流程中固定种子，可以帮助控制随机起点并比较修改前后。",
+      "analogy": "像记下洗牌的起始状态；还要使用同样的牌、规则与流程，结果才有机会接近。",
+      "usedFor": "调试提示、对比参数、记录候选版本和复现实验。",
+      "pitfall": "同一种子不保证跨硬件、软件版本、模型与尺寸得到同一张图；只抄种子远远不够。",
+      "category": "生成参数",
+      "sources": [
+        {
+          "title": "Diffusers：Reproducibility",
+          "url": "https://huggingface.co/docs/diffusers/using-diffusers/reusing_seeds"
+        }
+      ]
+    },
+    {
+      "id": "sampler",
+      "term": "Sampler / Scheduler",
+      "alias": "采样器 / 调度器",
+      "definition": "生成过程中用来推进采样的算法与时间步安排。不同工具对“采样器”和“调度器”的拆分方式不同，应看对应实现。",
+      "analogy": "像从起点到终点采用怎样的走法，以及每一步走多远。",
+      "usedFor": "在兼容模型下调整生成速度、稳定性与结果特征；首先使用模型推荐的默认设置。",
+      "pitfall": "不能把网上的万能参数表套给所有模型，尤其不要把普通扩散、流匹配和蒸馏模型的设置混抄。",
+      "category": "生成参数",
+      "sources": [
+        {
+          "title": "Diffusers：Schedulers",
+          "url": "https://huggingface.co/docs/diffusers/using-diffusers/schedulers"
+        }
+      ]
+    },
+    {
+      "id": "steps",
+      "term": "Steps",
+      "alias": "推理步数",
+      "definition": "在常见扩散或流匹配流程中，指定采样推进多少步。步数与采样器、模型训练方式、引导设置一起影响结果与耗时。",
+      "analogy": "像把一段路线分成多少次更新；走很多小步不代表一定走对路。",
+      "usedFor": "在时间与质量之间做实验；对同一模型保持其他条件一致，比较少量不同步数。",
+      "pitfall": "步数越多不保证越好；少步数模型往往是专门训练或蒸馏的，不能照搬普通模型的配置。",
+      "category": "生成参数",
+      "sources": [
+        {
+          "title": "Diffusers：时间步与少步数模型",
+          "url": "https://huggingface.co/docs/diffusers/using-diffusers/schedulers"
+        }
+      ]
+    },
+    {
+      "id": "cfg",
+      "term": "CFG",
+      "alias": "无分类器引导",
+      "definition": "把有条件与无条件的模型预测进行组合，以改变生成结果对条件的遵循程度。界面中的 guidance scale 往往与此相关，但并非所有模型都采用同一实现。",
+      "analogy": "像调节“按任务单走”的力度；过猛时，画面可能变僵硬或失真。",
+      "usedFor": "理解部分扩散模型中提示遵循、多样性与视觉质量的取舍。",
+      "pitfall": "CFG 不是越高越好，也不是所有模型通用的“准确度开关”；用推荐范围，再做小范围对比。",
+      "category": "生成参数",
+      "sources": [
+        {
+          "title": "Classifier-Free Diffusion Guidance",
+          "url": "https://arxiv.org/abs/2207.12598"
+        }
+      ]
+    },
+    {
+      "id": "checkpoint",
+      "term": "Checkpoint",
+      "alias": "模型检查点",
+      "definition": "训练过程中保存的模型状态。用于推理时，常指装有模型权重的文件或目录；还可能需要匹配的配置、分词器、编码器等组件。",
+      "analogy": "像保存下来的手艺版本；菜谱的其他部件也要齐全才能开工。",
+      "usedFor": "本地部署、切换基础模型、记录实验版本，以及排查工作流缺少的部件。",
+      "pitfall": "文件后缀相同不代表兼容；“开源工作流”也不等于它依赖的模型与素材都可自由商用。",
+      "category": "生成参数",
+      "sources": [
+        {
+          "title": "Transformers：模型加载与保存",
+          "url": "https://huggingface.co/docs/transformers/main_classes/model"
+        }
+      ]
+    },
+    {
+      "id": "rag",
+      "term": "RAG",
+      "alias": "检索增强生成",
+      "definition": "先从外部资料中检索相关内容，再把检索结果交给生成模型组织回答。2020 年 RAG 论文是这条路线的重要节点。",
+      "analogy": "像先翻资料再答题，但仍可能翻错页、看漏条件或引用错。",
+      "usedFor": "企业知识库、带来源问答、需要更新资料的助手；通常可以不重新训练基础模型。",
+      "pitfall": "RAG 不能保证零幻觉。资料权限、版本、检索命中、引用是否支持结论，必须分别检查。",
+      "category": "知识与应用",
+      "sources": [
+        {
+          "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+          "url": "https://arxiv.org/abs/2005.11401"
+        }
+      ]
+    },
+    {
+      "id": "context",
+      "term": "Context Window",
+      "alias": "上下文窗口 / 本轮能参考的材料",
+      "definition": "一次生成时可容纳的输入与输出范围，通常以 token 计。它与预训练数据、产品的长期记忆和外部知识库不是同一回事。",
+      "analogy": "像当前桌面能摊开多少材料；桌子更大，不代表每一页都能被准确使用。",
+      "usedFor": "规划长文、代码仓库与多轮任务，决定什么时候需要分段、摘要或检索。",
+      "pitfall": "支持很长的输入不等于能无遗漏地理解全部内容；重要结论要回到对应原文检查。",
+      "category": "知识与应用",
+      "sources": [
+        {
+          "title": "Anthropic：Context windows",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows"
+        }
+      ]
+    },
+    {
+      "id": "agent",
+      "term": "Agent",
+      "alias": "智能体 / 能调工具推进任务的系统",
+      "definition": "围绕目标，利用模型选择步骤、调用工具、观察结果并继续行动的系统。它通常还需要权限、状态管理、失败恢复和验证机制。",
+      "analogy": "像能操作工具的助理：不只告诉你怎么做，还会执行部分步骤，再检查结果。",
+      "usedFor": "检索研究、软件开发、业务流程和重复任务；先给明确目标、可访问材料与完成标准。",
+      "pitfall": "会自主行动不等于会可靠完成。重要修改要有权限边界、可回退记录与人工复核点。",
+      "category": "知识与应用",
+      "sources": [
+        {
+          "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+          "url": "https://arxiv.org/abs/2210.03629"
+        }
+      ]
+    },
+    {
+      "id": "hallucination",
+      "term": "Hallucination",
+      "alias": "幻觉 / 有把握地说错",
+      "definition": "模型生成事实错误、与给定资料不一致或缺少依据的内容。语气自然、细节丰富和附有链接，都不自动说明答案可靠。",
+      "analogy": "像一位表达流畅的答题者，记不清时仍补出一个听起来合理的答案。",
+      "usedFor": "检查人名、日期、引文、计算、商品信息与代码行为；要求依据，并实际打开原始来源或运行验证。",
+      "pitfall": "让模型“再确认一次”不能替代核验；联网、长上下文和 RAG 都可能减轻问题，但不会自动消除它。",
+      "category": "评测与边界",
+      "sources": [
+        {
+          "title": "Anthropic：Reduce hallucinations",
+          "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations"
+        }
+      ]
+    },
+    {
+      "id": "benchmark",
+      "term": "Benchmark",
+      "alias": "基准评测",
+      "definition": "在规定任务、样本和指标下比较系统表现的方法。可靠比较需要明确版本、提示、工具条件、成本和评分规则。",
+      "analogy": "像一张特定考试的成绩单：数学考得好，不能直接证明它也能拍好广告。",
+      "usedFor": "读懂模型报告，并用自己的真实任务建立小型验收集；同时看准确性、稳定性、耗时与费用。",
+      "pitfall": "榜单不是全能力排名。不同测试设置、样本污染与主观偏好会影响结论，不能只截一个分数。",
+      "category": "评测与边界",
+      "sources": [
+        {
+          "title": "Holistic Evaluation of Language Models",
+          "url": "https://arxiv.org/abs/2211.09110"
+        }
+      ]
+    },
+    {
+      "id": "copyright",
+      "term": "版权与授权",
+      "alias": "输入权利 / 输出权利 / 商用条款",
+      "definition": "素材是否有权上传或训练、输出能否受版权保护、能否用于某个商业场景，是不同问题。答案取决于素材、人的创作贡献、合同和适用法律。",
+      "analogy": "像租用了摄影棚，并不自动买下画面里每个人、每首歌和每个商标的使用权。",
+      "usedFor": "发布前核对图片、字体、音乐、肖像和声音授权，保存创作与授权记录，并查所用版本的条款。",
+      "pitfall": "付费会员、无水印与可商用不等于没有第三方权利风险；美国版权局报告也不能直接当成中国法律结论。",
+      "category": "信任与权利",
+      "sources": [
+        {
+          "title": "美国版权局：Copyright and Artificial Intelligence",
+          "url": "https://www.copyright.gov/ai/"
+        }
+      ]
+    },
+    {
+      "id": "deepfake",
+      "term": "Deepfake",
+      "alias": "深度伪造 / 逼真的合成身份",
+      "definition": "通常指利用 AI 生成或操纵人脸、声音等，让内容看起来像某人真实说过或做过。它是深度合成的一部分，既有获授权用途，也有冒充与欺骗风险。",
+      "analogy": "像给身份穿上一层可信的数字外衣；看到熟悉的脸或听到熟悉的声音，已不足以证明真实性。",
+      "usedFor": "识别换脸、声音克隆、数字人等场景；联系当事人或通过独立渠道验证重要指令。",
+      "pitfall": "不要把“明显是 AI”当作授权。涉及真人身份先确认许可，发布生成合成内容时按适用规则声明与标识。",
+      "category": "信任与权利",
+      "sources": [
+        {
+          "title": "互联网信息服务深度合成管理规定",
+          "url": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm"
+        },
+        {
+          "title": "人工智能生成合成内容标识办法",
+          "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm"
+        }
+      ]
+    },
+    {
+      "id": "provenance",
+      "term": "Content Provenance",
+      "alias": "内容溯源 / 内容凭证",
+      "definition": "记录媒体由谁、用什么工具、经过哪些编辑步骤形成的来源信息。C2PA 用签名等机制承载可验证的内容凭证。",
+      "analogy": "像一张能核验签名的加工履历；它说明谁做了哪些声明，不直接替你判断画面中的事件是真是假。",
+      "usedFor": "保存创作链路、编辑记录与 AI 使用信息，配合平台标识和事实核查。",
+      "pitfall": "有凭证不等于内容真实，无凭证也不等于造假；元数据可能丢失，信任还取决于签发者与完整链路。",
+      "category": "信任与权利",
+      "sources": [
+        {
+          "title": "C2PA：Content Credentials 技术规范",
+          "url": "https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html"
+        }
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "name": "ChatGPT",
+      "company": "OpenAI",
+      "region": "海外",
+      "focus": "产品 · 通用对话与任务助手",
+      "url": "https://chatgpt.com/",
+      "note": "将语言生成从开发者接口带入大众对话产品的重要入口，随后扩展到多模态与任务协作。产品、GPT 模型家族和开发者 API 分属不同层次。"
+    },
+    {
+      "name": "Claude",
+      "company": "Anthropic",
+      "region": "海外",
+      "focus": "模型家族与产品 · 文本、代码与任务协作",
+      "url": "https://www.anthropic.com/claude",
+      "note": "Anthropic 的模型家族与助手品牌，代表面向写作、代码和知识工作的对话产品路线，并延伸出开发者与执行工具。"
+    },
+    {
+      "name": "Gemini",
+      "company": "Google / Google DeepMind",
+      "region": "海外",
+      "focus": "模型家族与产品 · 多模态理解与生成",
+      "url": "https://deepmind.google/models/gemini/",
+      "note": "Google 的多模态模型家族与应用品牌，连接语言、视觉、音频等方向；模型发布、Gemini 应用和开发者服务各有演进。"
+    },
+    {
+      "name": "Llama",
+      "company": "Meta",
+      "region": "海外",
+      "focus": "模型家族 · 可下载权重的语言与多模态模型",
+      "url": "https://github.com/meta-llama/llama-models",
+      "note": "Meta 的开放权重模型路线，推动下载、部署与二次适配生态。它是模型家族，不能与某个完整助手产品画等号。"
+    },
+    {
+      "name": "Qwen / 通义千问",
+      "company": "阿里巴巴",
+      "region": "中国",
+      "focus": "模型家族 · 语言、视觉、代码与图像等",
+      "url": "https://qwen.ai/",
+      "note": "阿里巴巴的模型家族，发展出语言、代码、视觉和图像等分支，连接开放模型社区、Qwen Chat 与云上服务。"
+    },
+    {
+      "name": "DeepSeek",
+      "company": "深度求索",
+      "region": "中国",
+      "focus": "模型家族与产品 · 对话、推理与代码",
+      "url": "https://www.deepseek.com/",
+      "note": "深度求索的模型与产品品牌，沿语言、推理和代码方向发展，官网将对话产品、开发服务与研究发布分别呈现。"
+    },
+    {
+      "name": "豆包",
+      "company": "字节跳动",
+      "region": "中国",
+      "focus": "产品 · 通用助手与多模态创作",
+      "url": "https://www.doubao.com/",
+      "note": "字节跳动面向大众的 AI 助手，将其模型能力带入对话与多模态创作；与即梦、Seed 模型家族和火山引擎分属不同产品层。"
+    },
+    {
+      "name": "Kimi",
+      "company": "月之暗面 / Moonshot AI",
+      "region": "中国",
+      "focus": "产品与模型品牌 · 知识工作与代码任务",
+      "url": "https://www.kimi.com/",
+      "note": "月之暗面的助手与模型品牌，从长文档等知识工作入口扩展到推理、代码与任务协作，是国内通用助手路线的一支。"
+    },
+    {
+      "name": "混元 / Hunyuan",
+      "company": "腾讯",
+      "region": "中国",
+      "focus": "模型家族 · 语言、视觉、视频与 3D 等",
+      "url": "https://hunyuan.tencent.com/",
+      "note": "腾讯的模型家族，延伸到语言、图像、视频与三维等方向。混元模型与腾讯元宝、创作产品和云服务分别记录。"
+    },
+    {
+      "name": "文心 / ERNIE",
+      "company": "百度",
+      "region": "中国",
+      "focus": "模型家族 · 语言与多模态",
+      "url": "https://github.com/PaddlePaddle/ERNIE",
+      "note": "百度的语言与多模态模型路线，形成模型、用户助手和千帆开发服务等层次；官方仓库记录其开放模型与工具生态。"
+    },
+    {
+      "name": "GLM",
+      "company": "智谱 / Z.ai",
+      "region": "中国",
+      "focus": "模型家族 · 语言、视觉、代码与智能体",
+      "url": "https://www.zhipuai.cn/",
+      "note": "智谱的模型家族，从语言扩展至视觉、代码与智能体。GLM 模型、智谱清言、Z.ai 和开发平台分别承担不同历史角色。"
+    },
+    {
+      "name": "Midjourney",
+      "company": "Midjourney",
+      "region": "海外",
+      "focus": "产品与自研模型 · 图像与视觉探索",
+      "url": "https://www.midjourney.com/",
+      "note": "以图像生成进入大众视觉创作的独立产品，后来加入视频等能力。它代表由专有模型、视觉探索与创作者社区组成的产品路线。"
+    },
+    {
+      "name": "Stable Diffusion",
+      "company": "Stability AI 及相关研究团队",
+      "region": "海外",
+      "focus": "模型家族 · 图像生成与开放权重生态",
+      "url": "https://stability.ai/",
+      "note": "潜空间扩散的重要模型家族，带动本地生成、模型微调与社区工具生态；不是单个网页，也不等于某一工作台。"
+    },
+    {
+      "name": "FLUX",
+      "company": "Black Forest Labs",
+      "region": "海外",
+      "focus": "模型家族 · 视觉与多模态生成",
+      "url": "https://bfl.ai/",
+      "note": "Black Forest Labs 的生成模型家族，以视觉生成和编辑进入创作生态，并通过官方产品、API 与部分权重发布连接不同平台。"
+    },
+    {
+      "name": "Adobe Firefly",
+      "company": "Adobe",
+      "region": "海外",
+      "focus": "模型品牌与产品 · 生成、编辑与设计工作流",
+      "url": "https://www.adobe.com/products/firefly.html",
+      "note": "Adobe 的生成模型与创作产品品牌，把生成式能力嵌入设计、图像编辑和影像软件，也在产品内整合合作方模型。"
+    },
+    {
+      "name": "ComfyUI",
+      "company": "Comfy Org / 开源社区",
+      "region": "开源社区",
+      "focus": "工作台 · 节点式生成流程",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "note": "以节点图组织生成过程的开源工作台，成为连接模型、适配器、控制与后处理的重要创作基础设施。它不是基础模型。"
+    },
+    {
+      "name": "即梦 AI",
+      "company": "字节跳动",
+      "region": "中国",
+      "focus": "产品 · 图像、视频与创意制作",
+      "url": "https://jimeng.jianying.com/",
+      "note": "字节跳动的创意平台，将图片、视频、音频与画布等能力带到创作者面前；是 Seedream、Seedance 等模型走向实际影像生产的重要产品入口。"
+    },
+    {
+      "name": "LibTV",
+      "company": "LiblibAI / 北京演语科技及关联方",
+      "region": "中国",
+      "focus": "聚合创作工作台 · AI 影视与无限画布",
+      "url": "https://www.liblib.tv/",
+      "note": "LiblibAI 体系内的专业视频创作平台，以无限画布连接剧本、图像、视频、音频和剪辑，并提供面向创作者与 Agent 的入口，代表由单次生成走向项目制作的产品层。"
+    },
+    {
+      "name": "TapNow",
+      "company": "TapNow / Tamar AI（地区主体不同）",
+      "region": "中国 / 海外",
+      "focus": "聚合创作工作台 · Creative OS 与多模态画布",
+      "url": "https://www.tapnow.ai/",
+      "note": "以画布、模型编排、Agent 和 TapTV 社区组成创作系统。中国站署名深圳盛健科技；香港与美国条款分别列 TAMAR EDGE LIMITED 与 Tamar AI Inc.，不据此推断集团股权。"
+    },
+    {
+      "name": "可灵 AI / Kling",
+      "company": "快手",
+      "region": "中国",
+      "focus": "模型品牌与产品 · 视频与图像创作",
+      "url": "https://klingai.com/",
+      "note": "快手的视频模型与创作产品品牌，从视频生成扩展到图像、参考控制与多镜头创作，连接模型研发、创作者产品和开发服务。"
+    },
+    {
+      "name": "万相 / Wan",
+      "company": "阿里巴巴",
+      "region": "中国",
+      "focus": "模型家族与产品 · 视频生成",
+      "url": "https://wan.video/",
+      "note": "阿里巴巴的生成模型与创作品牌，连接在线视频创作和开放模型社区；模型家族、在线产品与具体权重版本分别记录。"
+    },
+    {
+      "name": "海螺 AI / Hailuo",
+      "company": "MiniMax",
+      "region": "中国",
+      "focus": "产品 · 视频生成与参考创作",
+      "url": "https://hailuoai.video/",
+      "note": "MiniMax 的视频创作产品入口，与其视频模型的迭代相互关联，覆盖文本、图像与参考素材驱动的生成路线。"
+    },
+    {
+      "name": "Runway",
+      "company": "Runway",
+      "region": "海外",
+      "focus": "产品与自研模型 · 影像生成和编辑",
+      "url": "https://runway.com/",
+      "note": "从 AI 创作工具发展为影像生成、编辑与开发服务的产品体系；其自研模型与创作工作台共同推进生成视频进入制作流程。"
+    },
+    {
+      "name": "Luma",
+      "company": "Luma AI",
+      "region": "海外",
+      "focus": "产品与模型 · 多模态创作和创意智能体",
+      "url": "https://lumalabs.ai/",
+      "note": "以 Dream Machine 等入口进入生成视频领域，随后发展多模态创作与创意智能体。目录保留品牌演进，不把历史产品名当固定规格。"
+    },
+    {
+      "name": "Suno",
+      "company": "Suno",
+      "region": "海外",
+      "focus": "产品与自研模型 · 歌曲和音乐制作",
+      "url": "https://suno.com/",
+      "note": "以歌曲和音乐生成为核心的产品与模型路线，将自然语言、歌词等输入接到音乐创作、编辑与分享场景。"
+    },
+    {
+      "name": "ElevenLabs",
+      "company": "ElevenLabs",
+      "region": "海外",
+      "focus": "产品与 API · 语音、配音与音频创作",
+      "url": "https://elevenlabs.io/",
+      "note": "从合成语音扩展到配音、转写、音效、音乐与语音智能体的音频产品体系，是声音生成商业化的重要代表。"
+    },
+    {
+      "name": "Sora",
+      "company": "OpenAI",
+      "region": "海外",
+      "focus": "历史模型与产品 · 视频生成",
+      "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+      "note": "保留为历史条目。官方列明网页与 App 的停服日期为 2026-04-26，API 为 2026-09-24；不将其历史发布能力写成当前可用服务。"
+    },
+    {
+      "name": "Veo",
+      "company": "Google DeepMind",
+      "region": "海外",
+      "focus": "模型家族 · 视频与音视频生成",
+      "url": "https://deepmind.google/models/veo/",
+      "note": "Google DeepMind 的视频模型家族，从视频生成发展到音视频联合生成；Flow 等创作产品是它进入创作者场景的应用层。"
+    },
+    {
+      "name": "Cursor",
+      "company": "Anysphere",
+      "region": "海外",
+      "focus": "产品 · AI 编程与代码任务",
+      "url": "https://cursor.com/",
+      "note": "Anysphere 的编程产品，把模型接到代码库、编辑器与执行环境，反映 AIGC 从生成代码片段走向完成开发任务的变化。"
+    },
+    {
+      "name": "扣子 / Coze",
+      "company": "字节跳动",
+      "region": "中国",
+      "focus": "产品与工作台 · 智能体、应用与工作流",
+      "url": "https://www.coze.cn/overview",
+      "note": "字节跳动的应用与智能体平台，将模型、知识、工具和执行步骤组织成应用，代表基础模型之上的编排与任务产品路线。"
+    },
+    {
+      "name": "LiblibAI / 哩布哩布",
+      "company": "北京演语科技及关联方",
+      "region": "中国",
+      "focus": "创作平台与社区 · 模型、素材和在线生成",
+      "url": "https://www.liblib.art/",
+      "note": "以 AI 视觉创作、模型与社区资源连接创作者，并发展出 LibTV、星流等关联平台。它在历史中的角色包括模型传播、在线创作和应用生态。"
+    },
+    {
+      "name": "RunningHub",
+      "company": "安徽海马云智能科技发展有限公司（中国站）",
+      "region": "中国",
+      "focus": "聚合创作工作台 · 云端 ComfyUI 与 AI 应用",
+      "url": "https://www.runninghub.cn/",
+      "note": "从云端 ComfyUI 与可分享 AI 应用扩展到无限画布和智能体内容创作。中国站隐私政策明确运营主体，国际站另有合同主体，不能混写。"
+    },
+    {
+      "name": "Vidu",
+      "company": "生数科技 / ShengShu",
+      "region": "中国",
+      "focus": "模型品牌与产品 · 视频和参考创作",
+      "url": "https://www.vidu.cn/",
+      "note": "生数科技的视频模型与产品路线，以文生视频、图生视频和多参考内容创作连接用户产品与开发者 API，后续形成更完整的内容生产入口。"
+    },
+    {
+      "name": "PixVerse / 拍我 AI",
+      "company": "爱诗科技；国际网页运营方 AIVORA PTE. LTD.",
+      "region": "中国 / 海外",
+      "focus": "模型品牌与创作平台 · 视频、特效与交互内容",
+      "url": "https://pixverse.ai/",
+      "note": "爱诗科技官网将 PixVerse 与拍我 AI 关联；国际网页条款列 AIVORA 为运营方。产品从视频生成与特效扩展到画布、Agent、API 和交互内容。"
+    },
+    {
+      "name": "MOKI",
+      "company": "美图",
+      "region": "中国",
+      "focus": "影视创作平台 · AI 短片与叙事内容",
+      "url": "https://www.moki.cn/",
+      "note": "美图于 2024-06-12 发布的 AI 短片创作产品，连接脚本、分镜、视觉素材与成片，面向动画短片、网文短剧、绘本和音乐影像等场景。"
+    },
+    {
+      "name": "腾讯智能创作 / 媒资 AIGC",
+      "company": "腾讯",
+      "region": "中国",
+      "focus": "创作与内容平台 · 云剪辑、生成与媒体管理",
+      "url": "https://cloud.tencent.com/product/voda",
+      "note": "腾讯云的音视频创作与媒体服务路线，把在线剪辑、素材管理、配音字幕等能力与 AI 生图、生视频相连，反映传统云制作平台吸收生成式能力的演进。"
+    },
+    {
+      "name": "堆友",
+      "company": "阿里巴巴国际数字科技（杭州）有限公司",
+      "region": "中国",
+      "focus": "设计创作平台 · 图像、视频与商业视觉",
+      "url": "https://d.design/",
+      "note": "由阿里设计与 AI 业务共同推动的设计创作平台，从素材、图像生成与电商工具延伸到视频、画布和 Agent，连接设计师社区与商业视觉生产。"
+    },
+    {
+      "name": "纳米大片 / 纳米漫剧流水线",
+      "company": "360",
+      "region": "中国",
+      "focus": "影视创作平台 · 漫剧、短片与智能体制作",
+      "url": "https://www.namistory.com/",
+      "note": "360 体系内的 AI 影视创作入口，官方业务清单可核其域名。曾以纳米漫剧流水线等名称出现，将剧本、分镜、资产和动态内容组织到同一制作平台。"
+    },
+    {
+      "name": "LTX Studio",
+      "company": "LTX / Lightricks",
+      "region": "海外",
+      "focus": "影视创作工作台 · 分镜、生成与影像制作",
+      "url": "https://ltx.io/studio",
+      "note": "起源于 Lightricks 的 AI 影像路线，将故事、分镜、人物和镜头制作组织为产品；与 LTX 视频模型相互关联，但工作台与模型分别记录。"
+    },
+    {
+      "name": "Higgsfield",
+      "company": "Higgsfield, Inc.",
+      "region": "海外",
+      "focus": "聚合创作平台 · 镜头、特效与影像制作",
+      "url": "https://higgsfield.ai/",
+      "note": "以运镜、影像效果与生成视频进入创作市场，发展出 Cinema Studio、画布与商业内容等入口；产品整合自研能力和外部模型。"
+    },
+    {
+      "name": "Krea",
+      "company": "Krea",
+      "region": "海外",
+      "focus": "聚合创作平台 · 图像、视频与视觉编辑",
+      "url": "https://www.krea.ai/",
+      "note": "把实时视觉探索、增强、图像视频生成与编辑汇入创作套件，同时发展自研模型、节点应用和第三方软件连接。平台与 Krea 模型分别记录。"
+    },
+    {
+      "name": "Freepik / Magnific",
+      "company": "Freepik / Magnific",
+      "region": "海外",
+      "focus": "聚合创作平台 · 素材库、图像、视频与音频",
+      "url": "https://www.magnific.com/ai",
+      "note": "从 Freepik 的图形资源与素材平台发展为多模态创作套件；核验时官网已以 Magnific 展示，并保留 Freepik 更名与账号迁移说明。"
+    },
+    {
+      "name": "Leonardo.Ai",
+      "company": "Leonardo Interactive / Canva",
+      "region": "海外",
+      "focus": "视觉创作平台 · 图像、模型适配与动态内容",
+      "url": "https://leonardo.ai/",
+      "note": "从可定制的图像生成平台发展出自研模型与动态视觉工具，2024-07-30 官方宣布加入 Canva，成为设计软件与生成模型结合的一条路线。"
+    },
+    {
+      "name": "Pika",
+      "company": "Pika",
+      "region": "海外",
+      "focus": "模型品牌与聚合创作平台 · 视频与视觉效果",
+      "url": "https://pika.art/",
+      "note": "以生成视频、图像动画和创意效果形成产品辨识度，后续加入更多图像、音频及第三方模型入口；Pika 自研模型与整个平台并非同一对象。"
+    },
+    {
+      "name": "HeyGen",
+      "company": "HeyGen",
+      "region": "海外",
+      "focus": "创作平台 · 数字人、配音与视频本地化",
+      "url": "https://www.heygen.com/",
+      "note": "围绕数字人视频、合成声音、翻译与口型同步形成商业创作产品，反映 AIGC 在讲解、营销、培训与多语言传播中的应用分支。"
+    },
+    {
+      "name": "Google Flow",
+      "company": "Google Labs / Google DeepMind",
+      "region": "海外",
+      "focus": "影视创作平台 · 场景、镜头与生成资产",
+      "url": "https://flow.google.com/",
+      "note": "Google 于 2025-05-20 推出的 AI 影视创作工具，由 VideoFX 实验演进而来，将 Veo、Imagen 和 Gemini 等模型能力组织为场景与镜头制作产品。"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "short-film",
+      "title": "做完一支 60 秒短片",
+      "intro": "最小交付是一支能看懂、能播放、镜头能接上的成片。示例：一只纸鹤飞过城市，沿途的窗户依次亮起。先限制角色和动作，再决定用哪个平台。",
+      "steps": [
+        {
+          "title": "01 定故事与交付",
+          "detail": "写一句话事件，明确观众、时长、横竖版与情绪转折。先回答“观众最后看懂了什么”，再写画风词。"
+        },
+        {
+          "title": "02 拆镜头",
+          "detail": "拆成 6—10 个短镜头，每镜只承担一个主要动作。记录主体、景别、机位、动作、时长，以及前后镜怎样接。"
+        },
+        {
+          "title": "03 锁住视觉",
+          "detail": "准备有权使用的角色图、场景图与风格卡。先定关键静帧，再让它动，避免一边做视频一边更换主角和世界。"
+        },
+        {
+          "title": "04 小批生成与记录",
+          "detail": "先做最难的一镜验证可行性。每镜只生成少量候选，记录模型、素材、提示、参数与费用；一次只改一个主要变量。"
+        },
+        {
+          "title": "05 剪辑与声音",
+          "detail": "先看静音版本是否讲得通，再加环境声、音效、音乐和必要对白。用剪辑连接镜头，别让每个片段都争当高潮。"
+        },
+        {
+          "title": "06 验收与发布",
+          "detail": "逐镜查变脸、穿帮、物理关系、字幕和音画同步。输出成片、分镜、源素材与授权记录，发布时按要求声明 AI 内容。"
+        }
+      ],
+      "pitfall": "素材多不等于片子完成。先锁一套参考与一个主动作，超支时缩短镜头数量，别靠不停抽卡拖延剪辑。",
+      "sources": [
+        {
+          "title": "MiniMax：短片由多个片段生成后剪辑的官方示例",
+          "url": "https://www.minimax.io/news/minimax-hailuo-02"
+        },
+        {
+          "title": "ControlNet：结构控制",
+          "url": "https://arxiv.org/abs/2302.05543"
+        },
+        {
+          "title": "生成合成内容标识办法",
+          "url": "https://www.cac.gov.cn/2025-03/14/c_1743654684782215.htm"
+        }
+      ]
+    },
+    {
+      "id": "commerce",
+      "title": "一件商品，做出一组可交付素材",
+      "intro": "最小交付是同一件真实商品的 3 张场景图和一条短视频。AI 帮忙更换场景、探索构图和试文案，商品事实由真实资料确定。",
+      "steps": [
+        {
+          "title": "01 建商品事实卡",
+          "detail": "从商家资料提取型号、尺寸、颜色、材质、配件与可证明的卖点，未知项留空。另存包装、Logo 与关键结构的实拍图。"
+        },
+        {
+          "title": "02 定受众与场景",
+          "detail": "只选 2—3 个明确用途，例如通勤、办公室、露营。每个场景服务一个卖点，先定画幅、文案位置和交付数量。"
+        },
+        {
+          "title": "03 保主体、换环境",
+          "detail": "用真实商品图做局部编辑、抠图合成或参考生成。结构要求高时，优先保留原始主体；不要让生成模型替你重造商品。"
+        },
+        {
+          "title": "04 做图与短视频",
+          "detail": "先把静帧里的商品核准，再做轻动作或镜头移动。文字、价格和规格放到可编辑图层中，便于最终校对。"
+        },
+        {
+          "title": "05 逐项验货",
+          "detail": "把成图与实拍并排比较：接口、数量、颜色、包装、商标、尺寸和使用状态逐项打勾；不合格图返工。"
+        },
+        {
+          "title": "06 测试实际结果",
+          "detail": "以点击、加购、成交或制作工时为目标，尽量只改一个变量做测试，同时看误购、退货和投诉。保留源图与发布版本。"
+        }
+      ],
+      "pitfall": "“看起来高级”不是商品准确性。不能生成不存在的功能、配件和功效，也不能把生成数量直接当成销售增长。",
+      "sources": [
+        {
+          "title": "Adobe Firefly：生成与图片编辑入口",
+          "url": "https://www.adobe.com/products/firefly.html"
+        },
+        {
+          "title": "IP-Adapter：参考图机制",
+          "url": "https://arxiv.org/abs/2308.06721"
+        },
+        {
+          "title": "美国版权局：输入、输出与训练的权利议题",
+          "url": "https://www.copyright.gov/ai/"
+        }
+      ]
+    },
+    {
+      "id": "short-drama",
+      "title": "先做一集能接着看的短剧",
+      "intro": "先交付一集 60—90 秒样片，验证人物是否一致、冲突是否清楚、对白能否成立。剧本、制作工具和分发平台是三层生意，不能混成一张“巨头榜”。",
+      "steps": [
+        {
+          "title": "01 划清剧集承诺",
+          "detail": "确定题材、受众、集长和核心冲突，写一页人物关系与整季方向。只展开第一集，不先承诺几十集。"
+        },
+        {
+          "title": "02 固定人物与世界",
+          "detail": "建立人物卡、服装、道具、场景和声音档案，并核查素材权利。连续性表记录每场戏的时间、位置与状态。"
+        },
+        {
+          "title": "03 先走对白与分镜",
+          "detail": "用临时配音和静态分镜拼出可播放草稿，确认信息顺序、台词长度和情绪变化，再为失败镜头选择替代拍法。"
+        },
+        {
+          "title": "04 按镜头生产",
+          "detail": "先做近景对话、反应镜头和必要动作；多人交互困难时拆镜。用参考素材控制角色，逐镜记录模型和版本。"
+        },
+        {
+          "title": "05 合成与连续性检查",
+          "detail": "剪辑、配音、口型、字幕、音效统一处理。检查谁在说话、视线方向、伤痕与道具是否突然变化。"
+        },
+        {
+          "title": "06 用样片验证",
+          "detail": "请目标观众复述剧情，看是否愿意继续。若发布后评估表现，写清平台、日期和统计口径；保留工时、算力、返工与授权成本。"
+        }
+      ],
+      "pitfall": "别把真人短剧的播放量写成 AI 制作成绩，也别把平台宣传个案当作行业平均收益。没有可核对口径，就不写“爆款”。",
+      "sources": [
+        {
+          "title": "快手：可灵模型与视频创作路线",
+          "url": "https://ir.kuaishou.com/zh-hant/news-releases/news-release-details/kuaishouziyanshipinshengchengdamoxingkeling-kaifangceshi"
+        },
+        {
+          "title": "MiniMax：主体参考",
+          "url": "https://www.minimax.io/news/s2v-01-release"
+        },
+        {
+          "title": "深度合成管理规定",
+          "url": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm"
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "title": "做一段可信、听得清的声音",
+      "intro": "最小交付是一段 60 秒旁白和一份声音使用记录。把文本转语音、音乐生成、转写与声音克隆分开选，避免一开始就追求“像某个名人”。",
+      "steps": [
+        {
+          "title": "01 定用途与权利",
+          "detail": "明确是旁白、对话、音乐还是转写，核对声音、歌词、旋律和录音的使用范围。涉及真人克隆，先取得明确许可。"
+        },
+        {
+          "title": "02 整理可朗读文本",
+          "detail": "短句分段，标记专名、数字、缩写、停顿和情绪。先把事实校准，再调声音；错事实配上好声音仍是错误。"
+        },
+        {
+          "title": "03 先试 10 秒",
+          "detail": "选择有权使用的音色，做短样检验发音、语速与表现。音乐另写节奏、乐器、结构和用途，不把歌曲风格当作身份授权。"
+        },
+        {
+          "title": "04 分段生成与挑选",
+          "detail": "按自然语义分段，记录文本与版本。逐句听专名、数字、重音、漏字与多字，保留能修改的分段文件。"
+        },
+        {
+          "title": "05 混音与同步",
+          "detail": "平衡人声、音乐与音效，避免背景盖住语言。放回视频检查口型、字幕与停顿，使用耳机和外放各听一遍。"
+        },
+        {
+          "title": "06 导出与披露",
+          "detail": "按交付要求导出格式与响度，保存授权与生成记录。按适用规则声明合成声音，不把合成内容包装成真实录音。"
+        }
+      ],
+      "pitfall": "音色逼真不等于获得本人许可，买会员也不等于获得所有歌曲的发行权。发音和情绪逐段听，不用波形好看代替审听。",
+      "sources": [
+        {
+          "title": "ElevenLabs：语音与音频工具",
+          "url": "https://elevenlabs.io/"
+        },
+        {
+          "title": "Suno：音乐创作入口",
+          "url": "https://suno.com/"
+        },
+        {
+          "title": "深度合成管理规定",
+          "url": "https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm"
+        }
+      ]
+    },
+    {
+      "id": "knowledge-assistant",
+      "title": "搭一个会给出处的知识助手",
+      "intro": "最小交付是基于一组有权使用的资料回答 20 个真实问题，并为关键结论给出可定位出处。先验收资料和回答，再决定要不要加自动执行能力。",
+      "steps": [
+        {
+          "title": "01 明确问题和权限",
+          "detail": "选一个范围，例如公司产品 FAQ。记录谁能问、谁能看哪些文档，列出必须拒答或转人工的场景。"
+        },
+        {
+          "title": "02 清理资料与版本",
+          "detail": "去掉重复、过期与无权使用的内容，保留标题、日期、页码或段落位置。机密文件不要未经许可上传到外部服务。"
+        },
+        {
+          "title": "03 建立检索",
+          "detail": "把材料分成合理片段，建立文字或向量检索，检查真实问题能否找到对应段落。先看是否找对，再看回答是否写好。"
+        },
+        {
+          "title": "04 基于证据回答",
+          "detail": "让模型区分原文、推断与未知；为关键句附出处。没有材料支持时说不知道，而不是用流畅语言补齐。"
+        },
+        {
+          "title": "05 做小型验收集",
+          "detail": "用 20 个问题覆盖常见问法、过期数据、无答案与越权提问。检查答案、引用、权限、延迟与费用，并记录失败原因。"
+        },
+        {
+          "title": "06 再加工具与维护",
+          "detail": "确有需要才允许查询数据库或执行操作。给外部写入设置授权与回退点；定期更新资料并重跑原来的验收题。"
+        }
+      ],
+      "pitfall": "上传 PDF 不等于训练了专属大模型；引用链接也不等于该链接支持结论。知识库最难的部分常是资料、权限与验收。",
+      "sources": [
+        {
+          "title": "RAG 原论文",
+          "url": "https://arxiv.org/abs/2005.11401"
+        },
+        {
+          "title": "Hugging Face：语义检索",
+          "url": "https://huggingface.co/learn/llm-course/en/chapter5/6"
+        },
+        {
+          "title": "ReAct：推理与工具行动",
+          "url": "https://arxiv.org/abs/2210.03629"
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "title": "基础方法与基础设施",
+      "description": "从规则、统计与神经网络，到 GAN、VAE、Transformer、扩散和流匹配；同时追踪数据、算力、预训练、适配、部署成本与开放权重，解释能力如何变得可用。"
+    },
+    {
+      "title": "文字、代码与知识工作",
+      "description": "语言生成、指令跟随、推理、代码协作与检索。把会续写、会回答、会查资料和会执行任务分清，再看各阶段解决了什么问题。"
+    },
+    {
+      "title": "图像、设计与可控创作",
+      "description": "从早期计算机艺术到文本生图、参考控制、局部编辑与品牌生产。图像质量之外，还看构图、文字、结构、角色一致性和可编辑性。"
+    },
+    {
+      "title": "语音、音乐与声音身份",
+      "description": "语音识别、语音合成、歌曲和音效生成、配音与克隆。记录生成能力，也记录声音授权、数字身份和听觉验证如何成为新问题。"
+    },
+    {
+      "title": "视频、短片与短剧",
+      "description": "从单帧走向时间连续性，追踪文生视频、图生视频、参考编辑与音视频联合生成。区分模型演示、可操作产品和经过剪辑的真实作品。"
+    },
+    {
+      "title": "3D、空间与世界模型",
+      "description": "纳入三维表示、场景重建、生成资产、交互环境和世界模型的关联路线。重建、生成和模拟不混写，也不把视觉逼真当成完整物理理解。"
+    },
+    {
+      "title": "平台、产业与创作系统",
+      "description": "从单一生成接口到画布、项目、资产和多模型编排，追踪创作平台怎样进入影像、设计和内容生产。结合官方发布与同期记录说明演进，首发日期未确认时保留空白。"
+    },
+    {
+      "title": "评测、权利与社会影响",
+      "description": "贯穿基准评测、事实可靠性、训练与输出权利、深度伪造、内容标识和来源凭证。记录争议及其适用范围，不把厂商说法当成无条件结论。"
+    }
+  ],
+  "editorialNote": "本馆按公开论文、官方发布、原始文档与制度文本整理，资料分别核验于 2026 年 10 月 23—24 日。目标是把 AIGC 的主要路线、代表节点与产业背景连起来，而不是承诺收录每篇论文、每次更新和每款工具。日期区分论文公开、演示、上线与开放权重；厂商自述不自动等于独立评测。术语中的类比用于理解，编辑解说均不替代原始定义或授权条款。平台目录按角色供查阅，不作无数据排名；停服与更名产品保留为历史记录。"
+}
