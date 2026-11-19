@@ -11,18 +11,26 @@ const eras = [
   {start:2025,end:2026,title:'推理、智能体与创作工具'}
 ];
 let events = [], atlas, curation, media = {}, tour = [], current = 0, selectedTab = 'timeline', category = 'all', query = '', archiveScope = 'featured', terminalView = 'archive';
+let atlasRequest;
 let lastFocus, wheelSum = 0, wheelAt = 0;
 const formatDate = value => { const [y,m,d] = value.split('-'); return `${y} 年${m ? ` ${Number(m)} 月` : ''}${d ? ` ${Number(d)} 日` : ''}`; };
 const sourceLinks = list => (list || []).map(s => `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a>`).join('');
 const matches = item => JSON.stringify(item).toLowerCase().includes(query.toLowerCase().trim());
 
+async function loadCollection(name) {
+  const response=await fetch(`./data/${name}.json`);
+  if(!response.ok)throw Error(`${name}: ${response.status}`);
+  return response.json();
+}
+
 async function init() {
   const intro = wireIntro();
   try {
-    const responses = await Promise.all(['foundations','modern','atlas','curation','media','context'].map(name => fetch(`./data/${name}.json`).then(r => { if (!r.ok) throw Error(`${name}: ${r.status}`); return r.json(); })));
-    events = [...responses[0], ...responses[1], ...responses[5]].sort((a,b) => a.date.localeCompare(b.date));
-    atlas = responses[2];
-    curation = responses[3]; media = responses[4];
+    const [foundations,modern,context,selection,materials]=await Promise.all(
+      ['foundations','modern','context','curation','media'].map(loadCollection)
+    );
+    events=[...foundations,...modern,...context].sort((a,b)=>a.date.localeCompare(b.date));
+    curation=selection;media=materials;
     tour = events.filter(e => curation.featuredIds.includes(e.id));
     if (!events.length) throw Error('档案为空');
     const initial = decodeURIComponent(location.hash.slice(1)) || 'mcculloch-pitts';
@@ -146,20 +154,22 @@ function styleGallery(m){
 function artifactHTML(e) {
   if (media[e.id]) {
     const m=media[e.id];
-    const visual = m.experience==='eliza' ? `<div class="eliza-experience"><div class="experience-tabs"><button data-eliza-view="demo" aria-pressed="true">试着对话</button><button data-eliza-view="original" aria-pressed="false">1966 打印稿</button></div><div id="eliza-demo" class="teletype"><div class="teletype-heading">ELIZA / 中文规则示意</div><div id="eliza-log" class="teletype-log" role="log" aria-label="对话记录"><p>程序：你想聊些什么？</p></div><form id="eliza-form"><label for="eliza-input">你说</label><input id="eliza-input" placeholder="例如：我有点紧张" maxlength="120" autocomplete="off"><button type="submit">发送 ↵</button></form><p class="experience-note">本站简化重建 · 非原程序 · 输入仅在本页处理</p></div><a id="eliza-original" class="history-zoom reading-room" href="${escape(m.src)}" target="_blank" rel="noopener" hidden><img class="history-image" src="${escape(m.src)}" alt="${escape(m.alt)}"></a></div>`
+    if(e.id==='mcculloch-pitts')return neuronBench(m);
+    const visual = m.game ? `<section class="paper-game game-${escape(e.id)}" data-interactive><a href="${escape(m.src)}" target="_blank" rel="noopener">查看论文原图 ↗</a></section>`
+      : m.experience==='eliza' ? `<div class="eliza-experience"><div class="experience-tabs"><button data-eliza-view="demo" aria-pressed="true">试着对话</button><button data-eliza-view="original" aria-pressed="false">1966 打印稿</button></div><div id="eliza-demo" class="teletype"><div class="teletype-heading">ELIZA / 中文规则示意</div><div id="eliza-log" class="teletype-log" role="log" aria-label="对话记录"><p>程序：你想聊些什么？</p></div><form id="eliza-form"><label for="eliza-input">你说</label><input id="eliza-input" placeholder="例如：我有点紧张" maxlength="120" autocomplete="off"><button type="submit">发送 ↵</button></form><p class="experience-note">本站简化重建 · 非原程序 · 输入仅在本页处理</p></div><a id="eliza-original" class="history-zoom reading-room" href="${escape(m.src)}" target="_blank" rel="noopener" hidden><img class="history-image" src="${escape(m.src)}" alt="${escape(m.alt)}"></a></div>`
       : m.pages ? documentReader(m)
       : e.id==='neural-style-transfer' ? styleGallery(m)
       : m.explore ? `<div class="comparison-desk" data-interactive><div class="comparison-heading">ControlNet / Canny · 2023</div><div class="archive-panels">${m.panels.slice(0,3).map((panel,i)=>`<figure><svg ${i===2?'id="comparison-result"':''} viewBox="${panel.crop.join(' ')}" role="img" aria-label="${escape(panel.alt)}"><image href="${escape(m.src)}" width="${m.imageSize[0]}" height="${m.imageSize[1]}"></image></svg><figcaption>${escape(panel.label)}</figcaption></figure>`).join('')}</div><div class="comparison-choices" role="group" aria-label="选择原始生成结果"><span>生成结果</span>${m.panels.slice(2).map((p,i)=>`<button data-result="${i+2}" aria-label="查看生成结果 ${i+1}" aria-pressed="${i===0}">${i+1}</button>`).join('')}</div><p class="experience-note">提示词：bird · 切换原始样本</p></div>`
       : m.type==='embed'
       ? `<div class="embedded-film"><button class="film-play" id="play-archive" aria-label="播放原始演示：${escape(m.alt)}"><img src="${escape(m.poster)}" alt="${escape(m.alt)}"><span aria-hidden="true">▶</span></button></div>`
       : m.type==='audio'
-        ? `<div class="audio-artifact"><img class="audio-diagram" src="${escape(m.poster)}" alt="WaveNet 2016 年官方博客中的分层卷积结构动图"><div class="audio-samples">${m.samples.map(sample=>`<label class="audio-sample"><span>${escape(sample.label)}</span><audio controls preload="none" aria-label="2016 年普通话样本：${escape(sample.label)}"><source src="${escape(sample.src)}" type="${escape(sample.mime)}"></audio></label>`).join('')}</div></div>`
+        ? `<div class="audio-artifact"><img class="audio-diagram" src="${escape(m.poster)}" alt="WaveNet 2016 年官方博客中的分层卷积结构动图"><div class="audio-samples"><button type="button" id="blind-listen" aria-pressed="false">盲听对比</button>${m.samples.map(sample=>`<label class="audio-sample"><span>${escape(sample.label)}</span><audio controls preload="none" aria-label="2016 年普通话样本：${escape(sample.label)}"><source src="${escape(sample.src)}" type="${escape(sample.mime)}"></audio></label>`).join('')}</div></div>`
       : m.type==='video'
         ? `<video controls playsinline preload="none" ${m.loop?'loop':''} ${m.muted?'muted':''} ${m.poster?`poster="${escape(m.poster)}"`:''} aria-label="${escape(m.alt)}"><source src="${escape(m.src)}" type="${m.src.endsWith('.webm')?'video/webm':'video/mp4'}">浏览器不支持此视频，请查看原始来源。</video>`
       : m.panels
         ? `<div class="archive-panels${m.panels.length===1?' archive-single':''}">${m.panels.map(panel=>`<figure><svg viewBox="${panel.crop.join(' ')}" role="img" aria-label="${escape(panel.alt)}"><image href="${escape(m.src)}" width="${m.imageSize[0]}" height="${m.imageSize[1]}"></image></svg>${panel.label?`<figcaption>${escape(panel.label)}</figcaption>`:''}</figure>`).join('')}</div>`
         : `<a class="history-zoom${m.reading?' reading-room':''}" href="${escape(m.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escape(m.alt)}"><img class="history-image" src="${escape(m.src)}" alt="${escape(m.alt)}"></a>`;
-    return `<div class="historical-artifact ${m.type!=='image'?'historical-video':'historical-image'}${m.presentation==='photograph'?' archive-photograph':''}">${visual}${e.id === 'mcculloch-pitts' ? neuronControls() : ''}<div class="media-caption"><p>${escape(m.displayCaption || m.caption.split('。').slice(0,2).join('。') + (m.caption.includes('。') ? '。' : ''))}</p></div></div>`;
+    return `<div class="historical-artifact ${m.type!=='image'?'historical-video':'historical-image'}${m.presentation==='photograph'?' archive-photograph':''}">${visual}<div class="media-caption"><p>${escape(m.displayCaption || m.caption.split('。').slice(0,2).join('。') + (m.caption.includes('。') ? '。' : ''))}</p></div></div>`;
   }
   const note = '<div class="artifact-note">交互示意 · 本站重建，非历史原件</div>';
   if (['code','terminal'].includes(e.artifact.type) || e.id === 'transformer') {
@@ -173,8 +183,18 @@ function artifactHTML(e) {
   }
   return `<div class="canvas-artifact"><h2>${escape(e.artifact.label)}</h2><canvas id="demo-canvas" width="1000" height="500" aria-label="${escape(e.artifact.type === 'waveform' ? '声音波形示意' : e.artifact.type === 'image' ? '噪声逐渐减少的图像示意' : '信息在网络中流动的示意')}" role="img"></canvas><p class="canvas-caption" id="canvas-caption">${escape(e.artifact.lines.slice(0,2).join(' · '))}</p><label class="canvas-control">${e.artifact.type === 'image' ? '从噪声到结构' : '探索生成过程'}<input type="range" id="demo-range" min="0" max="100" value="55" aria-label="调整示意进度"><output id="demo-output">55%</output></label>${note}</div>`;
 }
-function neuronControls() {
-  return `<fieldset class="neuron-controls" data-interactive><legend>阈值实验 · 本站示意</legend>${['A','B','C'].map(name => `<label><input type="checkbox"> ${name}</label>`).join('')}<output aria-live="polite">0 个输入 · 未触发（阈值 2）</output></fieldset>`;
+function neuronBench(m) {
+  return `<div class="neuron-bench" data-interactive>
+    <nav class="bench-tabs" aria-label="展品视图"><button data-bench="experiment" aria-pressed="true">阈值实验</button><button data-bench="paper" aria-pressed="false">翻阅论文 ↗</button></nav>
+    <section class="signal-panel" aria-label="逻辑神经元教学示意">
+      <div class="panel-title"><h2>阈值神经元</h2><span>本站交互示意</span></div>
+      <div class="signal-flow"><div class="input-bank">${['A','B','C'].map(name=>`<button type="button" class="signal-key" aria-label="输入 ${name}" aria-pressed="false"><b>${name}</b><i></i></button>`).join('')}</div>
+      <svg class="signal-wires" viewBox="0 0 160 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 H49 L82 60 H160"/><path d="M0 60 H160"/><path d="M0 100 H49 L82 60 H160"/></svg>
+      <div class="signal-lamp"><i></i><output aria-live="polite">未触发</output></div></div>
+      <div class="panel-foot"><span>打开任意两个输入</span><span id="signal-count">0 / 3</span></div>
+    </section>
+    <section class="bench-paper" hidden>${documentReader(m)}<div class="media-caption"><p>${escape(m.displayCaption)}</p></div></section>
+  </div>`;
 }
 function terminalContent(e, view) {
   if (view === 'mechanism') return `<div class="terminal-concept">${escape(e.mechanism)}<br><br><span class="code-comment">// 为什么这一步重要</span><br>${escape(e.why)}</div>`;
@@ -204,6 +224,12 @@ ${e.artifact.lines.map(escape).join('\n\n')}
 }
 function wireArtifact(e) {
   const m=media[e.id];
+  if (m?.game) {
+    const root=$('.paper-game');
+    import('./exhibit-games.js').then(({mountGame})=>{
+      if(root.isConnected)mountGame(root,e.id,m.originalSrc || m.src);
+    }).catch(()=>{ if(root.isConnected)root.querySelector('a').textContent='互动加载失败，查看论文原图 ↗'; });
+  }
   $$('[data-river]').forEach(button=>button.onclick=()=>{
     const [name,...area]=riverPanels[Number(button.dataset.river)];
     ['x','y','width','height'].forEach((key,i)=>$('#river-clip rect').setAttribute(key,area[i]));
@@ -211,13 +237,21 @@ function wireArtifact(e) {
     $('#river-view').setAttribute('aria-label',name==='原照'?'图宾根河岸原照':name+'风格的图宾根河岸');
     $$('[data-river]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
   });
-  const neuron = $('.neuron-controls');
-  if (neuron) neuron.onchange = () => {
-    const count = $$('input:checked', neuron).length;
-    const result = $('output', neuron);
-    result.textContent = `${count} 个输入 · ${count >= 2 ? '已触发' : '未触发'}（阈值 2）`;
-    result.classList.toggle('firing', count >= 2);
-  };
+  const signalKeys=$$('.signal-key');
+  signalKeys.forEach((button,index)=>button.onclick=()=>{
+    const active=button.getAttribute('aria-pressed')!=='true';
+    button.setAttribute('aria-pressed',String(active));
+    $$('.signal-wires path')[index].classList.toggle('active',active);
+    const count=signalKeys.filter(b=>b.getAttribute('aria-pressed')==='true').length;
+    $('.signal-panel').classList.toggle('firing',count>=2);
+    $('.signal-lamp output').textContent=count>=2?'已触发':'未触发';
+    $('#signal-count').textContent=`${count} / 3`;
+  });
+  $$('[data-bench]').forEach(button=>button.onclick=()=>{
+    const paper=button.dataset.bench==='paper';
+    $('.bench-paper').hidden=!paper;$('.signal-panel').hidden=paper;
+    $$('[data-bench]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  });
   if (m?.pages) {
     let page=0;
     const turn=direction=>{
@@ -249,6 +283,29 @@ function wireArtifact(e) {
     $$('[data-eliza-view]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
   });
   if(m?.experience==='eliza')$('.media-caption p').textContent='输入一句话，观察关键词怎样被改写成追问。这是本站的中文简化示意；上方可切换查看 1966 年的真实打印稿。';
+  const blind=$('#blind-listen');
+  if(blind)blind.onclick=()=>{
+    const hide=blind.getAttribute('aria-pressed')==='false';
+    const samples=[...m.samples];
+    if(hide)for(let i=samples.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [samples[i],samples[j]]=[samples[j],samples[i]];
+    }
+    $$('.audio-sample').forEach((row,i)=>{
+      const audio=$('audio',row);
+      if(hide){
+        audio.pause();
+        row.dataset.method=samples[i].label;
+        $('source',audio).src=samples[i].src;
+        audio.load();
+      }
+      const label=hide?`样本 ${'ABC'[i]}`:row.dataset.method;
+      $('span',row).textContent=label;audio.setAttribute('aria-label',label);
+    });
+    blind.setAttribute('aria-pressed',String(hide));
+    blind.textContent=hide?'揭晓合成方式':'重新盲听';
+    $('.media-caption p').textContent=hide?'依次听三段普通话，选出你觉得停顿最自然的一段，再揭晓录音各自的合成方式。':m.displayCaption;
+  };
   $$('audio').forEach(player => player.onplay = () => {
     $$('audio').forEach(other => { if (other !== player) other.pause(); });
   });
@@ -324,9 +381,9 @@ function openDetail(e) {
   const originals = [...e.sources];
   if (material && !originals.some(s=>s.url===material.sourceUrl)) originals.unshift({title:material.sourceTitle,url:material.sourceUrl});
   if (material?.panels) originals.unshift({title:material.originalLabel || '查看完整原始界面',url:material.src});
-  if (material?.originalSrc) originals.push({title:'查看原始动图',url:material.originalSrc});
+  if (material?.originalSrc) originals.push({title:material.originalSrc.endsWith('.gif')?'查看原始动图':'查看原始图片',url:material.originalSrc});
   for (const sample of material?.samples || []) originals.push({title:`官方语音样本 · ${sample.label}`,url:sample.sourceUrl});
-  $('#detail-content').innerHTML = `<h1>资料索引</h1><p class="detail-meta">${escape(e.title)}</p><p class="detail-addition">${escape(e.mechanism)}</p><div class="source-list">${originals.map(s=>`<div class="source-entry"><a class="original-link" href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a>${s.url===material?.sourceUrl?`${materialNote?`<p class="source-description">${escape(materialNote)}</p>`:''}<p class="source-kind">展出材料 · ${escape(material.date)}<br>${escape(material.credit)}</p>`:''}</div>`).join('')}</div>`;
+  $('#detail-content').innerHTML = `<h1>资料索引</h1><p class="detail-meta">${escape(e.title)}</p><p class="detail-addition">${escape(e.mechanism)}</p>${e.id==='mcculloch-pitts'?`<p>${escape(e.why)}</p>`:''}<div class="source-list">${originals.map(s=>`<div class="source-entry"><a class="original-link" href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a>${s.url===material?.sourceUrl?`${materialNote?`<p class="source-description">${escape(materialNote)}</p>`:''}<p class="source-kind">展出材料 · ${escape(material.date)}<br>${escape(material.credit)}</p>`:''}</div>`).join('')}</div>`;
   if (!$('#detail').open) $('#detail').showModal();
   $('#detail').scrollTop=0;
 }
@@ -341,15 +398,33 @@ function renderCatalog() {
   $$('.collection-tabs button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===selectedTab)));
   $('.catalog-tools').hidden=selectedTab==='about';
   $('#filter-label').hidden=selectedTab!=='timeline';
+  if ((selectedTab==='concepts'||selectedTab==='platforms') && !atlas) {
+    const container=$('#catalog-content');
+    container.innerHTML='<p role="status">正在打开资料……</p>';
+    if(!atlasRequest)atlasRequest=loadCollection('atlas').then(data=>{
+      atlas=data;
+      if(selectedTab==='concepts'||selectedTab==='platforms')renderCatalog();
+    }).catch(()=>{
+      atlasRequest=null;
+      if(selectedTab!=='concepts'&&selectedTab!=='platforms')return;
+      container.innerHTML='<p>资料暂时没有加载成功。</p><button class="text-button">重试</button>';
+      $('button',container).onclick=renderCatalog;
+    });
+    return;
+  }
   let content;
   if(selectedTab==='timeline') {
-    const filtered=(query.trim()?events:archiveScope==='featured'?tour:events).filter(e=>(category==='all'||e.category===category)&&matches(e));
-    content=`<div class="archive-scope"><button data-scope="featured" aria-pressed="${archiveScope==='featured'}">主展览</button><button data-scope="all" aria-pressed="${archiveScope==='all'}">全部档案</button></div>`+eras.map(era=>{
+    const pool=archiveScope==='interactive'?events.filter(e=>{
+      const m=media[e.id];return m?.game || m?.experience || m?.explore || m?.pages || m?.type==='audio' || e.id==='neural-style-transfer';
+    }):query.trim()||archiveScope==='all'?events:tour;
+    const filtered=pool.filter(e=>(category==='all'||e.category===category)&&matches(e));
+    const scope=`<div class="archive-scope"><button data-scope="featured" aria-pressed="${archiveScope==='featured'}">主展览</button><button data-scope="all" aria-pressed="${archiveScope==='all'}">全部档案</button><button data-scope="interactive" aria-pressed="${archiveScope==='interactive'}">互动展品</button></div>`;
+    content=scope+eras.map(era=>{
       const group=filtered.filter(e=>Number(e.date.slice(0,4))>=era.start&&Number(e.date.slice(0,4))<=era.end);
       if(!group.length)return '';
       return `<section class="timeline-group"><div class="group-heading"><h2>${era.start}${era.start===era.end?'':`—${era.end}`}</h2><span>${era.title}</span></div><div class="event-grid">${group.map(e=>`<button class="event-entry" data-go="${escape(e.id)}"><span class="entry-year">${e.date.slice(0,7).replace('-','.')}</span><span><span class="entry-title">${escape(e.title)}</span><span class="entry-description">${escape(e.subtitle)}</span><span class="entry-tag">${escape(categories[e.category])} / ${escape(e.tags.slice(0,2).join(' · '))}</span></span></button>`).join('')}</div></section>`;
     }).join('');
-    if(!filtered.length) content=emptyState();
+    if(!filtered.length) content=scope+emptyState();
   } else if(selectedTab==='concepts') {
     const filtered=atlas.concepts.filter(matches);
     content=`<div class="knowledge-list">${filtered.map(c=>`<article class="concept-entry"><h2>${escape(c.term)}</h2><div class="alias">${escape(c.alias)} · ${escape(c.category)}</div><p>${escape(c.definition)}</p><p><strong>打个比方：</strong>${escape(c.analogy)}</p><p><strong>什么时候用：</strong>${escape(c.usedFor)}</p><p><strong>别踩这个坑：</strong>${escape(c.pitfall)}</p><div class="small-sources">${sourceLinks(c.sources)}</div></article>`).join('')}</div>`;

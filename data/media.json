@@ -21,7 +21,8 @@
     "credit": "Ian Goodfellow 等，2014。原论文图，未发现单独的开放媒体许可。",
     "date": "2014-06-10",
     "displayCaption": "2014 年 GAN 论文中的生成结果。每组最右一列是最接近的训练图片，其余列由模型生成，可以对照着看两者的差别。",
-    "originalSrc": "./assets/history/gan-2014-paper-figure2.png"
+    "originalSrc": "./assets/history/gan-2014-paper-figure2.png",
+    "game": "pairs"
   },
   "stylegan": {
     "type": "embed",
@@ -232,7 +233,8 @@
     "sourceUrl": "https://arxiv.org/abs/1312.6114v1",
     "credit": "Diederik P. Kingma / Max Welling；原论文图文，署名与许可依原件。",
     "date": "2013-12-20",
-    "originalSrc": "./assets/history/vae-2013-v1-figure3-manifold.png"
+    "originalSrc": "./assets/history/vae-2013-v1-figure3-manifold.png",
+    "game": "map"
   },
   "neural-style-transfer": {
     "type": "image",
