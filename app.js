@@ -126,16 +126,34 @@ function goTo(id) {
   if (current === index) render(); else navigate(index);
 }
 
+function documentReader(m) {
+  const page=m.pages[0];
+  const detail=m.mount==='plate' ? `<svg class="reader-figure" viewBox="${m.panels[0].crop.join(' ')}" role="img" aria-label="${escape(m.panels[0].alt)}"><image href="${escape(page.src)}" width="${m.imageSize[0]}" height="${m.imageSize[1]}"/></svg>` : '';
+  return `<div class="document-reader mount-${escape(m.mount || 'sheet')}" data-interactive>
+    <div class="reader-paper" tabindex="0" aria-label="文献页面">${detail}<img id="reader-image" src="${escape(page.src)}" alt="${escape(page.alt)}"></div>
+    <div class="reader-controls"><button id="reader-prev" aria-label="上一张选页" disabled>←</button><span id="reader-label" aria-live="polite">${escape(page.label)}</span><button id="reader-next" aria-label="下一张选页">→</button><button id="reader-zoom" aria-pressed="false">放大阅读</button><a id="reader-original" href="${escape(page.src)}" target="_blank" rel="noopener">原页 ↗</a></div></div>`;
+}
+
+// Positions on the authors' published Figure 2, including its inset paintings.
+const riverPanels=[
+  ['原照',19,5,190,143],['透纳',220,5,204,154],['梵高',5,166,204,154],
+  ['蒙克',220,166,204,154],['毕加索',5,327,204,154],['康定斯基',220,327,204,154]
+];
+function styleGallery(m){
+  return `<div class="river-gallery" data-interactive><svg id="river-view" viewBox="19 5 190 143" role="img" aria-label="图宾根河岸原照"><defs><clipPath id="river-clip"><rect x="19" y="5" width="190" height="143"/></clipPath></defs><image clip-path="url(#river-clip)" href="${escape(m.src)}" width="429" height="600" preserveAspectRatio="none"/></svg>
+  <div class="river-choices" aria-label="选择风格">${riverPanels.map(([label],index)=>`<button data-river="${index}" aria-pressed="${index===0}">${label}</button>`).join('')}<a href="${escape(m.src)}" target="_blank" rel="noopener">原图 ↗</a></div></div>`;
+}
 function artifactHTML(e) {
   if (media[e.id]) {
     const m=media[e.id];
     const visual = m.experience==='eliza' ? `<div class="eliza-experience"><div class="experience-tabs"><button data-eliza-view="demo" aria-pressed="true">试着对话</button><button data-eliza-view="original" aria-pressed="false">1966 打印稿</button></div><div id="eliza-demo" class="teletype"><div class="teletype-heading">ELIZA / 中文规则示意</div><div id="eliza-log" class="teletype-log" role="log" aria-label="对话记录"><p>程序：你想聊些什么？</p></div><form id="eliza-form"><label for="eliza-input">你说</label><input id="eliza-input" placeholder="例如：我有点紧张" maxlength="120" autocomplete="off"><button type="submit">发送 ↵</button></form><p class="experience-note">本站简化重建 · 非原程序 · 输入仅在本页处理</p></div><a id="eliza-original" class="history-zoom reading-room" href="${escape(m.src)}" target="_blank" rel="noopener" hidden><img class="history-image" src="${escape(m.src)}" alt="${escape(m.alt)}"></a></div>`
-      : m.pages ? `<div class="document-reader" data-interactive><div class="reader-heading">${escape(m.readerTitle || '文献选页')} <button id="reader-zoom" aria-pressed="false">放大阅读</button></div><div class="reader-paper" tabindex="0" aria-label="文献页面，可滚动阅读"><img id="reader-image" src="${escape(m.pages[0].src)}" alt="${escape(m.pages[0].alt)}"></div><div class="reader-controls"><button id="reader-prev" aria-label="上一张选页" disabled>←</button><span id="reader-label" aria-live="polite">${escape(m.pages[0].label)}</span><button id="reader-next" aria-label="下一张选页">→</button><a id="reader-original" href="${escape(m.pages[0].src)}" target="_blank" rel="noopener">原页 ↗</a></div></div>`
+      : m.pages ? documentReader(m)
+      : e.id==='neural-style-transfer' ? styleGallery(m)
       : m.explore ? `<div class="comparison-desk" data-interactive><div class="comparison-heading">ControlNet / Canny · 2023</div><div class="archive-panels">${m.panels.slice(0,3).map((panel,i)=>`<figure><svg ${i===2?'id="comparison-result"':''} viewBox="${panel.crop.join(' ')}" role="img" aria-label="${escape(panel.alt)}"><image href="${escape(m.src)}" width="${m.imageSize[0]}" height="${m.imageSize[1]}"></image></svg><figcaption>${escape(panel.label)}</figcaption></figure>`).join('')}</div><div class="comparison-choices" role="group" aria-label="选择原始生成结果"><span>生成结果</span>${m.panels.slice(2).map((p,i)=>`<button data-result="${i+2}" aria-label="查看生成结果 ${i+1}" aria-pressed="${i===0}">${i+1}</button>`).join('')}</div><p class="experience-note">提示词：bird · 切换原始样本</p></div>`
       : m.type==='embed'
       ? `<div class="embedded-film"><button class="film-play" id="play-archive" aria-label="播放原始演示：${escape(m.alt)}"><img src="${escape(m.poster)}" alt="${escape(m.alt)}"><span aria-hidden="true">▶</span></button></div>`
       : m.type==='audio'
-        ? `<div class="audio-artifact"><img class="audio-diagram" src="${escape(m.poster)}" alt="WaveNet 2016 年官方博客中的分层卷积结构动图"><div class="audio-samples">${m.samples.map(sample=>`<label class="audio-sample"><span>${escape(sample.label)}</span><audio controls preload="metadata" aria-label="2016 年普通话样本：${escape(sample.label)}"><source src="${escape(sample.src)}" type="${escape(sample.mime)}"></audio></label>`).join('')}</div></div>`
+        ? `<div class="audio-artifact"><img class="audio-diagram" src="${escape(m.poster)}" alt="WaveNet 2016 年官方博客中的分层卷积结构动图"><div class="audio-samples">${m.samples.map(sample=>`<label class="audio-sample"><span>${escape(sample.label)}</span><audio controls preload="none" aria-label="2016 年普通话样本：${escape(sample.label)}"><source src="${escape(sample.src)}" type="${escape(sample.mime)}"></audio></label>`).join('')}</div></div>`
       : m.type==='video'
         ? `<video controls playsinline preload="none" ${m.loop?'loop':''} ${m.muted?'muted':''} ${m.poster?`poster="${escape(m.poster)}"`:''} aria-label="${escape(m.alt)}"><source src="${escape(m.src)}" type="${m.src.endsWith('.webm')?'video/webm':'video/mp4'}">浏览器不支持此视频，请查看原始来源。</video>`
       : m.panels
@@ -186,6 +204,13 @@ ${e.artifact.lines.map(escape).join('\n\n')}
 }
 function wireArtifact(e) {
   const m=media[e.id];
+  $$('[data-river]').forEach(button=>button.onclick=()=>{
+    const [name,...area]=riverPanels[Number(button.dataset.river)];
+    ['x','y','width','height'].forEach((key,i)=>$('#river-clip rect').setAttribute(key,area[i]));
+    $('#river-view').setAttribute('viewBox',area.join(' '));
+    $('#river-view').setAttribute('aria-label',name==='原照'?'图宾根河岸原照':name+'风格的图宾根河岸');
+    $$('[data-river]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  });
   const neuron = $('.neuron-controls');
   if (neuron) neuron.onchange = () => {
     const count = $$('input:checked', neuron).length;
@@ -202,6 +227,7 @@ function wireArtifact(e) {
       $('#reader-label').textContent=item.label;$('#reader-original').href=item.src;
       $('.media-caption p').textContent=page===0?(m.displayCaption||m.caption): item.caption || `当前选页：${item.label}。${m.date} 年材料；可放大滚动阅读，或打开原页。`;
       $('#reader-prev').disabled=page===0;$('#reader-next').disabled=page===m.pages.length-1;
+      $('.reader-paper').classList.toggle('later-page',page!==0);
       $('.reader-paper').scrollTop=0;
     };
     $('#reader-prev').onclick=()=>turn(-1);$('#reader-next').onclick=()=>turn(1);
@@ -381,7 +407,7 @@ function wireGlobal() {
     if(Math.abs(wheelSum)>75){step(wheelSum>0?1:-1);wheelSum=0;wheelAt=Date.now();}
   },{passive:true});
   let touch;
-  $('#exhibit').addEventListener('touchstart',event=>{if(event.target.closest('input,button,a,video,audio'))return;touch={x:event.changedTouches[0].clientX,y:event.changedTouches[0].clientY};},{passive:true});
+  $('#exhibit').addEventListener('touchstart',event=>{touch=null;if(event.target.closest('[data-interactive],input,button,a,video,audio'))return;touch={x:event.changedTouches[0].clientX,y:event.changedTouches[0].clientY};},{passive:true});
   $('#exhibit').addEventListener('touchend',event=>{if(!touch)return;const dx=event.changedTouches[0].clientX-touch.x,dy=event.changedTouches[0].clientY-touch.y;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5)step(dx<0?1:-1);touch=null;},{passive:true});
 }
 init();

@@ -429,7 +429,8 @@
         "alt": "原论文第 3 页：Transformer 编码器与解码器结构图",
         "caption": "图 1 中，左侧编码器读取输入，右侧解码器参考编码结果，逐步产生输出。"
       }
-    ]
+    ],
+    "mount": "folio"
   },
   "adobe-firefly": {
     "type": "image",
@@ -766,7 +767,8 @@
         "alt": "Learning representations by back-propagating errors — 论文第 1 页"
       }
     ],
-    "sourceNote": "本站选取两页供切换阅览，并非完整文献；页序以控件标注为准。"
+    "sourceNote": "本站选取两页供切换阅览，并非完整文献；页序以控件标注为准。",
+    "mount": "folio"
   },
   "alexnet": {
     "type": "image",
@@ -806,7 +808,8 @@
         "label": "论文第 1 页",
         "alt": "ImageNet Classification with Deep Convolutional Neural Networks — 论文第 1 页"
       }
-    ]
+    ],
+    "mount": "plate"
   },
   "dartmouth": {
     "type": "image",
@@ -1462,6 +1465,7 @@
         "caption": "实验一，第 4 张谱页。上下对照四行五线谱，可以沿同一小节追踪四件弦乐器。"
       }
     ],
-    "readerTitle": "弦乐四重奏 · 实验一"
+    "readerTitle": "弦乐四重奏 · 实验一",
+    "mount": "score"
   }
 }

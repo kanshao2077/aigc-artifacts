@@ -171,14 +171,31 @@ body.intro-open .header,body.intro-open #exhibit,body.intro-open .exhibit-footer
 @media(max-width:650px){.archive-panels{gap:7px;padding:12px 12px 0}.archive-panels figcaption{font-size:11px;margin-top:8px}}
 
 /* Each historical medium keeps its own reading and interaction pattern. */
-.document-reader{display:flex;flex-direction:column;flex:1;min-height:0;background:#ede6d8;color:#433b2e;border:1px solid #b8aa91;box-shadow:inset 7px 0 10px #79664c18}
-.reader-heading,.reader-controls{display:flex;align-items:center;gap:12px;padding:10px 16px;font-size:12px;flex-shrink:0}
-.reader-heading{border-bottom:1px solid #cfc4af;justify-content:space-between;letter-spacing:1px}
-.reader-controls{border-top:1px solid #cfc4af}.reader-controls span{flex:1;text-align:center;line-height:1.5}.reader-controls a{white-space:nowrap}
-.document-reader button{background:transparent;border:1px solid #b8aa91;padding:5px 9px;font-size:12px}
-.reader-paper{min-height:0;flex:1;overflow:auto;padding:14px 24px;background:#e3dbc9;scrollbar-width:thin}
-.reader-paper img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(2px 3px 3px #51422a30)}
-.reader-paper.is-zoomed img{height:auto;min-height:100%;object-fit:initial}
+/* Mounts share a reading strip while the document itself sets the composition. */
+.historical-artifact:has(.document-reader){background:transparent}
+.artifact:has(.document-reader):before{display:none}
+.document-reader{display:flex;flex-direction:column;flex:1;min-height:0;color:#202529}
+.reader-paper{position:relative;display:flex;align-items:center;justify-content:center;min-height:0;flex:1;overflow:auto;padding:10px 14px;scrollbar-width:thin}
+.reader-paper img{display:block;width:auto;height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(1px 4px 4px #30271b42)}
+.mount-sheet .reader-paper:before{content:'';position:absolute;z-index:1;top:6px;left:calc(50% - 14px);width:28px;height:8px;border-radius:3px;background:linear-gradient(#fafafa,#a6a8a5);box-shadow:0 1px 2px #4c4e4d88}
+.mount-folio .reader-paper{background:linear-gradient(90deg,#162e47 0 4%,#3f6080 4.5%,#294c6b 5%);border-radius:2px 5px 0 0}
+.mount-folio .reader-paper:before{content:'';position:absolute;left:2%;top:18%;bottom:18%;width:7%;pointer-events:none;background:linear-gradient(#818785,#eff2ee,#535b5e) top/100% 5px no-repeat,linear-gradient(#818785,#eff2ee,#535b5e) center/100% 5px no-repeat,linear-gradient(#818785,#eff2ee,#535b5e) bottom/100% 5px no-repeat}
+.mount-score .reader-paper{background:linear-gradient(110deg,#363c3d,#1a2122);border-bottom:5px solid #101818}
+.mount-plate .reader-paper{background:#fff;border-top:3px solid #a84129}
+.mount-plate .reader-paper:not(.later-page):not(.is-zoomed){display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:4%}
+.reader-figure{display:block;width:100%;max-height:100%}
+.later-page .reader-figure,.is-zoomed .reader-figure,.reader-paper.is-zoomed:before{display:none}
+.reader-paper.is-zoomed{display:block;padding:0;background:white}
+.reader-paper.is-zoomed img{width:100%;height:auto;max-width:none;filter:none}
+.reader-controls{display:flex;align-items:center;gap:5px;flex-shrink:0;padding:4px 9px;background:#fff;color:#25282b;font-size:12px}
+.reader-controls span{flex:1;line-height:1.3}.reader-controls a{white-space:nowrap}
+.reader-controls button,.river-choices button{background:transparent;border:0;color:inherit;padding:6px;min-height:32px;cursor:pointer}
+.reader-controls button:disabled{opacity:.35}.reader-controls button[aria-pressed=true]{text-decoration:underline}
+.document-reader~.media-caption{padding-top:4px}.neuron-controls~.media-caption{padding-top:8px}
+.river-gallery{display:flex;flex-direction:column;flex:1;min-height:0;background:#252a28;color:white}
+.river-gallery svg{flex:1;width:100%;height:100%;min-height:0;padding:12px}
+.river-choices{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:3px;padding:4px 6px;font-size:12px}
+.river-choices button[aria-pressed=true]{background:#f2f2ec;color:#252a28}.river-choices a{color:inherit;padding:5px}
 .comparison-desk{display:flex;flex-direction:column;flex:1;min-height:0;background:#202833;color:#f1efe8;padding:0 12px}
 .comparison-heading{font:12px monospace;padding:16px 10px;border-bottom:1px solid #647184}
 .comparison-desk .archive-panels{padding:16px 10px 8px;gap:12px;overflow:auto}
@@ -187,23 +204,23 @@ body.intro-open .header,body.intro-open #exhibit,body.intro-open .exhibit-footer
 .comparison-choices button{background:transparent;color:inherit;border:1px solid #7a8899;width:30px;height:30px}
 .comparison-choices button[aria-pressed=true]{background:#e5dfca;color:#202833;border-color:#e5dfca}
 .experience-note{font-size:11px;line-height:1.6;margin:5px 12px 12px;text-align:center;opacity:.8;flex-shrink:0}
-.eliza-experience{display:flex;flex-direction:column;flex:1;min-height:0;background:#eee5ce}
-.experience-tabs{display:flex;border-bottom:1px solid #ac9e80;flex-shrink:0}
-.experience-tabs button{flex:1;padding:11px 6px;border:0;border-bottom:2px solid transparent;background:#e4dbc5;font-size:12px}
-.experience-tabs button[aria-pressed=true]{background:#f6efdf;border-bottom-color:#5b4d32}
-.teletype{display:flex;flex-direction:column;min-height:0;flex:1;padding:22px 25px 10px;background:repeating-linear-gradient(0deg,#f6efdf 0,#f6efdf 28px,#e9e0cb 29px);font-family:'Courier New','PingFang SC',monospace;color:#34352f}
+.eliza-experience{display:flex;flex-direction:column;flex:1;min-height:0;background:#f1f3ec}
+.experience-tabs{display:flex;border-bottom:1px solid #384d49;flex-shrink:0}
+.experience-tabs button{flex:1;padding:11px 6px;border:0;border-bottom:2px solid transparent;background:#213c38;color:#dce6e0;font-size:12px}
+.experience-tabs button[aria-pressed=true]{background:#f1f3ec;color:#263c35;border-bottom-color:#477362}
+.teletype{display:flex;flex-direction:column;min-height:0;flex:1;padding:22px 25px 10px;background:repeating-linear-gradient(0deg,#f1f3ec 0,#f1f3ec 28px,#dce2d7 29px);font-family:'Courier New','PingFang SC',monospace;color:#34352f}
 .teletype-heading{font-size:13px;letter-spacing:2px;border-bottom:1px dashed #8c856e;padding-bottom:12px}
 .teletype-log{flex:1;min-height:0;overflow:auto;font-size:15px;line-height:1.9;padding:10px 0}
 .teletype-log p{margin:0 0 12px;overflow-wrap:anywhere}
 .teletype form{display:flex;align-items:center;gap:9px;border-top:1px dashed #8c856e;padding:12px 0;font-size:12px}
-.teletype input{min-width:0;flex:1;background:#fff9;border:1px solid #b6aa8d;padding:10px;font-size:13px}
-.teletype button{padding:10px 12px;border:1px solid #7b7059;background:#e6ddc6;white-space:nowrap}
+.teletype input{min-width:0;flex:1;background:#fff9;border:1px solid #8b9a90;padding:10px;font-size:13px}
+.teletype button{padding:10px 12px;border:0;background:#274639;color:#fff;white-space:nowrap}
 .eliza-experience [hidden]{display:none!important}
 .historical-artifact.archive-photograph{background:transparent;overflow:visible}
 .archive-photograph .history-zoom{background:transparent;padding:12px 20px}
 .archive-photograph .history-image{background:transparent;filter:drop-shadow(2px 4px 5px #3e291a55)}
-.archive-photograph .media-caption{background:#f3ebda;border-top:1px solid #c2af91}
-@media(max-width:650px){.reader-heading,.reader-controls{padding:7px 9px;gap:6px;font-size:10px}.teletype{padding:12px}.comparison-choices{gap:5px}.comparison-heading{padding:8px}.comparison-desk .archive-panels{padding:8px 0;gap:5px}}
+.archive-photograph .media-caption{background:#fff;border-top:0}
+@media(max-width:650px){.reader-controls{padding:3px 5px;gap:3px;font-size:11px}.teletype{padding:12px}.comparison-choices{gap:5px}.comparison-heading{padding:8px}.comparison-desk .archive-panels{padding:8px 0;gap:5px}}
 .comparison-desk .archive-panels{grid-template-rows:minmax(0,1fr);align-content:stretch;overflow:hidden}
 .comparison-desk .archive-panels figure{display:flex;flex-direction:column;min-height:0}
 .comparison-desk .archive-panels svg{flex:1;min-height:0;height:100%}
@@ -217,7 +234,7 @@ body.intro-open .header,body.intro-open #exhibit,body.intro-open .exhibit-footer
 .about h2{margin-bottom:12px}
 }
 
-.neuron-controls{margin:0;padding:4px 12px 8px;border:0;background:#eee6d5;color:#443827;font-size:13px}
+.neuron-controls{margin:0;padding:4px 12px 8px;border:0;background:#eef1ef;color:#27332d;font-size:13px}
 .neuron-controls legend{float:left;margin-right:12px}
 .neuron-controls label{display:inline-block;margin-right:8px;cursor:pointer}
 .neuron-controls input{accent-color:#75583c}
