@@ -154,7 +154,7 @@ function styleGallery(m){
 function artifactHTML(e) {
   if (media[e.id]) {
     const m=media[e.id];
-    if(e.id==='mcculloch-pitts')return neuronBench(m);
+    if(e.id==='mcculloch-pitts')return neuronBench();
     const visual = m.game ? `<section class="paper-game game-${escape(e.id)}" data-interactive><a href="${escape(m.src)}" target="_blank" rel="noopener">查看论文原图 ↗</a></section>`
       : m.experience==='eliza' ? `<div class="eliza-experience"><div class="experience-tabs"><button data-eliza-view="demo" aria-pressed="true">试着对话</button><button data-eliza-view="original" aria-pressed="false">1966 打印稿</button></div><div id="eliza-demo" class="teletype"><div class="teletype-heading">ELIZA / 中文规则示意</div><div id="eliza-log" class="teletype-log" role="log" aria-label="对话记录"><p>程序：你想聊些什么？</p></div><form id="eliza-form"><label for="eliza-input">你说</label><input id="eliza-input" placeholder="例如：我有点紧张" maxlength="120" autocomplete="off"><button type="submit">发送 ↵</button></form><p class="experience-note">本站简化重建 · 非原程序 · 输入仅在本页处理</p></div><a id="eliza-original" class="history-zoom reading-room" href="${escape(m.src)}" target="_blank" rel="noopener" hidden><img class="history-image" src="${escape(m.src)}" alt="${escape(m.alt)}"></a></div>`
       : m.pages ? documentReader(m)
@@ -183,16 +183,14 @@ function artifactHTML(e) {
   }
   return `<div class="canvas-artifact"><h2>${escape(e.artifact.label)}</h2><canvas id="demo-canvas" width="1000" height="500" aria-label="${escape(e.artifact.type === 'waveform' ? '声音波形示意' : e.artifact.type === 'image' ? '噪声逐渐减少的图像示意' : '信息在网络中流动的示意')}" role="img"></canvas><p class="canvas-caption" id="canvas-caption">${escape(e.artifact.lines.slice(0,2).join(' · '))}</p><label class="canvas-control">${e.artifact.type === 'image' ? '从噪声到结构' : '探索生成过程'}<input type="range" id="demo-range" min="0" max="100" value="55" aria-label="调整示意进度"><output id="demo-output">55%</output></label>${note}</div>`;
 }
-function neuronBench(m) {
+function neuronBench() {
   return `<div class="neuron-bench" data-interactive>
-    <nav class="bench-tabs" aria-label="展品视图"><button data-bench="experiment" aria-pressed="true">阈值实验</button><button data-bench="paper" aria-pressed="false">翻阅论文</button></nav>
     <section class="signal-panel" aria-label="逻辑神经元教学示意">
       <div class="signal-flow"><div class="input-bank">${['A','B','C'].map(name=>`<button type="button" class="signal-key" aria-label="输入 ${name}" aria-pressed="false"><b>${name}</b><i></i></button>`).join('')}</div>
       <svg class="signal-wires" viewBox="0 0 160 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 H49 L82 60 H160"/><path d="M0 60 H160"/><path d="M0 100 H49 L82 60 H160"/></svg>
       <div class="signal-lamp"><i></i><output aria-live="polite">未触发</output></div></div>
       <div class="panel-foot"><span>打开任意两个输入</span><span id="signal-count">0 / 3</span></div>
     </section>
-    <section class="bench-paper" hidden>${documentReader(m)}<div class="media-caption"><p>${escape(m.displayCaption)}</p></div></section>
   </div>`;
 }
 function terminalContent(e, view) {
@@ -246,12 +244,7 @@ function wireArtifact(e) {
     $('.signal-lamp output').textContent=count>=2?'已触发':'未触发';
     $('#signal-count').textContent=`${count} / 3`;
   });
-  $$('[data-bench]').forEach(button=>button.onclick=()=>{
-    const paper=button.dataset.bench==='paper';
-    $('.bench-paper').hidden=!paper;$('.signal-panel').hidden=paper;
-    $$('[data-bench]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-  });
-  if (m?.pages) {
+  if ($('.document-reader')) {
     let page=0;
     const turn=direction=>{
       page=Math.max(0,Math.min(m.pages.length-1,page+direction));

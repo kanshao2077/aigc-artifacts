@@ -248,11 +248,7 @@ body.intro-open .header,body.intro-open #exhibit,body.intro-open .exhibit-footer
 
 /* The opening exhibit pairs a working teaching panel with its paper record. */
 .neuron-bench{height:100%;display:flex;flex-direction:column;gap:14px;min-height:0;padding:0;color:#302b27}
-.bench-tabs{display:flex;align-items:center;gap:18px;border-bottom:1px solid #ab9381}
-.bench-tabs button{padding:0 0 8px;background:transparent;border:0;border-bottom:2px solid transparent;color:#634d40;font-size:14px}
-.bench-tabs button[aria-pressed=true]{color:#312720;border-color:#4e382c}
 .signal-panel{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-between;background:#fff;color:#262624;border-radius:5px;box-shadow:inset 0 1px #ffffff,0 5px 0 #aaa79e,0 12px 21px #382e232a;padding:clamp(14px,2.7vw,44px);container-type:inline-size}
-.signal-panel[hidden],.bench-paper[hidden]{display:none}
 .panel-foot{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .panel-foot{font-size:clamp(11px,2.5cqw,14px);color:#56554f}
 .panel-foot{border-top:1px solid #c8c6bd;padding-top:12px}.panel-foot span:last-child{font-family:monospace}
@@ -266,7 +262,6 @@ body.intro-open .header,body.intro-open #exhibit,body.intro-open .exhibit-footer
 .signal-lamp{position:relative;display:grid;justify-items:center}.signal-lamp i{display:block;width:clamp(41px,12cqw,83px);aspect-ratio:1;border:5px solid #deddd6;border-radius:50%;background:radial-gradient(at 40% 30%,#b1b0aa,#999992 60%,#85857e);box-shadow:0 0 0 1px #a09e96}
 .firing .signal-lamp i{background:radial-gradient(at 42% 32%,#fff2d7,#ff9457 62%,#dd572b);box-shadow:0 0 25px #e4733b44}
 .signal-lamp output{position:absolute;top:calc(100% + 8px);font-size:13px}
-.bench-paper{display:flex;min-height:0;flex-direction:column;flex:1}.bench-paper .media-caption{padding:6px 10px}
-@media(max-width:650px){.neuron-bench{gap:7px}.panel-foot{padding-top:6px}.bench-tabs button{padding-bottom:5px}}
+@media(max-width:650px){.neuron-bench{gap:7px}.panel-foot{padding-top:6px}}
 #blind-listen{justify-self:start;padding:4px 9px;background:#202f36;border:0;color:white;font-size:12px}
 .game-footer .map-hint{background:transparent;color:inherit;text-decoration:underline}
