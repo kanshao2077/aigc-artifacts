@@ -185,9 +185,8 @@ function artifactHTML(e) {
 }
 function neuronBench(m) {
   return `<div class="neuron-bench" data-interactive>
-    <nav class="bench-tabs" aria-label="展品视图"><button data-bench="experiment" aria-pressed="true">阈值实验</button><button data-bench="paper" aria-pressed="false">翻阅论文 ↗</button></nav>
+    <nav class="bench-tabs" aria-label="展品视图"><button data-bench="experiment" aria-pressed="true">阈值实验</button><button data-bench="paper" aria-pressed="false">翻阅论文</button></nav>
     <section class="signal-panel" aria-label="逻辑神经元教学示意">
-      <div class="panel-title"><h2>阈值神经元</h2><span>本站交互示意</span></div>
       <div class="signal-flow"><div class="input-bank">${['A','B','C'].map(name=>`<button type="button" class="signal-key" aria-label="输入 ${name}" aria-pressed="false"><b>${name}</b><i></i></button>`).join('')}</div>
       <svg class="signal-wires" viewBox="0 0 160 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 H49 L82 60 H160"/><path d="M0 60 H160"/><path d="M0 100 H49 L82 60 H160"/></svg>
       <div class="signal-lamp"><i></i><output aria-live="polite">未触发</output></div></div>
