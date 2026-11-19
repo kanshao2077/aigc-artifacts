@@ -247,13 +247,7 @@ body.intro-open .header,body.intro-open #exhibit,body.intro-open .exhibit-footer
 .paper-game :focus-visible{outline:3px solid #2771bc;outline-offset:3px}
 
 /* The opening exhibit pairs a working teaching panel with its paper record. */
-.stage[data-event="mcculloch-pitts"]{background:#edf0ea;color:#202f32}
-.stage[data-event="mcculloch-pitts"] .plaque{background:transparent;box-shadow:none;border:0;border-top:2px solid #384d4d;border-radius:0;color:#223336;padding:18px 0 0;min-height:0}
-.stage[data-event="mcculloch-pitts"] .plaque:before,.stage[data-event="mcculloch-pitts"] .plaque:after,.stage[data-event="mcculloch-pitts"] .divider,.stage[data-event="mcculloch-pitts"] .pedestal{display:none}
-.stage[data-event="mcculloch-pitts"] .event-meta{color:#4e625d}
-.stage[data-event="mcculloch-pitts"] .plaque h1{font-size:clamp(30px,3.3vw,54px);line-height:1.13;letter-spacing:-.045em;margin:16px 0 20px}
-.stage[data-event="mcculloch-pitts"] .artifact{align-items:stretch}
-.neuron-bench{display:flex;flex-direction:column;gap:14px;min-height:0;padding:0 0 10px;color:#243632}
+.neuron-bench{height:100%;display:flex;flex-direction:column;gap:14px;min-height:0;padding:0;color:#243632}
 .bench-tabs{display:flex;align-items:center;gap:18px;border-bottom:1px solid #b4c0b8}
 .bench-tabs button{padding:0 0 8px;background:transparent;border:0;border-bottom:2px solid transparent;color:#58665f;font-size:14px}
 .bench-tabs button[aria-pressed=true]{color:#1b322e;border-color:#254739}
@@ -274,14 +268,6 @@ body.intro-open .header,body.intro-open #exhibit,body.intro-open .exhibit-footer
 .firing .signal-lamp i{background:radial-gradient(at 42% 32%,#fff8b8,#ffca66 62%,#d08c37);box-shadow:0 0 25px #eeb15366}
 .signal-lamp output{position:absolute;top:calc(100% + 8px);font-size:13px}
 .bench-paper{display:flex;min-height:0;flex-direction:column;flex:1}.bench-paper .media-caption{padding:6px 10px}
-@media(min-width:651px){.stage[data-event="mcculloch-pitts"]{--exhibit-height:min(54svh,530px);--exhibit-top:23svh}}
-@media(max-width:650px){.stage[data-event="mcculloch-pitts"]{gap:10px}.stage[data-event="mcculloch-pitts"] .plaque{padding:8px 0;max-height:21svh}.stage[data-event="mcculloch-pitts"] .plaque h1{font-size:26px;margin:7px 0}.neuron-bench{gap:7px}.panel-foot{padding-top:6px}.bench-tabs button{padding-bottom:5px}}
-body:has(.neuron-bench){background:#edf0ea}
-@media(max-width:650px){
-.stage[data-event="mcculloch-pitts"] .plaque{max-height:none;overflow:visible}
-.stage[data-event="mcculloch-pitts"] .plaque p:not(.plaque-subtitle){display:none}
-.stage[data-event="mcculloch-pitts"] .plaque-actions{margin-top:4px}
-.stage[data-event="mcculloch-pitts"] .plaque-subtitle{margin-bottom:4px}
-}
+@media(max-width:650px){.neuron-bench{gap:7px}.panel-foot{padding-top:6px}.bench-tabs button{padding-bottom:5px}}
 #blind-listen{justify-self:start;padding:4px 9px;background:#202f36;border:0;color:white;font-size:12px}
 .game-footer .map-hint{background:transparent;color:inherit;text-decoration:underline}
