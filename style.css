@@ -247,25 +247,25 @@ body.intro-open .header,body.intro-open #exhibit,body.intro-open .exhibit-footer
 .paper-game :focus-visible{outline:3px solid #2771bc;outline-offset:3px}
 
 /* The opening exhibit pairs a working teaching panel with its paper record. */
-.neuron-bench{height:100%;display:flex;flex-direction:column;gap:14px;min-height:0;padding:0;color:#243632}
-.bench-tabs{display:flex;align-items:center;gap:18px;border-bottom:1px solid #b4c0b8}
-.bench-tabs button{padding:0 0 8px;background:transparent;border:0;border-bottom:2px solid transparent;color:#58665f;font-size:14px}
-.bench-tabs button[aria-pressed=true]{color:#1b322e;border-color:#254739}
-.signal-panel{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-between;background:#243b39;color:#f5f3e7;border-radius:5px;box-shadow:inset 0 1px #5f746c,0 5px 0 #162927,0 12px 21px #17292025;padding:clamp(14px,2.7vw,44px);container-type:inline-size}
+.neuron-bench{height:100%;display:flex;flex-direction:column;gap:14px;min-height:0;padding:0;color:#302b27}
+.bench-tabs{display:flex;align-items:center;gap:18px;border-bottom:1px solid #ab9381}
+.bench-tabs button{padding:0 0 8px;background:transparent;border:0;border-bottom:2px solid transparent;color:#634d40;font-size:14px}
+.bench-tabs button[aria-pressed=true]{color:#312720;border-color:#4e382c}
+.signal-panel{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-between;background:#f4f3ee;color:#262624;border-radius:5px;box-shadow:inset 0 1px #ffffff,0 5px 0 #aaa79e,0 12px 21px #382e232a;padding:clamp(14px,2.7vw,44px);container-type:inline-size}
 .signal-panel[hidden],.bench-paper[hidden]{display:none}
 .panel-title,.panel-foot{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.panel-title h2{font:500 clamp(19px,5cqw,35px)/1.25 Georgia,'Songti SC',serif;margin:0}
-.panel-title span,.panel-foot{font-size:clamp(11px,2.5cqw,14px);color:#d2ddd2}
-.panel-foot{border-top:1px solid #657670;padding-top:12px}.panel-foot span:last-child{font-family:monospace}
+.panel-title h2{font:550 clamp(19px,5cqw,35px)/1.25 Elza,'PingFang SC',sans-serif;margin:0}
+.panel-title span,.panel-foot{font-size:clamp(11px,2.5cqw,14px);color:#56554f}
+.panel-foot{border-top:1px solid #c8c6bd;padding-top:12px}.panel-foot span:last-child{font-family:monospace}
 .signal-flow{align-self:center;display:grid;grid-template-columns:minmax(58px,1fr) minmax(0,2.2fr) minmax(62px,1fr);width:94%;height:55%;align-items:center}
 .input-bank{height:100%;display:grid;grid-template-rows:repeat(3,minmax(0,1fr));align-items:center}
-.signal-key{display:flex;align-items:center;justify-content:space-between;background:transparent;border:0;color:#e4ebe0;font:16px monospace;padding:0;min-height:32px}
-.signal-key i{width:clamp(34px,9cqw,60px);height:22px;border-radius:4px;background:#152724;box-shadow:inset 0 1px 3px #0c1616;position:relative}
-.signal-key i:before{content:'';position:absolute;left:3px;top:3px;width:43%;height:16px;border-radius:2px;background:linear-gradient(#dddcd0,#adb2a9);box-shadow:0 2px 2px #141c1c}
-.signal-key[aria-pressed=true] i:before{left:auto;right:3px;background:linear-gradient(#faca71,#eb9d49)}
-.signal-wires{width:100%;height:100%;overflow:visible}.signal-wires path{stroke:#84998c;stroke-width:1.6;fill:none;vector-effect:non-scaling-stroke}.signal-wires path.active{stroke:#f8b757;stroke-width:3}
-.signal-lamp{position:relative;display:grid;justify-items:center}.signal-lamp i{display:block;width:clamp(41px,12cqw,83px);aspect-ratio:1;border:5px solid #192b28;border-radius:50%;background:radial-gradient(at 40% 30%,#9aa399,#657668 60%,#40564a);box-shadow:0 0 0 1px #829084}
-.firing .signal-lamp i{background:radial-gradient(at 42% 32%,#fff8b8,#ffca66 62%,#d08c37);box-shadow:0 0 25px #eeb15366}
+.signal-key{display:flex;align-items:center;justify-content:space-between;background:transparent;border:0;color:#373633;font:16px monospace;padding:0;min-height:32px}
+.signal-key i{width:clamp(34px,9cqw,60px);height:22px;border-radius:4px;background:#cccac3;box-shadow:inset 0 1px 3px #85837c;position:relative}
+.signal-key i:before{content:'';position:absolute;left:3px;top:3px;width:43%;height:16px;border-radius:2px;background:linear-gradient(#585853,#393936);box-shadow:0 2px 2px #8b8980}
+.signal-key[aria-pressed=true] i:before{left:auto;right:3px;background:linear-gradient(#c94b2e,#ae341c)}
+.signal-wires{width:100%;height:100%;overflow:visible}.signal-wires path{stroke:#868680;stroke-width:1.6;fill:none;vector-effect:non-scaling-stroke}.signal-wires path.active{stroke:#b33e22;stroke-width:3}
+.signal-lamp{position:relative;display:grid;justify-items:center}.signal-lamp i{display:block;width:clamp(41px,12cqw,83px);aspect-ratio:1;border:5px solid #deddd6;border-radius:50%;background:radial-gradient(at 40% 30%,#b1b0aa,#999992 60%,#85857e);box-shadow:0 0 0 1px #a09e96}
+.firing .signal-lamp i{background:radial-gradient(at 42% 32%,#fff2d7,#ff9457 62%,#dd572b);box-shadow:0 0 25px #e4733b44}
 .signal-lamp output{position:absolute;top:calc(100% + 8px);font-size:13px}
 .bench-paper{display:flex;min-height:0;flex-direction:column;flex:1}.bench-paper .media-caption{padding:6px 10px}
 @media(max-width:650px){.neuron-bench{gap:7px}.panel-foot{padding-top:6px}.bench-tabs button{padding-bottom:5px}}
