@@ -51,7 +51,7 @@ for(const name of ['LibTV','TapNow'])assert.ok(atlas.platforms.some(p=>p.name.to
 assert.ok(atlas.platforms.some(p=>p.name.includes('即梦')));
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert.ok(html.includes('<title>AIGC Artifacts｜档案</title>'));
-assert.ok(html.includes('./assets/favicon.png'));
+assert.ok(html.includes('./assets/favicon.svg?v=2'));
 assert.ok(!html.includes('data-tab="workflows"'));assert.ok(!html.includes('id="position"'));assert.ok(!html.includes('生成纪'));
 const totalMediaBytes=Object.values(media).reduce((total,m)=>total+(m.type==='embed'?0:fs.statSync(path.join(root,m.src)).size),0);
 console.log(JSON.stringify({result:'passed',events:events.length,featured:curation.featuredIds.length,concepts:atlas.concepts.length,platforms:atlas.platforms.length,media:Object.keys(media).length,mediaMiB:Math.round(totalMediaBytes/1048576*10)/10},null,2));

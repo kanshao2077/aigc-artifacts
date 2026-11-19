@@ -28,7 +28,7 @@ async function init() {
     const initial = decodeURIComponent(location.hash.slice(1)) || 'mcculloch-pitts';
     current = Math.max(0,events.findIndex(e => e.id === initial));
     for (const [value,name] of Object.entries(categories)) $('#category').insertAdjacentHTML('beforeend',`<option value="${value}">${name}</option>`);
-    render();
+    if(location.hash)render();
     wireGlobal();
     document.documentElement.dataset.loaded = 'true';
     intro.ready();
@@ -56,6 +56,7 @@ function wireIntro() {
     entering = true;
     button.disabled = true;
     history.replaceState(null, '', '#mcculloch-pitts');
+    render();
     intro.classList.add('intro-leaving');
     const duration = matchMedia('(prefers-reduced-motion:reduce)').matches ? 0 : 600;
     setTimeout(() => { dismiss(); $('#exhibit').focus({preventScroll:true}); }, duration);
@@ -102,6 +103,7 @@ function renderYears() {
   const periods = [...new Set(route.map(periodOf))], selected = periodOf(events[current]);
   $('#years').innerHTML = periods.map(period => `<button class="year${period.length>4?' month':''}" data-period="${period}" aria-label="${formatDate(period)}" aria-current="${period===selected}" tabindex="${period===selected?0:-1}">${period.replace('-','.')}</button>`).join('');
   const active = $('.year[aria-current=true]');
+  if(!active)return;
   $('#years').style.transform = `translateX(${$('.year-nav').clientWidth/2 - active.offsetLeft - active.offsetWidth/2}px)`;
   $$('.year').forEach(b => b.onclick = () => navigate(events.indexOf(route.find(e => periodOf(e)===b.dataset.period))));
 }
@@ -128,7 +130,7 @@ function artifactHTML(e) {
   if (media[e.id]) {
     const m=media[e.id];
     const visual = m.experience==='eliza' ? `<div class="eliza-experience"><div class="experience-tabs"><button data-eliza-view="demo" aria-pressed="true">试着对话</button><button data-eliza-view="original" aria-pressed="false">1966 打印稿</button></div><div id="eliza-demo" class="teletype"><div class="teletype-heading">ELIZA / 中文规则示意</div><div id="eliza-log" class="teletype-log" role="log" aria-label="对话记录"><p>程序：你想聊些什么？</p></div><form id="eliza-form"><label for="eliza-input">你说</label><input id="eliza-input" placeholder="例如：我有点紧张" maxlength="120" autocomplete="off"><button type="submit">发送 ↵</button></form><p class="experience-note">本站简化重建 · 非原程序 · 输入仅在本页处理</p></div><a id="eliza-original" class="history-zoom reading-room" href="${escape(m.src)}" target="_blank" rel="noopener" hidden><img class="history-image" src="${escape(m.src)}" alt="${escape(m.alt)}"></a></div>`
-      : m.pages ? `<div class="document-reader" data-interactive><div class="reader-heading">文献选页 <button id="reader-zoom" aria-pressed="false">放大阅读</button></div><div class="reader-paper" tabindex="0" aria-label="文献页面，可滚动阅读"><img id="reader-image" src="${escape(m.pages[0].src)}" alt="${escape(m.pages[0].alt)}"></div><div class="reader-controls"><button id="reader-prev" aria-label="上一张选页" disabled>←</button><span id="reader-label" aria-live="polite">${escape(m.pages[0].label)}</span><button id="reader-next" aria-label="下一张选页">→</button><a id="reader-original" href="${escape(m.pages[0].src)}" target="_blank" rel="noopener">原页 ↗</a></div></div>`
+      : m.pages ? `<div class="document-reader" data-interactive><div class="reader-heading">${escape(m.readerTitle || '文献选页')} <button id="reader-zoom" aria-pressed="false">放大阅读</button></div><div class="reader-paper" tabindex="0" aria-label="文献页面，可滚动阅读"><img id="reader-image" src="${escape(m.pages[0].src)}" alt="${escape(m.pages[0].alt)}"></div><div class="reader-controls"><button id="reader-prev" aria-label="上一张选页" disabled>←</button><span id="reader-label" aria-live="polite">${escape(m.pages[0].label)}</span><button id="reader-next" aria-label="下一张选页">→</button><a id="reader-original" href="${escape(m.pages[0].src)}" target="_blank" rel="noopener">原页 ↗</a></div></div>`
       : m.explore ? `<div class="comparison-desk" data-interactive><div class="comparison-heading">ControlNet / Canny · 2023</div><div class="archive-panels">${m.panels.slice(0,3).map((panel,i)=>`<figure><svg ${i===2?'id="comparison-result"':''} viewBox="${panel.crop.join(' ')}" role="img" aria-label="${escape(panel.alt)}"><image href="${escape(m.src)}" width="${m.imageSize[0]}" height="${m.imageSize[1]}"></image></svg><figcaption>${escape(panel.label)}</figcaption></figure>`).join('')}</div><div class="comparison-choices" role="group" aria-label="选择原始生成结果"><span>生成结果</span>${m.panels.slice(2).map((p,i)=>`<button data-result="${i+2}" aria-label="查看生成结果 ${i+1}" aria-pressed="${i===0}">${i+1}</button>`).join('')}</div><p class="experience-note">提示词：bird · 切换原始样本</p></div>`
       : m.type==='embed'
       ? `<div class="embedded-film"><button class="film-play" id="play-archive" aria-label="播放原始演示：${escape(m.alt)}"><img src="${escape(m.poster)}" alt="${escape(m.alt)}"><span aria-hidden="true">▶</span></button></div>`
@@ -139,7 +141,7 @@ function artifactHTML(e) {
       : m.panels
         ? `<div class="archive-panels${m.panels.length===1?' archive-single':''}">${m.panels.map(panel=>`<figure><svg viewBox="${panel.crop.join(' ')}" role="img" aria-label="${escape(panel.alt)}"><image href="${escape(m.src)}" width="${m.imageSize[0]}" height="${m.imageSize[1]}"></image></svg>${panel.label?`<figcaption>${escape(panel.label)}</figcaption>`:''}</figure>`).join('')}</div>`
         : `<a class="history-zoom${m.reading?' reading-room':''}" href="${escape(m.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escape(m.alt)}"><img class="history-image" src="${escape(m.src)}" alt="${escape(m.alt)}"></a>`;
-    return `<div class="historical-artifact ${m.type!=='image'?'historical-video':'historical-image'}${m.presentation==='photograph'?' archive-photograph':''}">${visual}<div class="media-caption"><p>${escape(m.displayCaption || m.caption.split('。').slice(0,2).join('。') + (m.caption.includes('。') ? '。' : ''))}</p></div></div>`;
+    return `<div class="historical-artifact ${m.type!=='image'?'historical-video':'historical-image'}${m.presentation==='photograph'?' archive-photograph':''}">${visual}${e.id === 'mcculloch-pitts' ? neuronControls() : ''}<div class="media-caption"><p>${escape(m.displayCaption || m.caption.split('。').slice(0,2).join('。') + (m.caption.includes('。') ? '。' : ''))}</p></div></div>`;
   }
   const note = '<div class="artifact-note">交互示意 · 本站重建，非历史原件</div>';
   if (['code','terminal'].includes(e.artifact.type) || e.id === 'transformer') {
@@ -152,6 +154,9 @@ function artifactHTML(e) {
     return `<div class="chat-artifact"><div class="window-title"><span>${escape(e.artifact.label)}</span><span>${e.date.slice(0,4)}</span></div><div class="window-content"><div class="window-label">An interface to imagination</div><h2>${escape(e.tags[0] || e.title)}</h2><div class="prompt-row">${escape(e.artifact.lines[0])}</div><div class="answer" id="demo-answer">${e.artifact.lines.slice(1).map(escape).join('<br>')}</div>${e.id === 'eliza' ? '<form class="chat-form" id="eliza-form"><input aria-label="对 ELIZA 说句话" placeholder="试着说一句话……" maxlength="120"><button type="submit">发送</button></form>' : `<button class="demo-button" id="interface-explain">看看背后的原理</button>`}</div>${note}</div>`;
   }
   return `<div class="canvas-artifact"><h2>${escape(e.artifact.label)}</h2><canvas id="demo-canvas" width="1000" height="500" aria-label="${escape(e.artifact.type === 'waveform' ? '声音波形示意' : e.artifact.type === 'image' ? '噪声逐渐减少的图像示意' : '信息在网络中流动的示意')}" role="img"></canvas><p class="canvas-caption" id="canvas-caption">${escape(e.artifact.lines.slice(0,2).join(' · '))}</p><label class="canvas-control">${e.artifact.type === 'image' ? '从噪声到结构' : '探索生成过程'}<input type="range" id="demo-range" min="0" max="100" value="55" aria-label="调整示意进度"><output id="demo-output">55%</output></label>${note}</div>`;
+}
+function neuronControls() {
+  return `<fieldset class="neuron-controls" data-interactive><legend>阈值实验 · 本站示意</legend>${['A','B','C'].map(name => `<label><input type="checkbox"> ${name}</label>`).join('')}<output aria-live="polite">0 个输入 · 未触发（阈值 2）</output></fieldset>`;
 }
 function terminalContent(e, view) {
   if (view === 'mechanism') return `<div class="terminal-concept">${escape(e.mechanism)}<br><br><span class="code-comment">// 为什么这一步重要</span><br>${escape(e.why)}</div>`;
@@ -181,6 +186,13 @@ ${e.artifact.lines.map(escape).join('\n\n')}
 }
 function wireArtifact(e) {
   const m=media[e.id];
+  const neuron = $('.neuron-controls');
+  if (neuron) neuron.onchange = () => {
+    const count = $$('input:checked', neuron).length;
+    const result = $('output', neuron);
+    result.textContent = `${count} 个输入 · ${count >= 2 ? '已触发' : '未触发'}（阈值 2）`;
+    result.classList.toggle('firing', count >= 2);
+  };
   if (m?.pages) {
     let page=0;
     const turn=direction=>{
@@ -188,7 +200,7 @@ function wireArtifact(e) {
       const item=m.pages[page];
       $('#reader-image').src=item.src;$('#reader-image').alt=item.alt;
       $('#reader-label').textContent=item.label;$('#reader-original').href=item.src;
-      $('.media-caption p').textContent=page===0?(m.displayCaption||m.caption):`当前选页：${item.label}。${m.date} 年材料；可放大滚动阅读，或打开原页。`;
+      $('.media-caption p').textContent=page===0?(m.displayCaption||m.caption): item.caption || `当前选页：${item.label}。${m.date} 年材料；可放大滚动阅读，或打开原页。`;
       $('#reader-prev').disabled=page===0;$('#reader-next').disabled=page===m.pages.length-1;
       $('.reader-paper').scrollTop=0;
     };

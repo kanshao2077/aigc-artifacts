@@ -1936,5 +1936,45 @@
       "ddpm",
       "lora"
     ]
+  },
+  {
+    "id": "illiac-suite",
+    "date": "1956-08-09",
+    "title": "计算机写谱，四个人演奏",
+    "subtitle": "《伊利亚克组曲》在伊利诺伊大学响起。",
+    "category": "audio",
+    "org": "Lejaren Hiller / Leonard Isaacson",
+    "modality": [
+      "音乐"
+    ],
+    "tags": [
+      "计算机作曲",
+      "弦乐四重奏"
+    ],
+    "summary": "Hiller 和 Isaacson 把作曲规则写进 ILLIAC I，让机器产生音乐材料，再由人整理成谱。1956 年 8 月 9 日，学生四重奏在校园里演出了前三个乐章。",
+    "why": "今天点击生成，可以直接听到一段声音。这件作品把中间的一步留在了纸上：计算机交出音符，演奏者把它们变成音乐。",
+    "mechanism": "程序依照预设的作曲规则筛选音符，产生可供整理和演奏的序列。",
+    "artifact": {
+      "type": "paper",
+      "label": "ILLIAC SUITE · EXPERIMENT I",
+      "lines": [
+        "弦乐四重奏",
+        "实验一",
+        "附录谱页"
+      ]
+    },
+    "sources": [
+      {
+        "title": "伊利诺伊大学博物馆 · 首演记录",
+        "url": "https://distributedmuseum.illinois.edu/exhibit/illiac-suite/"
+      },
+      {
+        "title": "实验一 · 四页谱稿",
+        "url": "https://cmp.ischool.illinois.edu/courses/tipei/M408E/Notes/illiac.pdf"
+      }
+    ],
+    "related": [
+      "wavenet"
+    ]
   }
 ]
